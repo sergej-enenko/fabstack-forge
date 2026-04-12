@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Forge Hub — Findings</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<button class="hamburger" aria-label="Menu" onclick="document.querySelector('.sidebar').classList.toggle('open')">&#9776;</button>
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect width="20" height="20" rx="4" fill="#1a7f37"/><path d="M6 14l4-8 4 8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Forge Hub
+  </div>
+  <div class="sidebar-section">Monitoring</div>
+  <a class="sidebar-link" href="index.html">Dashboard</a>
+  <a class="sidebar-link active" href="findings.html">Findings</a>
+  <a class="sidebar-link" href="history.html">Run History</a>
+  <hr class="sidebar-divider">
+  <div class="sidebar-section">Guide</div>
+  <a class="sidebar-link" href="guide/">Overview</a>
+  <a class="sidebar-link" href="guide/installation.html">Installation</a>
+  <a class="sidebar-link" href="guide/daily-usage.html">Daily Usage</a>
+  <a class="sidebar-link" href="guide/commands.html">Commands</a>
+  <a class="sidebar-link" href="guide/configuration.html">Configuration</a>
+  <a class="sidebar-link" href="guide/troubleshooting.html">Troubleshooting</a>
+</nav>
+<div class="content">
+  <div class="page-header">
+    <div>
+      <div class="page-title">Findings</div>
+      <div class="page-subtitle">All classified errors across projects</div>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterFindings('all',this)">All</button>
+    <button class="filter-btn" onclick="filterFindings('critical',this)">Critical</button>
+    <button class="filter-btn" onclick="filterFindings('notable',this)">Notable</button>
+    <button class="filter-btn" onclick="filterFindings('resolved',this)">Resolved</button>
+    <span style="width:1px;background:var(--color-border);margin:0 4px"></span>
+    <button class="filter-btn" onclick="filterProject('all',this)">All Projects</button>
+    <button class="filter-btn" onclick="filterProject('labong',this)">LaBong</button>
+    <button class="filter-btn" onclick="filterProject('sortico',this)">Sortico</button>
+  </div>
+
+  <div class="section">
+    <div class="section-body" style="padding:0">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width:10px"></th>
+            <th>Project</th>
+            <th>Fingerprint</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Count</th>
+            <th>First Seen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-severity="critical" data-project="labong">
+            <td><div class="finding-dot critical"></div></td>
+            <td><span class="finding-project">labong</span></td>
+            <td><code style="font-size:11px">storefront-ssr-missing-i18n</code></td>
+            <td>SSR MISSING_MESSAGE: vision.color.mintgruen + vision.room.home_office in all 12 locales</td>
+            <td><span class="badge badge-red">active</span></td>
+            <td>1</td>
+            <td style="font-size:12px;white-space:nowrap">Apr 12 15:17</td>
+          </tr>
+          <tr data-severity="notable" data-project="labong">
+            <td><div class="finding-dot notable"></div></td>
+            <td><span class="finding-project">labong</span></td>
+            <td><code style="font-size:11px">docker-double-deploy-sigkill</code></td>
+            <td>Two deploy cycles in 9min, Medusa SIGKILL (no SIGTERM handler)</td>
+            <td><span class="badge badge-yellow">active</span></td>
+            <td>1</td>
+            <td style="font-size:12px;white-space:nowrap">Apr 12 15:17</td>
+          </tr>
+          <tr data-severity="notable" data-project="labong">
+            <td><div class="finding-dot notable"></div></td>
+            <td><span class="finding-project">labong</span></td>
+            <td><code style="font-size:11px">docker-logs-empty</code></td>
+            <td>Docker logs 0 bytes for storefront+medusa (returning after brief fix)</td>
+            <td><span class="badge badge-yellow">returning</span></td>
+            <td>4</td>
+            <td style="font-size:12px;white-space:nowrap">Apr 12 11:17</td>
+          </tr>
+          <tr data-severity="notable" data-project="labong">
+            <td><div class="finding-dot notable"></div></td>
+            <td><span class="finding-project">labong</span></td>
+            <td><code style="font-size:11px">nginx-env-credential-scan</code></td>
+            <td>l9explore/1.2.2 scanner probing .env/.git/config (all 404)</td>
+            <td><span class="badge badge-yellow">active</span></td>
+            <td>112</td>
+            <td style="font-size:12px;white-space:nowrap">Apr 12 11:17</td>
+          </tr>
+          <tr data-severity="notable" data-project="labong">
+            <td><div class="finding-dot notable"></div></td>
+            <td><span class="finding-project">labong</span></td>
+            <td><code style="font-size:11px">ssh-brute-force-campaign</code></td>
+            <td>Sustained SSH brute force from 10+ IPs (all fail pre-auth)</td>
+            <td><span class="badge badge-yellow">active</span></td>
+            <td>3</td>
+            <td style="font-size:12px;white-space:nowrap">Apr 12 13:17</td>
+          </tr>
+          <tr data-severity="notable" data-project="labong">
+            <td><div class="finding-dot notable"></div></td>
+            <td><span class="finding-project">labong</span></td>
+            <td><code style="font-size:11px">nginx-cgi-path-traversal-rce</code></td>
+            <td>CVE-2021-41773-style CGI path traversal + IoT wget injection (all 400)</td>
+            <td><span class="badge badge-yellow">new</span></td>
+            <td>5</td>
+            <td style="font-size:12px;white-space:nowrap">Apr 13 01:37</td>
+          </tr>
+          <tr data-severity="notable" data-project="labong">
+            <td><div class="finding-dot notable"></div></td>
+            <td><span class="finding-project">labong</span></td>
+            <td><code style="font-size:11px">nginx-credential-scanner-chrome131</code></td>
+            <td>Chrome/131 scanner from 13.251.77.166 (170 requests, all blocked)</td>
+            <td><span class="badge badge-yellow">active</span></td>
+            <td>2</td>
+            <td style="font-size:12px;white-space:nowrap">Apr 12 13:17</td>
+          </tr>
+          <tr data-severity="notable" data-project="labong">
+            <td><div class="finding-dot notable"></div></td>
+            <td><span class="finding-project">labong</span></td>
+            <td><code style="font-size:11px">nginx-path-traversal-static</code></td>
+            <td>Path traversal via /static// targeting .aws/credentials (all 404)</td>
+            <td><span class="badge badge-yellow">active</span></td>
+            <td>2</td>
+            <td style="font-size:12px;white-space:nowrap">Apr 12 13:17</td>
+          </tr>
+          <tr data-severity="resolved" data-project="labong">
+            <td><div class="finding-dot resolved"></div></td>
+            <td><span class="finding-project">labong</span></td>
+            <td><code style="font-size:11px">log-collection-total-failure</code></td>
+            <td>All 5 log sources FETCH_FAILED — resolved, collecting again</td>
+            <td><span class="badge badge-green">resolved</span></td>
+            <td>1</td>
+            <td style="font-size:12px;white-space:nowrap">Apr 12 17:00</td>
+          </tr>
+          <tr data-severity="notable" data-project="sortico">
+            <td><div class="finding-dot notable"></div></td>
+            <td><span class="finding-project">sortico</span></td>
+            <td><code style="font-size:11px">docker-logs-empty-all</code></td>
+            <td>Docker logs 0 bytes for api, ui, traefik containers</td>
+            <td><span class="badge badge-yellow">new</span></td>
+            <td>1</td>
+            <td style="font-size:12px;white-space:nowrap">Apr 13 01:37</td>
+          </tr>
+          <tr data-severity="notable" data-project="sortico">
+            <td><div class="finding-dot notable"></div></td>
+            <td><span class="finding-project">sortico</span></td>
+            <td><code style="font-size:11px">traefik-env-credential-scan</code></td>
+            <td>l9explore/1.2.2 scanner (59 .env probes, all 404 via Traefik)</td>
+            <td><span class="badge badge-yellow">active</span></td>
+            <td>59</td>
+            <td style="font-size:12px;white-space:nowrap">Apr 12 17:00</td>
+          </tr>
+          <tr data-severity="notable" data-project="sortico">
+            <td><div class="finding-dot notable"></div></td>
+            <td><span class="finding-project">sortico</span></td>
+            <td><code style="font-size:11px">ssh-brute-force-sortico</code></td>
+            <td>SSH brute force from 12+ IPs (all fail password auth)</td>
+            <td><span class="badge badge-yellow">active</span></td>
+            <td>2</td>
+            <td style="font-size:12px;white-space:nowrap">Apr 12 17:00</td>
+          </tr>
+          <tr data-severity="notable" data-project="sortico">
+            <td><div class="finding-dot notable"></div></td>
+            <td><span class="finding-project">sortico</span></td>
+            <td><code style="font-size:11px">web-scanner-censys-oai</code></td>
+            <td>OAI-SearchBot + CensysInspect crawling. Missing robots.txt</td>
+            <td><span class="badge badge-yellow">active</span></td>
+            <td>1</td>
+            <td style="font-size:12px;white-space:nowrap">Apr 12 17:00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="font-size:11px;color:var(--color-text-secondary);margin-top:24px;text-align:center">
+    Fabstack Forge Hub | <a href="https://github.com/sergej-enenko/fabstack-forge">sergej-enenko/fabstack-forge</a>
+  </div>
+</div>
+<script>
+function filterFindings(severity, btn) {
+  document.querySelectorAll('.filter-bar button:nth-child(-n+4)').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.data-table tbody tr').forEach(tr => {
+    if (severity === 'all' || tr.dataset.severity === severity) {
+      tr.style.display = '';
+    } else {
+      tr.style.display = 'none';
+    }
+  });
+}
+function filterProject(project, btn) {
+  document.querySelectorAll('.filter-bar button:nth-child(n+6)').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.data-table tbody tr').forEach(tr => {
+    if (project === 'all' || tr.dataset.project === project) {
+      tr.style.display = '';
+    } else {
+      tr.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>

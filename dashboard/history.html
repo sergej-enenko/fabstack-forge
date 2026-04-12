@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Forge Hub — Run History</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<button class="hamburger" aria-label="Menu" onclick="document.querySelector('.sidebar').classList.toggle('open')">&#9776;</button>
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect width="20" height="20" rx="4" fill="#1a7f37"/><path d="M6 14l4-8 4 8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Forge Hub
+  </div>
+  <div class="sidebar-section">Monitoring</div>
+  <a class="sidebar-link" href="index.html">Dashboard</a>
+  <a class="sidebar-link" href="findings.html">Findings</a>
+  <a class="sidebar-link active" href="history.html">Run History</a>
+  <hr class="sidebar-divider">
+  <div class="sidebar-section">Guide</div>
+  <a class="sidebar-link" href="guide/">Overview</a>
+  <a class="sidebar-link" href="guide/installation.html">Installation</a>
+  <a class="sidebar-link" href="guide/daily-usage.html">Daily Usage</a>
+  <a class="sidebar-link" href="guide/commands.html">Commands</a>
+  <a class="sidebar-link" href="guide/configuration.html">Configuration</a>
+  <a class="sidebar-link" href="guide/troubleshooting.html">Troubleshooting</a>
+</nav>
+<div class="content">
+  <div class="page-header">
+    <div>
+      <div class="page-title">Run History</div>
+      <div class="page-subtitle">Timeline of all monitoring runs across projects</div>
+    </div>
+  </div>
+
+  <div class="section" style="margin-bottom:24px">
+    <div class="section-body">
+      <div style="display:flex;gap:24px;flex-wrap:wrap">
+        <div style="text-align:center"><div style="font-size:20px;font-weight:700">5</div><div style="font-size:11px;color:var(--color-text-secondary)">LaBong Runs</div></div>
+        <div style="text-align:center"><div style="font-size:20px;font-weight:700">2</div><div style="font-size:11px;color:var(--color-text-secondary)">Sortico Runs</div></div>
+        <div style="text-align:center"><div style="font-size:20px;font-weight:700">82</div><div style="font-size:11px;color:var(--color-text-secondary)">Avg Health</div></div>
+        <div style="text-align:center"><div style="font-size:20px;font-weight:700">0</div><div style="font-size:11px;color:var(--color-text-secondary)">Auto-fixes</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active">All</button>
+    <button class="filter-btn">LaBong</button>
+    <button class="filter-btn">Sortico</button>
+  </div>
+
+  <div class="timeline-row">
+    <div class="timeline-ts">2026-04-13 01:37</div>
+    <span class="timeline-project">labong</span>
+    <div class="timeline-score" style="color:var(--color-yellow)">78</div>
+    <div class="timeline-detail">0 new criticals, 1 resolved (log collection), 1 new notable (CGI RCE probes), 7 continuing</div>
+  </div>
+  <div class="timeline-row">
+    <div class="timeline-ts">2026-04-13 01:37</div>
+    <span class="timeline-project">sortico</span>
+    <div class="timeline-score" style="color:var(--color-green)">85</div>
+    <div class="timeline-detail">0 criticals, 1 new notable (docker logs empty), 3 continuing</div>
+  </div>
+  <div class="timeline-row red">
+    <div class="timeline-ts">2026-04-12 17:00</div>
+    <span class="timeline-project">labong</span>
+    <div class="timeline-score" style="color:var(--color-red)">40</div>
+    <div class="timeline-detail">Log collection FAILED (all 5 sources). 1 continuing critical, 5 continuing notable</div>
+  </div>
+  <div class="timeline-row">
+    <div class="timeline-ts">2026-04-12 17:00</div>
+    <span class="timeline-project">sortico</span>
+    <div class="timeline-score" style="color:var(--color-green)">95</div>
+    <div class="timeline-detail">First run. 0 criticals, 3 new notable (scanners, SSH brute force)</div>
+  </div>
+  <div class="timeline-row yellow">
+    <div class="timeline-ts">2026-04-12 15:17</div>
+    <span class="timeline-project">labong</span>
+    <div class="timeline-score" style="color:var(--color-yellow)">76</div>
+    <div class="timeline-detail">1 new critical (SSR i18n), 4 continuing, 1 resolved</div>
+  </div>
+  <div class="timeline-row">
+    <div class="timeline-ts">2026-04-12 13:17</div>
+    <span class="timeline-project">labong</span>
+    <div class="timeline-score" style="color:var(--color-green)">92</div>
+    <div class="timeline-detail">3 new notable (credential scanners, SSH brute force), 3 continuing</div>
+  </div>
+  <div class="timeline-row">
+    <div class="timeline-ts">2026-04-12 11:17</div>
+    <span class="timeline-project">labong</span>
+    <div class="timeline-score" style="color:var(--color-green)">95</div>
+    <div class="timeline-detail">First run. 0 criticals, 3 notable (scanners, empty docker logs)</div>
+  </div>
+
+  <div style="font-size:11px;color:var(--color-text-secondary);margin-top:24px;text-align:center">
+    Fabstack Forge Hub | <a href="https://github.com/sergej-enenko/fabstack-forge">sergej-enenko/fabstack-forge</a>
+  </div>
+</div>
+</body>
+</html>
