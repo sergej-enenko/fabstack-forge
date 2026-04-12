@@ -1,0 +1,13 @@
+version: 1
+project:
+  name: test
+  github_repo: user/test
+  base_branch: main
+  mode: observe
+  workspaces:
+    - name: app
+      path: .
+      test_command: "npm test"
+      build_command: "npm run build"
+      typecheck_command: "npm run typecheck"
+log_sources: []

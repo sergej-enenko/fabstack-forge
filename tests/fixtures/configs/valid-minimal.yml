@@ -1,0 +1,57 @@
+version: 1
+project:
+  name: test-project
+  github_repo: user/test-project
+  base_branch: main
+  mode: observe
+  workspaces:
+    - name: app
+      path: .
+      test_command: "npm test"
+      build_command: "npm run build"
+      typecheck_command: "npm run typecheck"
+servers:
+  - name: production
+    display_host: 10.0.0.1
+    display_user: deploy
+log_bridge:
+  type: github-actions-branch
+  branch: forge-logs
+  logs_path: logs
+  max_age_hours: 3
+log_sources:
+  - file: logs/docker-app.log
+    parser: docker
+    source_name: app
+    severity_profile: high
+secrets:
+  github_via: claude-web-setup
+collector:
+  type: github-actions
+  workflow_file: .github/workflows/forge-collect.yml
+  schedule_cron: "3 */2 * * *"
+  timeout_minutes: 5
+  secret_names:
+    ssh_private_key: SSH_PRIVATE_KEY
+    host: FORGE_HOST
+    user: FORGE_USER
+  ssh:
+    connect_timeout_seconds: 15
+    strict_host_key_checking: true
+  sources:
+    - type: docker
+      container: app
+      severity_profile: high
+      lines: 5000
+      since: 2h10m
+schedule:
+  cron: "17 */2 * * *"
+  timezone: Europe/Berlin
+  durable: true
+  max_runtime_minutes: 20
+  lock_file: docs/monitoring/.lock
+  pause_file: .forge-pause
+state:
+  state_file: docs/monitoring/state.json
+  backup_enabled: true
+  audit_log: docs/monitoring/audit.log
