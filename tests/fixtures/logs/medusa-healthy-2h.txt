@@ -1,0 +1,5 @@
+2026-04-12T00:05:12.456Z [info] Medusa server started on port 9000
+2026-04-12T00:10:34.123Z [info] Worker queue processing: order-created
+2026-04-12T00:15:00.000Z [info] Healthcheck ok
+2026-04-12T00:20:12.111Z [info] Request POST /store/carts 201 45ms
+2026-04-12T00:25:33.444Z [info] Request GET /store/products 200 123ms

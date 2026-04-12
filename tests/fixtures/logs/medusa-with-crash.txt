@@ -1,0 +1,6 @@
+2026-04-12T01:00:00.000Z [info] Healthcheck ok
+2026-04-12T01:15:42.891Z [error] Uncaught TypeError: Cannot read properties of undefined (reading 'title')
+2026-04-12T01:15:42.892Z [error]     at getProductMetadata (/app/dist/modules/products.js:123:45)
+2026-04-12T01:15:42.893Z [error]     at processRequest (/app/dist/server.js:89:12)
+2026-04-12T01:15:42.894Z [error]     at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-04-12T01:15:43.000Z [warn] Container exiting with code 1
