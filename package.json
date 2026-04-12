@@ -1,0 +1,28 @@
+{
+  "name": "fabstack-forge",
+  "version": "0.1.0-dev",
+  "type": "module",
+  "description": "Autonomous AI coder driven by runtime observability signals",
+  "license": "MIT",
+  "author": "Sergej Enenko",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergej-enenko/fabstack-forge.git"
+  },
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/unit/ tests/components/",
+    "test:unit": "node --test tests/unit/",
+    "test:components": "node --test tests/components/",
+    "test:e2e": "node --test tests/e2e/",
+    "test:all": "node --test tests/",
+    "test:watch": "node --test --watch tests/",
+    "lint": "node --check skills/log-monitor/scripts/*.mjs skills/log-monitor/scripts/classifier-rules/*.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.0",
+    "@octokit/rest": "^21.0.0",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {}
+}

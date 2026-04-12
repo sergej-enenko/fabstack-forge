@@ -1,0 +1,22 @@
+{
+  "name": "fabstack-forge",
+  "version": "0.1.0",
+  "description": "Autonomous AI coder driven by runtime observability signals — first application: log-monitoring with auto-fix PRs",
+  "author": "Sergej Enenko",
+  "license": "MIT",
+  "homepage": "https://github.com/sergej-enenko/fabstack-forge",
+  "skills": [
+    "skills/log-monitor/SKILL.md"
+  ],
+  "commands": [
+    "commands/forge-init.md",
+    "commands/forge-run.md",
+    "commands/forge-inspect.md",
+    "commands/forge-status.md",
+    "commands/forge-uninstall.md"
+  ],
+  "requirements": {
+    "node": ">=22.0.0",
+    "cli": ["git", "gh", "npm"]
+  }
+}
