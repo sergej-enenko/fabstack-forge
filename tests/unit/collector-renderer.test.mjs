@@ -75,7 +75,7 @@ describe('renderCollectorWorkflow', () => {
     });
 
     assert.ok(cmd.includes('fetch_or_mark logs/docker-medusa.log'), 'target file must use container name');
-    assert.ok(cmd.includes('docker logs --since=1h30m --until=now medusa'), 'docker logs command must include since and container');
+    assert.ok(cmd.includes('docker logs --since=1h30m medusa'), 'docker logs command must include since and container');
     assert.ok(cmd.includes('tail -3000'), 'must tail the configured line count');
   });
 

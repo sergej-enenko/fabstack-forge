@@ -73,7 +73,7 @@ Test that allowed commands work and disallowed commands are rejected.
 ```bash
 # Should succeed: fetch docker logs
 ssh -i ~/.ssh/forge_ed25519 deploy@YOUR_SERVER \
-  "docker logs --since=1h --until=now app 2>&1 | tail -100"
+  "docker logs --since=1h app 2>&1 | tail -100"
 
 # Should succeed: tail a log file
 ssh -i ~/.ssh/forge_ed25519 deploy@YOUR_SERVER \

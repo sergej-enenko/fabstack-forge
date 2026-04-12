@@ -6,7 +6,7 @@ set -euo pipefail
 
 cmd="$SSH_ORIGINAL_COMMAND"
 
-if [[ "$cmd" =~ ^docker\ logs\ (--since=[0-9]+[smh][0-9]*\ )?(--until=now\ )?[a-zA-Z0-9_-]+(\ 2\>\&1)?(\ \|\ tail\ -[0-9]+)?$ ]]; then
+if [[ "$cmd" =~ ^docker\ logs\ (--since=[0-9]+[smh][0-9]*\ )?[a-zA-Z0-9_-]+(\ 2\>\&1)?(\ \|\ tail\ -[0-9]+)?$ ]]; then
   exec bash -c "$cmd"
 elif [[ "$cmd" =~ ^tail\ -n\ [0-9]+\ /var/log/(nginx|syslog)/[a-zA-Z._-]+$ ]]; then
   exec bash -c "$cmd"
