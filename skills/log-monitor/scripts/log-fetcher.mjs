@@ -54,12 +54,17 @@ async function defaultGit(args) {
  * @param {Object} [opts]
  * @param {Function} [opts.git]         Mock-friendly git executor
  * @param {boolean}  [opts.returnMeta]  When true, return { events, failures, warnings }
+ * @param {string}   [opts.projectId]   When set, prefix log paths with logs/{projectId}/ (hub mode)
  * @returns {Promise<Array|{ events: Array, failures: Array, warnings: Array }>}
  */
 export async function fetchLogs(config, opts = {}) {
   const git = opts.git || defaultGit;
   const { branch, logs_path, max_age_hours } = config.log_bridge;
   const ref = `origin/${branch}`;
+  const projectId = opts.projectId;
+
+  // In hub mode (v2), logs are at logs/{projectId}/. In v1 mode, logs are at logs/.
+  const logsDir = projectId ? `${logs_path}/${projectId}` : logs_path;
 
   const failures = [];
   const warnings = [];
@@ -70,7 +75,7 @@ export async function fetchLogs(config, opts = {}) {
 
   // 2. Check freshness via fetched-at.txt
   try {
-    const fetchedAtRaw = await git(['show', `${ref}:${logs_path}/fetched-at.txt`]);
+    const fetchedAtRaw = await git(['show', `${ref}:${logsDir}/fetched-at.txt`]);
     const fetchedAt = new Date(fetchedAtRaw.trim());
 
     if (!isNaN(fetchedAt.getTime())) {
