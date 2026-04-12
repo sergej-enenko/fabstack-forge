@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "last_run": "2026-04-12T17:00:50Z",
-  "run_count": 4,
+  "last_run": "2026-04-13T01:37:00Z",
+  "run_count": 5,
   "circuit_breaker": {
     "consecutive_failures": 0,
     "self_disabled": false
@@ -12,23 +12,23 @@
       "rule": "new_signature",
       "classification": "notable",
       "first_seen": "2026-04-12T11:17:00Z",
-      "last_seen": "2026-04-12T13:17:00Z",
-      "resolved_at": "2026-04-12T15:17:00Z",
-      "occurrence_count": 2,
-      "resolved": true,
+      "last_seen": "2026-04-13T01:37:00Z",
+      "resolved_at": null,
+      "occurrence_count": 4,
+      "resolved": false,
       "github_issue": null,
-      "description": "Both labong-storefront and labong-medusa docker logs collected as 0 bytes across 2 consecutive runs. Either containers had no output in the 2h windows or collection is silently failing. Storefront appears live (nginx returns 200), so containers are likely running but docker log capture may be misconfigured."
+      "description": "Both labong-storefront and labong-medusa docker logs collected as 0 bytes. Returning after brief resolution at 15:17Z (run 3 had 7+118 lines). Containers appear to be running (nginx serves 200s), but docker log capture produces no output in the 2h window. May indicate docker logging driver misconfiguration or containers producing output only during deployments/restarts."
     },
     "nginx-env-credential-scan": {
       "fingerprint": "nginx-env-credential-scan",
       "rule": "new_signature",
       "classification": "notable",
       "first_seen": "2026-04-12T11:17:00Z",
-      "last_seen": "2026-04-12T15:17:00Z",
-      "occurrence_count": 61,
+      "last_seen": "2026-04-13T01:37:00Z",
+      "occurrence_count": 112,
       "resolved": false,
       "github_issue": null,
-      "description": "Systematic .env and .git/config credential scanner from 185.177.72.61 (61 requests, all blocked with 404). Tool: l9explore/1.2.2."
+      "description": "Systematic .env and .git/config credential scanner from 185.177.72.61 using l9explore/1.2.2. Continued in this run with ~50 new requests probing .env variants, .git/config, .aws/credentials, config.json across multiple path prefixes. All returned 404. Persistent automated scanner."
     },
     "nginx-url-injection-probe": {
       "fingerprint": "nginx-url-injection-probe-query-param",
@@ -46,11 +46,11 @@
       "rule": "new_signature",
       "classification": "notable",
       "first_seen": "2026-04-12T13:17:00Z",
-      "last_seen": "2026-04-12T15:17:00Z",
-      "occurrence_count": 2,
+      "last_seen": "2026-04-13T01:37:00Z",
+      "occurrence_count": 3,
       "resolved": false,
       "github_issue": null,
-      "description": "Sustained SSH brute force from 8+ IPs across multiple 2h windows. IPs include: 106.225.215.154, 103.218.241.179, 45.148.10.183, 87.251.64.149, 202.165.22.12, 186.96.145.241, 115.239.224.92, 150.5.169.176, 185.9.193.111, 87.251.64.147. Usernames: ubuntu, azureadmin, root, admin, git, minecraft, sol, etluser, firedancer, crafty, ps, mqmuser, demo, test, solana, arpwatch, moonbeam. All fail at pre-auth (public key only). Normal internet background noise."
+      "description": "Sustained SSH brute force from 10+ IPs across multiple 2h windows. Current window includes: 45.148.10.157, 121.29.4.85, 45.148.10.141, 2.57.122.196, 162.55.94.103, 45.227.254.170, 2.57.122.188. Usernames: root, sammy, and others. All fail at preauth (public key only). Normal internet background noise."
     },
     "nginx-new-credential-scanner-chrome131": {
       "fingerprint": "nginx-credential-scanner-chrome131-linux",
@@ -61,7 +61,7 @@
       "occurrence_count": 2,
       "resolved": false,
       "github_issue": null,
-      "description": "Credential scanner from 13.251.77.166 (Chrome/131.0.0.0 Linux UA) making 170 requests. Probed: .env variants (25+), .git/config, phpinfo.php, server-status.php, server-info.php, POST to / (4x), /webroot/index.php/_environment. All returned 404 except GET / (200 2610b). Distinct from 185.177.72.61 l9explore scanner. All sensitive paths blocked."
+      "description": "Credential scanner from 13.251.77.166 (Chrome/131.0.0.0 Linux UA) making 170 requests. Probed: .env variants (25+), .git/config, phpinfo.php, server-status.php, server-info.php, POST to / (4x), /webroot/index.php/_environment. All returned 404 except GET / (200 2610b). Not seen in current window — may have moved on."
     },
     "nginx-path-traversal-static-dir": {
       "fingerprint": "nginx-path-traversal-static-double-slash",
@@ -72,7 +72,7 @@
       "occurrence_count": 2,
       "resolved": false,
       "github_issue": null,
-      "description": "213.209.159.175 path traversal attempts via Next.js /static/ route: GET /static//root/.aws/credentials, GET /static//proc/1/environ, GET /static//home/user/.env, GET /static//.env, GET /static//app/.env. Targets cloud credentials and process environment. All returning 404. IP also seen with 62 total requests in current log window."
+      "description": "213.209.159.175 path traversal attempts via Next.js /static/ route: GET /static//root/.aws/credentials, GET /static//proc/1/environ, GET /static//home/user/.env, GET /static//.env, GET /static//app/.env. Targets cloud credentials and process environment. All returning 404. Not seen in current window."
     },
     "storefront-ssr-missing-i18n-vision": {
       "fingerprint": "storefront-ssr-missing-i18n-vision-color-mintgruen+room-home-office",
@@ -83,7 +83,7 @@
       "occurrence_count": 1,
       "resolved": false,
       "github_issue": 2,
-      "description": "SSR MISSING_MESSAGE errors for vision.color.mintgrün and vision.room.home_office in all 12 locales (en, de, nl, fr, es, da, pl, it, hr, fi, sv, el). Stack trace in storefront container c98e7f3e6a87 at startup. Root cause: c9aba1f feat(variants) introduced dynamic i18n key lookup for product attributes (vision.<category>.<value>), but new product attribute values mintgrün (color) and home_office (room) were never added to any locale file. Affects shoppers browsing products with those attributes. Fix: add missing-i18n-key to all 12 storefront/messages/*.json. GitHub issue: #2."
+      "description": "SSR MISSING_MESSAGE errors for vision.color.mintgrün and vision.room.home_office in all 12 locales. Root cause: c9aba1f feat(variants) introduced dynamic i18n key lookup but missing translations. Cannot verify current status — docker logs empty. GitHub issue: #2."
     },
     "docker-double-deploy-medusa-sigkill": {
       "fingerprint": "docker-double-deploy-medusa-sigkill-on-stop",
@@ -94,7 +94,7 @@
       "occurrence_count": 1,
       "resolved": false,
       "github_issue": null,
-      "description": "Two full docker build+deploy cycles within 9 minutes at 12:02Z and 12:12Z, likely triggered by fix(accounts) commit 6c9ab1a. In both cycles labong-medusa was killed with SIGKILL (exit 137) after failing to respond to SIGTERM within 10s. Storefront container stopped cleanly (exit 0) both times. hasBeenManuallyStopped=true — no crash, intentional deploys. Medusa SIGKILL on every deployment indicates missing graceful shutdown handler in the Node.js process."
+      "description": "Two full docker build+deploy cycles within 9 minutes. Medusa killed with SIGKILL (exit 137) after failing to respond to SIGTERM within 10s. Indicates missing graceful shutdown handler. Not seen in current window — no deployments detected."
     },
     "labong-log-collection-total-failure": {
       "fingerprint": "labong-log-collection-all-sources-fetch-failed",
@@ -102,10 +102,22 @@
       "classification": "notable",
       "first_seen": "2026-04-12T17:00:50Z",
       "last_seen": "2026-04-12T17:00:50Z",
+      "resolved_at": "2026-04-13T01:37:00Z",
       "occurrence_count": 1,
+      "resolved": true,
+      "github_issue": null,
+      "description": "All 5 log sources returned FETCH_FAILED at 17:00Z. Resolved — collector successfully fetched nginx-access (1512 lines) and journald at 22:48Z. Was likely a transient SSH/network issue."
+    },
+    "nginx-cgi-path-traversal-rce": {
+      "fingerprint": "nginx-cgi-path-traversal-rce-bin-sh",
+      "rule": "new_signature",
+      "classification": "notable",
+      "first_seen": "2026-04-13T01:37:00Z",
+      "last_seen": "2026-04-13T01:37:00Z",
+      "occurrence_count": 5,
       "resolved": false,
       "github_issue": null,
-      "description": "All 5 log sources for labong returned FETCH_FAILED: nginx-access.log, nginx-error.log, docker-labong-storefront, docker-labong-medusa, and journald. Logs were fetched at 2026-04-12T16:52:39Z but every collector command failed. Server may be unreachable, SSH key may have rotated, or the collector script encountered an error on the labong host. No log data available for analysis this run."
+      "description": "CVE-2021-41773-style path traversal RCE attempts: POST /cgi-bin/.%2e/.%2e/.../bin/sh from 4 IPs (31.210.53.76, 119.3.230.28, 36.230.50.44, 140.245.121.61) + IoT wget injection from 129.211.7.73 (POST /cgi-bin/operator/servetest with wget payload targeting MIPS). All returned 400 — nginx not vulnerable. Background exploit scanning."
     }
   }
 }

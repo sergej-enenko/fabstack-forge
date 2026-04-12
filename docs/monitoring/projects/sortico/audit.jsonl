@@ -1,0 +1,1 @@
+{"timestamp":"2026-04-13T01:37:00Z","run_id":"hub-run-2","action":"analyze","result":"completed","new_criticals":0,"resolved":0,"notes":"docker logs empty for all containers (new), SSH brute force continuing, journald healthy"}

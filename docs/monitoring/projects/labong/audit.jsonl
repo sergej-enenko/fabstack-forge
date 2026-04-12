@@ -1,0 +1,1 @@
+{"timestamp":"2026-04-13T01:37:00Z","run_id":"hub-run-5","action":"analyze","result":"completed","new_criticals":0,"resolved":1,"notes":"log collection restored, docker logs still empty, new CGI RCE probes detected (blocked)"}
