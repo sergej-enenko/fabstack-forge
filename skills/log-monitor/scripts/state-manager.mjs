@@ -3,7 +3,7 @@
  * Handles load/save with atomic writes, backup/restore, and lock acquire/release.
  */
 
-import { readFileSync, writeFileSync, renameSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, renameSync, copyFileSync, existsSync } from 'node:fs';
 
 const EMPTY_STATE = {
   version: 1,
@@ -44,6 +44,7 @@ export function createStateManager({ statePath, backupPath, lockPath }) {
         return structuredClone(EMPTY_STATE);
       }
 
+      // Try primary file
       const raw = readFileSync(statePath, 'utf-8');
       try {
         const parsed = JSON.parse(raw);
@@ -51,9 +52,26 @@ export function createStateManager({ statePath, backupPath, lockPath }) {
           throw new StateCorruptError(`Unsupported state version: ${parsed.version}`);
         }
         return parsed;
-      } catch (err) {
-        if (err instanceof StateCorruptError) throw err;
-        throw new StateCorruptError(`Failed to parse state.json: ${err.message}`);
+      } catch (primaryErr) {
+        // Primary corrupt — try backup
+        if (!existsSync(backupPath)) {
+          throw primaryErr instanceof StateCorruptError
+            ? primaryErr
+            : new StateCorruptError(`Failed to parse state.json: ${primaryErr.message}`);
+        }
+
+        const backupRaw = readFileSync(backupPath, 'utf-8');
+        try {
+          const backupParsed = JSON.parse(backupRaw);
+          if (backupParsed.version !== 1) {
+            throw new StateCorruptError(`Unsupported backup state version: ${backupParsed.version}`);
+          }
+          return backupParsed;
+        } catch (backupErr) {
+          throw backupErr instanceof StateCorruptError
+            ? backupErr
+            : new StateCorruptError(`Both state.json and backup are corrupt`);
+        }
       }
     },
 
@@ -62,6 +80,11 @@ export function createStateManager({ statePath, backupPath, lockPath }) {
      * @param {object} state
      */
     save(state) {
+      // Back up existing state before overwriting
+      if (existsSync(statePath)) {
+        copyFileSync(statePath, backupPath);
+      }
+
       const tmpPath = statePath + '.tmp';
       writeFileSync(tmpPath, JSON.stringify(state, null, 2), 'utf-8');
       renameSync(tmpPath, statePath);
