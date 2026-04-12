@@ -1,0 +1,87 @@
+# Fabstack Forge — {{project_name}}
+
+Forge is an autonomous monitoring agent that reads your production logs, classifies errors, investigates root causes, and proposes fixes as draft pull requests.
+
+**Server:** {{server_host}}
+**Schedule:** {{cron_human}}
+**Mode:** {{mode}}
+**Maintainer:** {{maintainer}}
+
+---
+
+## How it works
+
+1. A GitHub Actions workflow SSHes to your server every ~30 minutes and commits raw logs to the `forge-logs` branch.
+2. The Forge agent reads those logs, classifies errors using deterministic rules and AI, deduplicates against known errors, and investigates new or returning criticals.
+3. Findings are reported as GitHub Issues labeled `forge`.
+4. In `fix` mode, high-confidence fixes are proposed as draft PRs from `forge/fix-*` branches. In `observe` mode, fixes are shown as diffs in the Issue body only.
+
+## Reading Forge Issues
+
+Each Forge Issue contains:
+- **Fingerprint** — a stable hash identifying this class of error
+- **Classification** — `critical`, `notable`, or `noise`
+- **Location** — file and line number from the stack trace
+- **Root cause** — AI hypothesis with confidence level
+- **Proposed fix** — diff and fix class (if applicable)
+
+## Responding to Forge Issues
+
+Use `/forge` commands in Issue comments to give feedback:
+
+| Command | Effect |
+|---|---|
+| `/forge ignore` | Permanently suppress this error fingerprint |
+| `/forge ignore-for 24h` | Suppress for a duration (s/m/h/d) |
+| `/forge reclassify noise` | Reclassify as noise/notable/critical |
+| `/forge reinvestigate` | Re-run investigation on next cycle |
+| `/forge wrong-fix-class <class>` | Disable a fix class (circuit breaker) |
+
+## Pausing Forge
+
+To pause all Forge activity (e.g., during a deploy or incident):
+
+1. Create a file called `.forge-pause` on the `monitoring` branch.
+2. Forge will check for this file at the start of each run and exit cleanly if it exists.
+3. Delete the file when you want Forge to resume.
+
+```bash
+# Pause
+git checkout monitoring
+touch .forge-pause
+git add .forge-pause
+git commit -m "chore: pause forge"
+git push origin monitoring
+
+# Resume
+git checkout monitoring
+git rm .forge-pause
+git commit -m "chore: resume forge"
+git push origin monitoring
+```
+
+## Branches
+
+| Branch | Purpose | Who writes |
+|---|---|---|
+| `main` | Production code | Humans only |
+| `forge-logs` | Raw log snapshots from server | GitHub Actions (Level 0) |
+| `monitoring` | Agent state, reports, stats, audit log | Forge agent |
+| `forge/fix-*` | Draft fix branches | Forge agent (PRs target `main`) |
+
+## Configuration
+
+The Forge config lives at `docs/monitoring/forge-config.yml`. Key settings:
+
+- `project.mode` — `observe` (report only) or `fix` (report + auto-PR)
+- `patcher.rate_limits.max_auto_prs_per_day` — daily cap on auto-created PRs
+- `security_sensitive_patterns` — files that always require human review
+
+## Safety guarantees
+
+- Forge never pushes to `main` — all code changes go through draft PRs
+- Forge never auto-merges — a human must review and approve
+- Forge never modifies `.env`, lockfiles, CI configs, or infrastructure
+- Forge limits itself to 3 auto-PRs per day by default
+- Forge self-disables after 3 consecutive failures
+- You can pause Forge instantly with `.forge-pause`

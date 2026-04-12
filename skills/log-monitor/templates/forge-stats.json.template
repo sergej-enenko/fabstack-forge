@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "project": "{{project_name}}",
+  "last_updated": null,
+  "totals": {
+    "runs": 0,
+    "events_processed": 0,
+    "criticals_found": 0,
+    "investigations_run": 0,
+    "patches_attempted": 0,
+    "patches_merged": 0,
+    "issues_created": 0,
+    "issues_closed": 0
+  },
+  "last_run": {
+    "run_id": null,
+    "timestamp": null,
+    "mode": null,
+    "new_criticals": 0,
+    "continuing": 0,
+    "returning": 0,
+    "resolved": 0,
+    "notable": 0,
+    "auto_fixes": 0,
+    "health_score": null
+  },
+  "health_trend": []
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "last_run": null,
+  "run_count_total": 0,
+  "known_errors": [],
+  "circuit_breaker": {
+    "daily_pr_count": 0,
+    "daily_pr_count_reset_at": null,
+    "disabled_fix_classes": [],
+    "self_disabled": false,
+    "self_disabled_reason": null,
+    "consecutive_failures": 0
+  },
+  "regression_watch": [],
+  "rejection_log": []
+}
