@@ -1,9 +1,29 @@
 {
   "version": 1,
-  "total_runs": 0,
-  "total_errors_classified": 0,
+  "total_runs": 1,
+  "total_errors_classified": 3,
   "total_investigations": 0,
   "total_issues_created": 0,
   "total_patches_proposed": 0,
-  "runs": []
+  "runs": [
+    {
+      "timestamp": "2026-04-12T17:00:50Z",
+      "log_freshness_minutes": 8,
+      "new_criticals": 0,
+      "continuing_criticals": 0,
+      "returning_criticals": 0,
+      "resolved": 0,
+      "new_notable": 3,
+      "continuing_notable": 0,
+      "noise_suppressed": 0,
+      "github_issues_created": 0,
+      "health_score": 95,
+      "log_lines_analyzed": {
+        "api_docker": 6,
+        "ui_docker": 0,
+        "traefik_docker": 84,
+        "journald": 300
+      }
+    }
+  ]
 }

@@ -59,10 +59,31 @@
         "medusa_docker": 118,
         "nginx_error": 0
       }
+    },
+    {
+      "timestamp": "2026-04-12T17:00:50Z",
+      "log_freshness_minutes": 8,
+      "new_criticals": 0,
+      "continuing_criticals": 1,
+      "returning_criticals": 0,
+      "resolved": 0,
+      "new_notable": 1,
+      "continuing_notable": 5,
+      "noise_suppressed": 0,
+      "github_issues_created": 0,
+      "health_score": 40,
+      "log_collection_failed": true,
+      "log_lines_analyzed": {
+        "nginx_access": 0,
+        "journald": 0,
+        "storefront_docker": 0,
+        "medusa_docker": 0,
+        "nginx_error": 0
+      }
     }
   ],
   "totals": {
-    "runs": 3,
+    "runs": 4,
     "issues_created": 1,
     "issues_closed": 0,
     "issues_commented": 0
