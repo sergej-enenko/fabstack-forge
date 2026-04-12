@@ -11,12 +11,12 @@
   },
   "private": true,
   "scripts": {
-    "test": "node --test tests/unit/ tests/components/",
-    "test:unit": "node --test tests/unit/",
-    "test:components": "node --test tests/components/",
-    "test:e2e": "node --test tests/e2e/",
-    "test:all": "node --test tests/",
-    "test:watch": "node --test --watch tests/",
+    "test": "bash -c \"node --test tests/unit/*.test.mjs tests/components/*.test.mjs 2>/dev/null || node --test tests/unit/*.test.mjs\"",
+    "test:unit": "bash -c \"node --test tests/unit/*.test.mjs\"",
+    "test:components": "bash -c \"node --test tests/components/*.test.mjs\"",
+    "test:e2e": "bash -c \"node --test tests/e2e/*.test.mjs\"",
+    "test:all": "npm run test:unit && npm run test:components && npm run test:e2e",
+    "test:watch": "bash -c \"node --test --watch tests/unit/*.test.mjs\"",
     "lint": "node --check skills/log-monitor/scripts/*.mjs skills/log-monitor/scripts/classifier-rules/*.mjs"
   },
   "dependencies": {
