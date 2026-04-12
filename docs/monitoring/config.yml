@@ -1,0 +1,137 @@
+# Fabstack Forge — Hub Config (Multi-Project)
+# Schema version 2.
+
+version: 2
+
+hub:
+  github_repo: "sergej-enenko/fabstack-forge"
+
+projects:
+  - id: labong
+    github_repo: sergej-enenko/labong
+    base_branch: main
+    mode: observe
+    server:
+      host_secret: FORGE_HOST_LABONG
+      user_secret: FORGE_USER_LABONG
+      ssh_key_secret: FORGE_SSH_KEY_LABONG
+    log_sources:
+      - type: docker
+        container: labong-storefront
+        since: 2h
+        lines: 5000
+      - type: docker
+        container: labong-medusa
+        since: 2h
+        lines: 5000
+      - type: file
+        path: /var/log/nginx/access.log
+        parser: nginx-access
+        lines: 5000
+      - type: file
+        path: /var/log/nginx/error.log
+        parser: nginx-error
+        lines: 2000
+      - type: journalctl
+        since: 2h
+    workspaces:
+      - path: storefront
+        test_command: "npm test"
+      - path: backend
+        test_command: "npm test"
+    severity_rules:
+      ssr_error_source_match: storefront
+    security_patterns:
+      - "**/auth/**"
+      - "**/middleware/auth*"
+      - "**/*secret*"
+      - "**/*credential*"
+      - "**/*token*"
+      - "**/payment*"
+      - "**/stripe*"
+      - "**/webhook*"
+      - "**/proxy.ts"
+      - "**/session.ts"
+
+  - id: sortico
+    github_repo: sergej-enenko/sortico
+    base_branch: master
+    mode: observe
+    server:
+      host_secret: FORGE_HOST_SORTICO
+      user_secret: FORGE_USER_SORTICO
+      ssh_key_secret: FORGE_SSH_KEY_SORTICO
+    log_sources:
+      - type: docker
+        container: infra-api-1
+        since: 2h
+        lines: 5000
+      - type: docker
+        container: infra-ui-1
+        since: 2h
+        lines: 5000
+      - type: docker
+        container: infra-traefik-1
+        since: 2h
+        lines: 5000
+      - type: journalctl
+        since: 2h
+    workspaces:
+      - path: apps/api
+        test_command: "pytest tests/ -v"
+      - path: apps/ui
+        test_command: "npm test"
+    severity_rules:
+      ssr_error_source_match: ui
+    security_patterns:
+      - "**/auth/**"
+      - "**/security/**"
+      - "**/crypto/**"
+      - "**/jwt/**"
+      - "**/*secret*"
+      - "**/*credential*"
+      - "**/*token*"
+      - "**/password*"
+      - "**/.env*"
+
+defaults:
+  time_window:
+    lookback_hours: 2
+    buffer_minutes: 10
+  classifier:
+    rules_enabled: true
+    ai_layer_enabled: true
+    upgrade_only: true
+    max_errors_per_ai_batch: 100
+  dedup:
+    enabled: true
+    window_minutes: 60
+    resolve_after_hours: 24
+  investigator:
+    enabled: true
+    max_parallel: 3
+    max_investigations_per_run: 10
+    timeout_seconds: 120
+    correlation_window_minutes: 60
+  patcher:
+    enabled: false
+  reporter:
+    format: github-issue
+    include_raw_logs: false
+    max_log_lines: 50
+
+schedule:
+  cron: "17 */2 * * *"
+  timezone: "UTC"
+
+state:
+  branch: monitoring
+
+log_bridge:
+  branch: forge-logs
+  logs_path: logs
+  max_age_hours: 3
+
+collector:
+  schedule_cron: "3 */2 * * *"
+  timeout_minutes: 11

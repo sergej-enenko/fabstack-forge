@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "last_run": "2026-04-12T15:17:00Z",
+  "run_count": 3,
+  "circuit_breaker": {
+    "consecutive_failures": 0,
+    "self_disabled": false
+  },
+  "known_errors": {
+    "docker-logs-empty-storefront-medusa": {
+      "fingerprint": "docker-logs-empty-storefront-medusa",
+      "rule": "new_signature",
+      "classification": "notable",
+      "first_seen": "2026-04-12T11:17:00Z",
+      "last_seen": "2026-04-12T13:17:00Z",
+      "resolved_at": "2026-04-12T15:17:00Z",
+      "occurrence_count": 2,
+      "resolved": true,
+      "github_issue": null,
+      "description": "Both labong-storefront and labong-medusa docker logs collected as 0 bytes across 2 consecutive runs. Either containers had no output in the 2h windows or collection is silently failing. Storefront appears live (nginx returns 200), so containers are likely running but docker log capture may be misconfigured."
+    },
+    "nginx-env-credential-scan": {
+      "fingerprint": "nginx-env-credential-scan",
+      "rule": "new_signature",
+      "classification": "notable",
+      "first_seen": "2026-04-12T11:17:00Z",
+      "last_seen": "2026-04-12T15:17:00Z",
+      "occurrence_count": 61,
+      "resolved": false,
+      "github_issue": null,
+      "description": "Systematic .env and .git/config credential scanner from 185.177.72.61 (61 requests, all blocked with 404). Tool: l9explore/1.2.2."
+    },
+    "nginx-url-injection-probe": {
+      "fingerprint": "nginx-url-injection-probe-query-param",
+      "rule": "new_signature",
+      "classification": "notable",
+      "first_seen": "2026-04-12T11:17:00Z",
+      "last_seen": "2026-04-12T13:17:00Z",
+      "occurrence_count": 2,
+      "resolved": false,
+      "github_issue": null,
+      "description": "GET /?url=.env from 213.209.159.175 returned HTTP 200 (5340 bytes). Likely benign — Next.js ignores unknown query params and renders the homepage. Confirmed benign given consistent body size with other homepage responses."
+    },
+    "ssh-brute-force-campaign": {
+      "fingerprint": "ssh-brute-force-campaign-sustained-multi-ip",
+      "rule": "new_signature",
+      "classification": "notable",
+      "first_seen": "2026-04-12T13:17:00Z",
+      "last_seen": "2026-04-12T15:17:00Z",
+      "occurrence_count": 2,
+      "resolved": false,
+      "github_issue": null,
+      "description": "Sustained SSH brute force from 8+ IPs across multiple 2h windows. IPs include: 106.225.215.154, 103.218.241.179, 45.148.10.183, 87.251.64.149, 202.165.22.12, 186.96.145.241, 115.239.224.92, 150.5.169.176, 185.9.193.111, 87.251.64.147. Usernames: ubuntu, azureadmin, root, admin, git, minecraft, sol, etluser, firedancer, crafty, ps, mqmuser, demo, test, solana, arpwatch, moonbeam. All fail at pre-auth (public key only). Normal internet background noise."
+    },
+    "nginx-new-credential-scanner-chrome131": {
+      "fingerprint": "nginx-credential-scanner-chrome131-linux",
+      "rule": "new_signature",
+      "classification": "notable",
+      "first_seen": "2026-04-12T13:17:00Z",
+      "last_seen": "2026-04-12T15:17:00Z",
+      "occurrence_count": 2,
+      "resolved": false,
+      "github_issue": null,
+      "description": "Credential scanner from 13.251.77.166 (Chrome/131.0.0.0 Linux UA) making 170 requests. Probed: .env variants (25+), .git/config, phpinfo.php, server-status.php, server-info.php, POST to / (4x), /webroot/index.php/_environment. All returned 404 except GET / (200 2610b). Distinct from 185.177.72.61 l9explore scanner. All sensitive paths blocked."
+    },
+    "nginx-path-traversal-static-dir": {
+      "fingerprint": "nginx-path-traversal-static-double-slash",
+      "rule": "new_signature",
+      "classification": "notable",
+      "first_seen": "2026-04-12T13:17:00Z",
+      "last_seen": "2026-04-12T15:17:00Z",
+      "occurrence_count": 2,
+      "resolved": false,
+      "github_issue": null,
+      "description": "213.209.159.175 path traversal attempts via Next.js /static/ route: GET /static//root/.aws/credentials, GET /static//proc/1/environ, GET /static//home/user/.env, GET /static//.env, GET /static//app/.env. Targets cloud credentials and process environment. All returning 404. IP also seen with 62 total requests in current log window."
+    },
+    "storefront-ssr-missing-i18n-vision": {
+      "fingerprint": "storefront-ssr-missing-i18n-vision-color-mintgruen+room-home-office",
+      "rule": "ssr_error",
+      "classification": "critical",
+      "first_seen": "2026-04-12T15:17:00Z",
+      "last_seen": "2026-04-12T15:17:00Z",
+      "occurrence_count": 1,
+      "resolved": false,
+      "github_issue": 2,
+      "description": "SSR MISSING_MESSAGE errors for vision.color.mintgrün and vision.room.home_office in all 12 locales (en, de, nl, fr, es, da, pl, it, hr, fi, sv, el). Stack trace in storefront container c98e7f3e6a87 at startup. Root cause: c9aba1f feat(variants) introduced dynamic i18n key lookup for product attributes (vision.<category>.<value>), but new product attribute values mintgrün (color) and home_office (room) were never added to any locale file. Affects shoppers browsing products with those attributes. Fix: add missing-i18n-key to all 12 storefront/messages/*.json. GitHub issue: #2."
+    },
+    "docker-double-deploy-medusa-sigkill": {
+      "fingerprint": "docker-double-deploy-medusa-sigkill-on-stop",
+      "rule": "new_signature",
+      "classification": "notable",
+      "first_seen": "2026-04-12T15:17:00Z",
+      "last_seen": "2026-04-12T15:17:00Z",
+      "occurrence_count": 1,
+      "resolved": false,
+      "github_issue": null,
+      "description": "Two full docker build+deploy cycles within 9 minutes at 12:02Z and 12:12Z, likely triggered by fix(accounts) commit 6c9ab1a. In both cycles labong-medusa was killed with SIGKILL (exit 137) after failing to respond to SIGTERM within 10s. Storefront container stopped cleanly (exit 0) both times. hasBeenManuallyStopped=true — no crash, intentional deploys. Medusa SIGKILL on every deployment indicates missing graceful shutdown handler in the Node.js process."
+    }
+  }
+}

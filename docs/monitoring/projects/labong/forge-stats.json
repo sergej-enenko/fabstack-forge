@@ -1,0 +1,70 @@
+{
+  "runs": [
+    {
+      "timestamp": "2026-04-12T11:17:00Z",
+      "log_freshness_minutes": 21,
+      "new_criticals": 0,
+      "continuing_criticals": 0,
+      "returning_criticals": 0,
+      "resolved": 0,
+      "notable": 3,
+      "noise_suppressed": 4,
+      "github_issues_created": 0,
+      "health_score": 95,
+      "log_lines_analyzed": {
+        "nginx_access": 474,
+        "journald": 956,
+        "storefront_docker": 0,
+        "medusa_docker": 0,
+        "nginx_error": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T13:17:00Z",
+      "log_freshness_minutes": 141,
+      "new_criticals": 0,
+      "continuing_criticals": 0,
+      "returning_criticals": 0,
+      "resolved": 0,
+      "new_notable": 3,
+      "continuing_notable": 3,
+      "noise_suppressed": 2,
+      "github_issues_created": 0,
+      "health_score": 92,
+      "log_lines_analyzed": {
+        "nginx_access": 475,
+        "journald": 956,
+        "storefront_docker": 0,
+        "medusa_docker": 0,
+        "nginx_error": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T15:17:00Z",
+      "log_freshness_minutes": 116,
+      "new_criticals": 1,
+      "continuing_criticals": 0,
+      "returning_criticals": 0,
+      "resolved": 1,
+      "new_notable": 1,
+      "continuing_notable": 4,
+      "noise_suppressed": 2,
+      "github_issues_created": 1,
+      "health_score": 76,
+      "deployment_detected": true,
+      "log_lines_analyzed": {
+        "nginx_access": 1308,
+        "journald": 2650,
+        "storefront_docker": 7,
+        "medusa_docker": 118,
+        "nginx_error": 0
+      }
+    }
+  ],
+  "totals": {
+    "runs": 3,
+    "issues_created": 1,
+    "issues_closed": 0,
+    "issues_commented": 0
+  }
+}

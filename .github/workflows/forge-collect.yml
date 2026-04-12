@@ -1,0 +1,132 @@
+# .github/workflows/forge-collect.yml
+# Multi-project hub collector for Fabstack Forge v0.1.0.
+# Fetches logs from all monitored servers into per-project subdirectories.
+
+name: Forge Log Collector (Hub)
+
+on:
+  schedule:
+    - cron: '3 */2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: forge-collect
+  cancel-in-progress: true
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 11
+    steps:
+      - name: Checkout default branch
+        uses: actions/checkout@v4
+
+      - name: Prepare forge-logs workspace
+        run: |
+          mkdir -p forge-logs-workspace
+          cd forge-logs-workspace
+          git init
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git fetch --depth=1 origin forge-logs 2>/dev/null || true
+          git checkout --orphan forge-logs
+          git reset --hard
+          git clean -fdx
+
+      # --- labong ---
+      - name: Setup SSH for labong
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo "${{ secrets.FORGE_SSH_KEY_LABONG }}" > ~/.ssh/forge_labong
+          chmod 600 ~/.ssh/forge_labong
+          ssh-keyscan -H ${{ secrets.FORGE_HOST_LABONG }} >> ~/.ssh/known_hosts 2>/dev/null
+        continue-on-error: true
+
+      - name: Fetch logs for labong
+        env:
+          HOST: ${{ secrets.FORGE_HOST_LABONG }}
+          USER: ${{ secrets.FORGE_USER_LABONG }}
+        run: |
+          cd forge-logs-workspace
+          mkdir -p logs/labong
+
+          fetch_or_mark() {
+            local target_file="$1"
+            local command="$2"
+            if ssh -i ~/.ssh/forge_labong \
+                   -o BatchMode=yes \
+                   -o ConnectTimeout=15 \
+                   -o StrictHostKeyChecking=yes \
+                   "$USER@$HOST" "$command" > "$target_file" 2>&1; then
+              echo "  fetched: $target_file ($(wc -l < "$target_file") lines)"
+            else
+              echo "FETCH_FAILED: $command" > "$target_file"
+              echo "  FAILED: $target_file"
+            fi
+          }
+
+          fetch_or_mark logs/labong/docker-labong-storefront.log "docker logs --since=2h labong-storefront 2>&1 | tail -5000"
+          fetch_or_mark logs/labong/docker-labong-medusa.log "docker logs --since=2h labong-medusa 2>&1 | tail -5000"
+          fetch_or_mark logs/labong/nginx-access.log "tail -n 5000 /var/log/nginx/access.log"
+          fetch_or_mark logs/labong/nginx-error.log "tail -n 2000 /var/log/nginx/error.log"
+          fetch_or_mark logs/labong/journald.log "journalctl --since='2h ago' --no-pager"
+
+          date -u +%Y-%m-%dT%H:%M:%SZ > logs/labong/fetched-at.txt
+          echo "${{ github.run_id }}" > logs/labong/run-id.txt
+        continue-on-error: true
+
+      # --- sortico ---
+      - name: Setup SSH for sortico
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo "${{ secrets.FORGE_SSH_KEY_SORTICO }}" > ~/.ssh/forge_sortico
+          chmod 600 ~/.ssh/forge_sortico
+          ssh-keyscan -H ${{ secrets.FORGE_HOST_SORTICO }} >> ~/.ssh/known_hosts 2>/dev/null
+        continue-on-error: true
+
+      - name: Fetch logs for sortico
+        env:
+          HOST: ${{ secrets.FORGE_HOST_SORTICO }}
+          USER: ${{ secrets.FORGE_USER_SORTICO }}
+        run: |
+          cd forge-logs-workspace
+          mkdir -p logs/sortico
+
+          fetch_or_mark() {
+            local target_file="$1"
+            local command="$2"
+            if ssh -i ~/.ssh/forge_sortico \
+                   -o BatchMode=yes \
+                   -o ConnectTimeout=15 \
+                   -o StrictHostKeyChecking=yes \
+                   "$USER@$HOST" "$command" > "$target_file" 2>&1; then
+              echo "  fetched: $target_file ($(wc -l < "$target_file") lines)"
+            else
+              echo "FETCH_FAILED: $command" > "$target_file"
+              echo "  FAILED: $target_file"
+            fi
+          }
+
+          fetch_or_mark logs/sortico/docker-infra-api-1.log "docker logs --since=2h infra-api-1 2>&1 | tail -5000"
+          fetch_or_mark logs/sortico/docker-infra-ui-1.log "docker logs --since=2h infra-ui-1 2>&1 | tail -5000"
+          fetch_or_mark logs/sortico/docker-infra-traefik-1.log "docker logs --since=2h infra-traefik-1 2>&1 | tail -5000"
+          fetch_or_mark logs/sortico/journald.log "journalctl --since='2h ago' --no-pager"
+
+          date -u +%Y-%m-%dT%H:%M:%SZ > logs/sortico/fetched-at.txt
+          echo "${{ github.run_id }}" > logs/sortico/run-id.txt
+        continue-on-error: true
+
+      # --- Commit all logs ---
+      - name: Commit and force-push
+        run: |
+          cd forge-logs-workspace
+          git config user.email "forge-collector[bot]@users.noreply.github.com"
+          git config user.name "Fabstack Forge Collector"
+          git add logs/
+          TIMESTAMP=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          git commit -m "chore(collector): logs $TIMESTAMP [labong, sortico] [run ${{ github.run_id }}]"
+          git push --force origin forge-logs

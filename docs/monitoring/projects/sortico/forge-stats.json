@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "total_runs": 0,
+  "total_errors_classified": 0,
+  "total_investigations": 0,
+  "total_issues_created": 0,
+  "total_patches_proposed": 0,
+  "runs": []
+}

@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "last_run": null,
+  "known_errors": {},
+  "suppressed_fingerprints": {},
+  "circuit_breaker": {
+    "consecutive_failures": 0,
+    "self_disabled": false
+  }
+}
