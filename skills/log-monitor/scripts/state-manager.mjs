@@ -3,7 +3,7 @@
  * Handles load/save with atomic writes, backup/restore, and lock acquire/release.
  */
 
-import { readFileSync, writeFileSync, renameSync, copyFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, renameSync, copyFileSync, unlinkSync, existsSync } from 'node:fs';
 
 const EMPTY_STATE = {
   version: 1,
@@ -88,6 +88,51 @@ export function createStateManager({ statePath, backupPath, lockPath }) {
       const tmpPath = statePath + '.tmp';
       writeFileSync(tmpPath, JSON.stringify(state, null, 2), 'utf-8');
       renameSync(tmpPath, statePath);
+    },
+
+    /**
+     * Acquire an exclusive run lock.
+     * @param {{ now?: () => number }} [opts]
+     * @returns {{ status: 'acquired' | 'rejected' | 'stolen', reason?: string }}
+     */
+    acquireLock(opts = {}) {
+      const now = opts.now ?? (() => Date.now());
+      const STALE_MS = 2 * 60 * 60 * 1000; // 2 hours
+      let stolen = false;
+
+      if (existsSync(lockPath)) {
+        const raw = readFileSync(lockPath, 'utf-8');
+        const lock = JSON.parse(raw);
+        const age = now() - new Date(lock.started_at).getTime();
+
+        if (age < STALE_MS) {
+          return { status: 'rejected', reason: 'another run in progress' };
+        }
+
+        // Stale lock — reclaim
+        unlinkSync(lockPath);
+        stolen = true;
+      }
+
+      const lockData = {
+        pid: process.pid,
+        started_at: new Date(now()).toISOString(),
+        runtime: 'node',
+      };
+      writeFileSync(lockPath, JSON.stringify(lockData, null, 2), 'utf-8');
+
+      return { status: stolen ? 'stolen' : 'acquired' };
+    },
+
+    /**
+     * Release the run lock. Idempotent — does not throw if lock is already missing.
+     */
+    releaseLock() {
+      try {
+        unlinkSync(lockPath);
+      } catch (err) {
+        if (err.code !== 'ENOENT') throw err;
+      }
     },
   };
 }
