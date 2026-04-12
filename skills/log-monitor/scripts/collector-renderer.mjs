@@ -29,7 +29,7 @@ function buildFetchCommand(source) {
       const container = source.container;
       const since = source.since || '2h';
       const targetFile = `logs/docker-${container}.log`;
-      const cmd = `docker logs --since=${since} --until=now ${container} 2>&1 | tail -${lines}`;
+      const cmd = `docker logs --since=${since} ${container} 2>&1 | tail -${lines}`;
       return `${indent}fetch_or_mark ${targetFile} "${cmd}"`;
     }
 
