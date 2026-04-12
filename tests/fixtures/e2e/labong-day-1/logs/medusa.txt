@@ -1,0 +1,4 @@
+2026-04-12T00:00:00.000Z [info] Medusa server started on port 9000
+2026-04-12T00:05:00.000Z [info] Healthcheck ok
+2026-04-12T00:10:00.000Z [info] Request POST /store/carts 201 45ms
+2026-04-12T01:00:00.000Z [info] Healthcheck ok

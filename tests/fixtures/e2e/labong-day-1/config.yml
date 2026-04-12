@@ -1,0 +1,62 @@
+version: 1
+project:
+  name: labong
+  github_repo: sergej-enenko/labong
+  base_branch: main
+  mode: observe
+  workspaces:
+    - name: storefront
+      path: storefront
+      test_command: "npm test"
+      build_command: "npm run build"
+      typecheck_command: "npm run typecheck"
+servers:
+  - name: production
+    display_host: 178.104.10.221
+    display_user: root
+log_bridge:
+  type: github-actions-branch
+  branch: forge-logs
+  logs_path: logs
+  max_age_hours: 3
+log_sources:
+  - file: logs/docker-storefront.log
+    parser: docker
+    source_name: storefront
+    severity_profile: high
+  - file: logs/docker-medusa.log
+    parser: docker
+    source_name: medusa
+    severity_profile: high
+classifier:
+  rules_enabled: true
+  ai_layer_enabled: false
+  upgrade_only: true
+  max_errors_per_ai_batch: 100
+severity_rules:
+  rules:
+    - id: crash
+      enabled: true
+    - id: ssr_error
+      enabled: true
+      source_match: storefront
+    - id: new_signature
+      enabled: true
+dedup:
+  resolve_after_hours: 24
+investigator:
+  enabled: true
+  max_investigations_per_run: 20
+  context_lines: 20
+  use_git_blame: true
+  use_git_history_correlation: false
+  use_dependency_check: true
+  active_dev_zone_hours: 2
+patcher:
+  enabled: false
+  fix_classes:
+    allowlist:
+      - null-guard
+      - missing-optional-chain
+  guardrails:
+    security_sensitive_patterns: []

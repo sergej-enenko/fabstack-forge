@@ -1,0 +1,11 @@
+2026-04-12T00:00:00.000Z [info] Next.js server started on port 3000
+2026-04-12T00:05:12.456Z [info] Compiling...
+2026-04-12T00:05:15.789Z [info] Compiled successfully
+2026-04-12T00:10:00.000Z [info] GET / 200 in 45ms
+2026-04-12T00:15:00.000Z [info] GET /de/products 200 in 123ms
+2026-04-12T01:00:42.891Z [error] TypeError: Cannot read properties of undefined (reading 'title')
+2026-04-12T01:00:42.892Z [error]     at getProductMetadata (storefront/src/app/[locale]/page.tsx:42:15)
+2026-04-12T01:00:42.893Z [error]     at renderPage (storefront/src/app/[locale]/page.tsx:28:10)
+2026-04-12T01:00:42.894Z [error]     at processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-04-12T01:05:00.000Z [info] GET / 200 in 52ms
+2026-04-12T01:30:00.000Z [info] GET /de 200 in 48ms
