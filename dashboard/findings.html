@@ -60,21 +60,21 @@
           </tr>
         </thead>
         <tbody>
-          <tr data-severity="critical" data-project="labong">
-            <td><div class="finding-dot critical"></div></td>
+          <tr data-severity="resolved" data-project="labong">
+            <td><div class="finding-dot resolved"></div></td>
             <td><span class="finding-project">labong</span></td>
             <td><code style="font-size:11px">storefront-ssr-missing-i18n</code></td>
-            <td>SSR MISSING_MESSAGE: vision.color.mintgruen + vision.room.home_office in all 12 locales</td>
-            <td><span class="badge badge-red">active</span></td>
+            <td>SSR MISSING_MESSAGE: vision.color.mintgrün + vision.room.home_office — fixed commit 6201ff0, redeploy pending</td>
+            <td><span class="badge badge-green">fixed</span></td>
             <td>1</td>
             <td style="font-size:12px;white-space:nowrap">Apr 12 15:17</td>
           </tr>
-          <tr data-severity="notable" data-project="labong">
-            <td><div class="finding-dot notable"></div></td>
+          <tr data-severity="resolved" data-project="labong">
+            <td><div class="finding-dot resolved"></div></td>
             <td><span class="finding-project">labong</span></td>
             <td><code style="font-size:11px">docker-double-deploy-sigkill</code></td>
-            <td>Two deploy cycles in 9min, Medusa SIGKILL (no SIGTERM handler)</td>
-            <td><span class="badge badge-yellow">active</span></td>
+            <td>Medusa SIGKILL on stop (exit 137) — fixed: exec + stop_grace_period 30s, commit 6201ff0</td>
+            <td><span class="badge badge-green">fixed</span></td>
             <td>1</td>
             <td style="font-size:12px;white-space:nowrap">Apr 12 15:17</td>
           </tr>

@@ -80,10 +80,11 @@
       "classification": "critical",
       "first_seen": "2026-04-12T15:17:00Z",
       "last_seen": "2026-04-12T15:17:00Z",
+      "resolved_at": "2026-04-13T01:55:00Z",
       "occurrence_count": 1,
-      "resolved": false,
+      "resolved": true,
       "github_issue": 2,
-      "description": "SSR MISSING_MESSAGE errors for vision.color.mintgrün and vision.room.home_office in all 12 locales. Root cause: c9aba1f feat(variants) introduced dynamic i18n key lookup but missing translations. Cannot verify current status — docker logs empty. GitHub issue: #2."
+      "description": "FIXED 2026-04-13: Added vision.color.mintgrün and vision.room.home_office to all 12 locale files (commit 6201ff0). Keys missing in all locales after c9aba1f introduced dynamic i18n key lookup. Requires storefront redeploy to take effect."
     },
     "docker-double-deploy-medusa-sigkill": {
       "fingerprint": "docker-double-deploy-medusa-sigkill-on-stop",
@@ -91,10 +92,11 @@
       "classification": "notable",
       "first_seen": "2026-04-12T15:17:00Z",
       "last_seen": "2026-04-12T15:17:00Z",
+      "resolved_at": "2026-04-13T01:55:00Z",
       "occurrence_count": 1,
-      "resolved": false,
+      "resolved": true,
       "github_issue": null,
-      "description": "Two full docker build+deploy cycles within 9 minutes. Medusa killed with SIGKILL (exit 137) after failing to respond to SIGTERM within 10s. Indicates missing graceful shutdown handler. Not seen in current window — no deployments detected."
+      "description": "FIXED 2026-04-13: start.sh now uses exec node_modules/.bin/medusa start (was: npx medusa start without exec — SIGTERM never reached Node.js). Added stop_grace_period: 30s to docker-compose. Commit 6201ff0. Requires medusa container rebuild to take effect."
     },
     "labong-log-collection-total-failure": {
       "fingerprint": "labong-log-collection-all-sources-fetch-failed",
