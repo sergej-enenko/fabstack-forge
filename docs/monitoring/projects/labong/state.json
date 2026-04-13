@@ -84,7 +84,31 @@
       "occurrence_count": 1,
       "resolved": true,
       "github_issue": 2,
-      "description": "FIXED 2026-04-13: Added vision.color.mintgrün and vision.room.home_office to all 12 locale files (commit 6201ff0). Keys missing in all locales after c9aba1f introduced dynamic i18n key lookup. Requires storefront redeploy to take effect."
+      "description": "FIXED 2026-04-13: Added vision.color.mintgrün and vision.room.home_office to all 12 locale files (commit 6201ff0). Keys missing in all locales after c9aba1f introduced dynamic i18n key lookup. Deployed."
+    },
+    "storefront-ssr-missing-i18n-guest-room": {
+      "fingerprint": "storefront-ssr-missing-i18n-vision-room-guest-room",
+      "rule": "ssr_error",
+      "classification": "critical",
+      "first_seen": "2026-04-13T09:25:00Z",
+      "last_seen": "2026-04-13T09:25:00Z",
+      "resolved_at": "2026-04-13T09:35:00Z",
+      "occurrence_count": 1,
+      "resolved": true,
+      "github_issue": null,
+      "description": "FIXED 2026-04-13: vision.room.guest_room missing from all 12 locales (commit 5210978). Discovered during deploy health check — same root cause as mintgrün/home_office. Added translations (de: Gästezimmer, en: Guest Room, etc.) and rebuilt storefront image."
+    },
+    "storefront-healthcheck-bridge-ip": {
+      "fingerprint": "storefront-healthcheck-127-0-0-1-connection-refused",
+      "rule": "new_signature",
+      "classification": "notable",
+      "first_seen": "2026-04-13T00:09:00Z",
+      "last_seen": "2026-04-13T09:25:00Z",
+      "resolved_at": "2026-04-13T09:35:00Z",
+      "occurrence_count": 1,
+      "resolved": true,
+      "github_issue": null,
+      "description": "FIXED 2026-04-13: Next.js standalone reads $HOSTNAME env var as bind address. Docker sets HOSTNAME to container ID which resolves to bridge IP (172.18.x.x), not 127.0.0.1. Healthcheck 'wget 127.0.0.1:3000' always failed. Fix: HOSTNAME=0.0.0.0 in docker-compose environment (commit 8d9733e in labong repo). Storefront now healthy."
     },
     "docker-double-deploy-medusa-sigkill": {
       "fingerprint": "docker-double-deploy-medusa-sigkill-on-stop",

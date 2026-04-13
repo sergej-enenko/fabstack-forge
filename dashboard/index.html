@@ -70,7 +70,7 @@
     </div>
     <div class="project-kpis">
       <div class="project-kpi">
-        <div class="project-kpi-value" style="color:var(--color-green)">91</div>
+        <div class="project-kpi-value" style="color:var(--color-green)">95</div>
         <div class="project-kpi-label">Health</div>
       </div>
       <div class="project-kpi">
@@ -88,7 +88,7 @@
     </div>
     <div style="font-size:12px;color:var(--color-text-secondary)">
       Stack: Next.js / Medusa.js / PostgreSQL / Redis / Meilisearch / Nginx<br>
-      Last run: 2026-04-13 01:37 UTC | 2 issues fixed (i18n + SIGTERM)
+      Last deploy: 2026-04-13 09:35 UTC | 4 issues fixed (i18n ×2, SIGTERM, healthcheck)
     </div>
   </div>
 
@@ -134,14 +134,26 @@
       <div class="finding-row">
         <div class="finding-dot resolved"></div>
         <span class="finding-project">labong</span>
-        <div class="finding-desc">SSR MISSING_MESSAGE: vision.color.mintgrün + vision.room.home_office — fixed in commit 6201ff0, redeploy pending. <a href="https://github.com/sergej-enenko/labong/issues/2">#2</a></div>
-        <div class="finding-meta">fixed</div>
+        <div class="finding-desc">SSR MISSING_MESSAGE: vision.room.guest_room — added to all 12 locales, rebuilt + deployed. <a href="https://github.com/sergej-enenko/labong/commit/5210978">5210978</a></div>
+        <div class="finding-meta">resolved</div>
       </div>
       <div class="finding-row">
         <div class="finding-dot resolved"></div>
         <span class="finding-project">labong</span>
-        <div class="finding-desc">Medusa SIGKILL on stop (exit 137) — fixed: exec + stop_grace_period 30s, commit 6201ff0, redeploy pending.</div>
-        <div class="finding-meta">fixed</div>
+        <div class="finding-desc">Storefront healthcheck perpetually failing — Next.js bound to bridge IP via $HOSTNAME. Fixed: HOSTNAME=0.0.0.0.</div>
+        <div class="finding-meta">resolved</div>
+      </div>
+      <div class="finding-row">
+        <div class="finding-dot resolved"></div>
+        <span class="finding-project">labong</span>
+        <div class="finding-desc">SSR MISSING_MESSAGE: vision.color.mintgrün + vision.room.home_office — deployed commit 6201ff0. <a href="https://github.com/sergej-enenko/labong/issues/2">#2</a></div>
+        <div class="finding-meta">resolved</div>
+      </div>
+      <div class="finding-row">
+        <div class="finding-dot resolved"></div>
+        <span class="finding-project">labong</span>
+        <div class="finding-desc">Medusa SIGKILL on stop (exit 137) — fixed: exec + stop_grace_period 30s, deployed.</div>
+        <div class="finding-meta">resolved</div>
       </div>
       <div class="finding-row">
         <div class="finding-dot notable"></div>
