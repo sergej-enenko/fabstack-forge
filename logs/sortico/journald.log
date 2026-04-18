@@ -1,0 +1,347 @@
+Apr 18 20:49:11 ubuntu-4gb-nbg1-17 sshd[1176927]: Unable to negotiate with 52.161.83.195 port 6172: no matching host key type found. Their offer: sk-ssh-ed25519@openssh.com [preauth]
+Apr 18 20:49:12 ubuntu-4gb-nbg1-17 sshd[1176929]: Connection closed by 52.161.83.195 port 6168 [preauth]
+Apr 18 20:49:12 ubuntu-4gb-nbg1-17 sshd[1176930]: Connection closed by 52.161.83.195 port 6170 [preauth]
+Apr 18 20:49:13 ubuntu-4gb-nbg1-17 sshd[1176928]: Connection closed by 52.161.83.195 port 6171 [preauth]
+Apr 18 20:49:13 ubuntu-4gb-nbg1-17 sshd[1176931]: Unable to negotiate with 52.161.83.195 port 6169: no matching host key type found. Their offer: sk-ecdsa-sha2-nistp256@openssh.com [preauth]
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 sshd[1176937]: Accepted publickey for root from 52.161.83.195 port 6173 ssh2: ED25519 SHA256:IN1KIAB3hvi6OF6Xt+vZ6Yhl2uvux9S1bOD5+E2L9FU
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 sshd[1176937]: pam_unix(sshd:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd-logind[828]: New session 9053 of user root.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1]: Created slice user-0.slice - User Slice of UID 0.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1]: Starting user-runtime-dir@0.service - User Runtime Directory /run/user/0...
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1]: Finished user-runtime-dir@0.service - User Runtime Directory /run/user/0.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1]: Starting user@0.service - User Manager for UID 0...
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 (systemd)[1176941]: pam_unix(systemd-user:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Queued start job for default target default.target.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Created slice app.slice - User Application Slice.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Started launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Reached target paths.target - Paths.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Reached target timers.target - Timers.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Starting dbus.socket - D-Bus User Message Bus Socket...
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Starting gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Reached target sockets.target - Sockets.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Reached target basic.target - Basic System.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Reached target default.target - Main User Target.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1176941]: Startup finished in 154ms.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1]: Started user@0.service - User Manager for UID 0.
+Apr 18 20:49:14 ubuntu-4gb-nbg1-17 systemd[1]: Started session-9053.scope - Session 9053 of User root.
+Apr 18 20:49:15 ubuntu-4gb-nbg1-17 sshd[1176937]: Received disconnect from 52.161.83.195 port 6173:11: disconnected by user
+Apr 18 20:49:15 ubuntu-4gb-nbg1-17 sshd[1176937]: Disconnected from user root 52.161.83.195 port 6173
+Apr 18 20:49:15 ubuntu-4gb-nbg1-17 sshd[1176937]: pam_unix(sshd:session): session closed for user root
+Apr 18 20:49:15 ubuntu-4gb-nbg1-17 systemd[1]: session-9053.scope: Deactivated successfully.
+Apr 18 20:49:15 ubuntu-4gb-nbg1-17 systemd-logind[828]: Session 9053 logged out. Waiting for processes to exit.
+Apr 18 20:49:15 ubuntu-4gb-nbg1-17 systemd-logind[828]: Removed session 9053.
+Apr 18 20:49:16 ubuntu-4gb-nbg1-17 sshd[1177084]: Accepted publickey for root from 52.161.83.195 port 6174 ssh2: ED25519 SHA256:IN1KIAB3hvi6OF6Xt+vZ6Yhl2uvux9S1bOD5+E2L9FU
+Apr 18 20:49:16 ubuntu-4gb-nbg1-17 sshd[1177084]: pam_unix(sshd:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 20:49:16 ubuntu-4gb-nbg1-17 systemd-logind[828]: New session 9055 of user root.
+Apr 18 20:49:16 ubuntu-4gb-nbg1-17 systemd[1]: Started session-9055.scope - Session 9055 of User root.
+Apr 18 20:49:17 ubuntu-4gb-nbg1-17 sshd[1177084]: Received disconnect from 52.161.83.195 port 6174:11: disconnected by user
+Apr 18 20:49:17 ubuntu-4gb-nbg1-17 sshd[1177084]: Disconnected from user root 52.161.83.195 port 6174
+Apr 18 20:49:17 ubuntu-4gb-nbg1-17 sshd[1177084]: pam_unix(sshd:session): session closed for user root
+Apr 18 20:49:17 ubuntu-4gb-nbg1-17 systemd[1]: session-9055.scope: Deactivated successfully.
+Apr 18 20:49:17 ubuntu-4gb-nbg1-17 systemd-logind[828]: Session 9055 logged out. Waiting for processes to exit.
+Apr 18 20:49:17 ubuntu-4gb-nbg1-17 systemd-logind[828]: Removed session 9055.
+Apr 18 20:49:18 ubuntu-4gb-nbg1-17 sshd[1177142]: Accepted publickey for root from 52.161.83.195 port 6175 ssh2: ED25519 SHA256:IN1KIAB3hvi6OF6Xt+vZ6Yhl2uvux9S1bOD5+E2L9FU
+Apr 18 20:49:18 ubuntu-4gb-nbg1-17 sshd[1177142]: pam_unix(sshd:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 20:49:18 ubuntu-4gb-nbg1-17 systemd-logind[828]: New session 9056 of user root.
+Apr 18 20:49:18 ubuntu-4gb-nbg1-17 systemd[1]: Started session-9056.scope - Session 9056 of User root.
+Apr 18 20:49:19 ubuntu-4gb-nbg1-17 sshd[1177142]: Received disconnect from 52.161.83.195 port 6175:11: disconnected by user
+Apr 18 20:49:19 ubuntu-4gb-nbg1-17 sshd[1177142]: Disconnected from user root 52.161.83.195 port 6175
+Apr 18 20:49:19 ubuntu-4gb-nbg1-17 sshd[1177142]: pam_unix(sshd:session): session closed for user root
+Apr 18 20:49:19 ubuntu-4gb-nbg1-17 systemd[1]: session-9056.scope: Deactivated successfully.
+Apr 18 20:49:19 ubuntu-4gb-nbg1-17 systemd-logind[828]: Session 9056 logged out. Waiting for processes to exit.
+Apr 18 20:49:19 ubuntu-4gb-nbg1-17 systemd-logind[828]: Removed session 9056.
+Apr 18 20:49:20 ubuntu-4gb-nbg1-17 sshd[1177220]: Accepted publickey for root from 52.161.83.195 port 6168 ssh2: ED25519 SHA256:IN1KIAB3hvi6OF6Xt+vZ6Yhl2uvux9S1bOD5+E2L9FU
+Apr 18 20:49:20 ubuntu-4gb-nbg1-17 sshd[1177220]: pam_unix(sshd:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 20:49:20 ubuntu-4gb-nbg1-17 systemd-logind[828]: New session 9057 of user root.
+Apr 18 20:49:20 ubuntu-4gb-nbg1-17 systemd[1]: Started session-9057.scope - Session 9057 of User root.
+Apr 18 20:49:21 ubuntu-4gb-nbg1-17 sshd[1177220]: Received disconnect from 52.161.83.195 port 6168:11: disconnected by user
+Apr 18 20:49:21 ubuntu-4gb-nbg1-17 sshd[1177220]: Disconnected from user root 52.161.83.195 port 6168
+Apr 18 20:49:21 ubuntu-4gb-nbg1-17 sshd[1177220]: pam_unix(sshd:session): session closed for user root
+Apr 18 20:49:21 ubuntu-4gb-nbg1-17 systemd[1]: session-9057.scope: Deactivated successfully.
+Apr 18 20:49:21 ubuntu-4gb-nbg1-17 systemd-logind[828]: Session 9057 logged out. Waiting for processes to exit.
+Apr 18 20:49:21 ubuntu-4gb-nbg1-17 systemd-logind[828]: Removed session 9057.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1]: Stopping user@0.service - User Manager for UID 0...
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Activating special unit exit.target...
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Stopped target default.target - Main User Target.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Stopped target basic.target - Basic System.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Stopped target paths.target - Paths.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Stopped target sockets.target - Sockets.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Stopped target timers.target - Timers.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Stopped launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Closed dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Closed dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Closed gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Closed gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Stopping gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Closed gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Closed keyboxd.socket - GnuPG public key management service.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Closed pk-debconf-helper.socket - debconf communication socket.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Closed snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Closed gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Removed slice app.slice - User Application Slice.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Reached target shutdown.target - Shutdown.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Finished systemd-exit.service - Exit the Session.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1176941]: Reached target exit.target - Exit the Session.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1]: user@0.service: Deactivated successfully.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1]: Stopped user@0.service - User Manager for UID 0.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1]: Stopping user-runtime-dir@0.service - User Runtime Directory /run/user/0...
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1]: run-user-0.mount: Deactivated successfully.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1]: user-runtime-dir@0.service: Deactivated successfully.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1]: Stopped user-runtime-dir@0.service - User Runtime Directory /run/user/0.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1]: Removed slice user-0.slice - User Slice of UID 0.
+Apr 18 20:49:31 ubuntu-4gb-nbg1-17 systemd[1]: user-0.slice: Consumed 1.027s CPU time.
+Apr 18 20:50:33 ubuntu-4gb-nbg1-17 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Apr 18 20:50:33 ubuntu-4gb-nbg1-17 systemd[1]: sysstat-collect.service: Deactivated successfully.
+Apr 18 20:50:33 ubuntu-4gb-nbg1-17 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Apr 18 20:55:01 ubuntu-4gb-nbg1-17 CRON[1180572]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 20:55:01 ubuntu-4gb-nbg1-17 CRON[1180573]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Apr 18 20:55:01 ubuntu-4gb-nbg1-17 CRON[1180572]: pam_unix(cron:session): session closed for user root
+Apr 18 20:55:08 ubuntu-4gb-nbg1-17 sshd[1180614]: Invalid user centos from 5.48.46.95 port 35792
+Apr 18 20:55:08 ubuntu-4gb-nbg1-17 sshd[1180614]: pam_unix(sshd:auth): check pass; user unknown
+Apr 18 20:55:08 ubuntu-4gb-nbg1-17 sshd[1180614]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=5.48.46.95
+Apr 18 20:55:10 ubuntu-4gb-nbg1-17 sshd[1180614]: Failed password for invalid user centos from 5.48.46.95 port 35792 ssh2
+Apr 18 20:55:12 ubuntu-4gb-nbg1-17 sshd[1180614]: Connection closed by invalid user centos 5.48.46.95 port 35792 [preauth]
+Apr 18 21:00:26 ubuntu-4gb-nbg1-17 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Apr 18 21:00:26 ubuntu-4gb-nbg1-17 systemd[1]: sysstat-collect.service: Deactivated successfully.
+Apr 18 21:00:26 ubuntu-4gb-nbg1-17 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Apr 18 21:02:24 ubuntu-4gb-nbg1-17 sshd[1184752]: Invalid user debian from 210.0.90.81 port 46212
+Apr 18 21:02:24 ubuntu-4gb-nbg1-17 sshd[1184752]: pam_unix(sshd:auth): check pass; user unknown
+Apr 18 21:02:24 ubuntu-4gb-nbg1-17 sshd[1184752]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=210.0.90.81
+Apr 18 21:02:26 ubuntu-4gb-nbg1-17 sshd[1184752]: Failed password for invalid user debian from 210.0.90.81 port 46212 ssh2
+Apr 18 21:02:27 ubuntu-4gb-nbg1-17 sshd[1184752]: Connection closed by invalid user debian 210.0.90.81 port 46212 [preauth]
+Apr 18 21:02:32 ubuntu-4gb-nbg1-17 sshd[1184851]: Invalid user test from 111.171.125.94 port 47686
+Apr 18 21:02:32 ubuntu-4gb-nbg1-17 sshd[1184851]: pam_unix(sshd:auth): check pass; user unknown
+Apr 18 21:02:32 ubuntu-4gb-nbg1-17 sshd[1184851]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=111.171.125.94
+Apr 18 21:02:35 ubuntu-4gb-nbg1-17 sshd[1184851]: Failed password for invalid user test from 111.171.125.94 port 47686 ssh2
+Apr 18 21:02:36 ubuntu-4gb-nbg1-17 sshd[1184851]: Connection closed by invalid user test 111.171.125.94 port 47686 [preauth]
+Apr 18 21:05:01 ubuntu-4gb-nbg1-17 CRON[1186312]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 21:05:01 ubuntu-4gb-nbg1-17 CRON[1186313]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Apr 18 21:05:01 ubuntu-4gb-nbg1-17 CRON[1186312]: pam_unix(cron:session): session closed for user root
+Apr 18 21:10:33 ubuntu-4gb-nbg1-17 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Apr 18 21:10:33 ubuntu-4gb-nbg1-17 systemd[1]: sysstat-collect.service: Deactivated successfully.
+Apr 18 21:10:33 ubuntu-4gb-nbg1-17 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Apr 18 21:11:11 ubuntu-4gb-nbg1-17 sshd[1189814]: Invalid user ubnt from 24.97.253.246 port 57981
+Apr 18 21:11:11 ubuntu-4gb-nbg1-17 sshd[1189814]: pam_unix(sshd:auth): check pass; user unknown
+Apr 18 21:11:11 ubuntu-4gb-nbg1-17 sshd[1189814]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=24.97.253.246
+Apr 18 21:11:12 ubuntu-4gb-nbg1-17 sshd[1189814]: Failed password for invalid user ubnt from 24.97.253.246 port 57981 ssh2
+Apr 18 21:11:36 ubuntu-4gb-nbg1-17 sshd[1190090]: Connection closed by 172.234.231.96 port 12654
+Apr 18 21:13:12 ubuntu-4gb-nbg1-17 sshd[1191027]: error: Protocol major versions differ: 2 vs. 1
+Apr 18 21:13:12 ubuntu-4gb-nbg1-17 sshd[1191027]: banner exchange: Connection from 172.234.231.96 port 3920: could not read protocol version
+Apr 18 21:13:13 ubuntu-4gb-nbg1-17 sshd[1191028]: Unable to negotiate with 172.234.231.96 port 3936: no matching host key type found. Their offer: ssh-dss [preauth]
+Apr 18 21:13:13 ubuntu-4gb-nbg1-17 sshd[1191030]: Unable to negotiate with 172.234.231.96 port 3948: no matching host key type found. Their offer: ssh-rsa [preauth]
+Apr 18 21:13:14 ubuntu-4gb-nbg1-17 sshd[1191051]: error: kex_protocol_error: type 30 seq 1 [preauth]
+Apr 18 21:13:14 ubuntu-4gb-nbg1-17 sshd[1191051]: Connection closed by 172.234.231.96 port 37482 [preauth]
+Apr 18 21:13:15 ubuntu-4gb-nbg1-17 sshd[1191053]: Unable to negotiate with 172.234.231.96 port 37484: no matching host key type found. Their offer: ecdsa-sha2-nistp384 [preauth]
+Apr 18 21:13:15 ubuntu-4gb-nbg1-17 sshd[1191055]: Unable to negotiate with 172.234.231.96 port 37488: no matching host key type found. Their offer: ecdsa-sha2-nistp521 [preauth]
+Apr 18 21:13:16 ubuntu-4gb-nbg1-17 sshd[1191057]: error: kex_protocol_error: type 30 seq 1 [preauth]
+Apr 18 21:13:16 ubuntu-4gb-nbg1-17 sshd[1191057]: Connection closed by 172.234.231.96 port 37494 [preauth]
+Apr 18 21:15:01 ubuntu-4gb-nbg1-17 CRON[1192090]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 21:15:01 ubuntu-4gb-nbg1-17 CRON[1192091]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Apr 18 21:15:01 ubuntu-4gb-nbg1-17 CRON[1192090]: pam_unix(cron:session): session closed for user root
+Apr 18 21:17:01 ubuntu-4gb-nbg1-17 CRON[1193219]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 21:17:01 ubuntu-4gb-nbg1-17 CRON[1193220]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+Apr 18 21:17:01 ubuntu-4gb-nbg1-17 CRON[1193219]: pam_unix(cron:session): session closed for user root
+Apr 18 21:20:26 ubuntu-4gb-nbg1-17 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Apr 18 21:20:26 ubuntu-4gb-nbg1-17 systemd[1]: sysstat-collect.service: Deactivated successfully.
+Apr 18 21:20:26 ubuntu-4gb-nbg1-17 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Apr 18 21:24:44 ubuntu-4gb-nbg1-17 sshd[1197628]: Invalid user user from 109.126.41.234 port 57538
+Apr 18 21:24:44 ubuntu-4gb-nbg1-17 sshd[1197628]: pam_unix(sshd:auth): check pass; user unknown
+Apr 18 21:24:44 ubuntu-4gb-nbg1-17 sshd[1197628]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=109.126.41.234
+Apr 18 21:24:46 ubuntu-4gb-nbg1-17 sshd[1197628]: Failed password for invalid user user from 109.126.41.234 port 57538 ssh2
+Apr 18 21:24:47 ubuntu-4gb-nbg1-17 sshd[1197628]: Connection closed by invalid user user 109.126.41.234 port 57538 [preauth]
+Apr 18 21:25:01 ubuntu-4gb-nbg1-17 CRON[1197804]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 21:25:01 ubuntu-4gb-nbg1-17 CRON[1197805]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Apr 18 21:25:01 ubuntu-4gb-nbg1-17 CRON[1197804]: pam_unix(cron:session): session closed for user root
+Apr 18 21:30:33 ubuntu-4gb-nbg1-17 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Apr 18 21:30:33 ubuntu-4gb-nbg1-17 systemd[1]: sysstat-collect.service: Deactivated successfully.
+Apr 18 21:30:33 ubuntu-4gb-nbg1-17 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Apr 18 21:33:12 ubuntu-4gb-nbg1-17 sshd[1202501]: Invalid user ubnt from 49.124.151.40 port 50548
+Apr 18 21:33:12 ubuntu-4gb-nbg1-17 sshd[1202501]: pam_unix(sshd:auth): check pass; user unknown
+Apr 18 21:33:12 ubuntu-4gb-nbg1-17 sshd[1202501]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=49.124.151.40
+Apr 18 21:33:14 ubuntu-4gb-nbg1-17 sshd[1202501]: Failed password for invalid user ubnt from 49.124.151.40 port 50548 ssh2
+Apr 18 21:33:16 ubuntu-4gb-nbg1-17 sshd[1202501]: Connection closed by invalid user ubnt 49.124.151.40 port 50548 [preauth]
+Apr 18 21:33:32 ubuntu-4gb-nbg1-17 sshd[1202698]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=24.207.66.154  user=root
+Apr 18 21:33:34 ubuntu-4gb-nbg1-17 sshd[1202698]: Failed password for root from 24.207.66.154 port 32868 ssh2
+Apr 18 21:33:36 ubuntu-4gb-nbg1-17 sshd[1202698]: Connection closed by authenticating user root 24.207.66.154 port 32868 [preauth]
+Apr 18 21:35:01 ubuntu-4gb-nbg1-17 CRON[1203583]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 21:35:01 ubuntu-4gb-nbg1-17 CRON[1203584]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Apr 18 21:35:01 ubuntu-4gb-nbg1-17 CRON[1203583]: pam_unix(cron:session): session closed for user root
+Apr 18 21:37:02 ubuntu-4gb-nbg1-17 sshd[1204733]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=103.147.211.2  user=root
+Apr 18 21:37:04 ubuntu-4gb-nbg1-17 sshd[1204733]: Failed password for root from 103.147.211.2 port 39382 ssh2
+Apr 18 21:37:05 ubuntu-4gb-nbg1-17 sshd[1204733]: Received disconnect from 103.147.211.2 port 39382:11: Bye Bye [preauth]
+Apr 18 21:37:05 ubuntu-4gb-nbg1-17 sshd[1204733]: Disconnected from authenticating user root 103.147.211.2 port 39382 [preauth]
+Apr 18 21:38:31 ubuntu-4gb-nbg1-17 sshd[1205568]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=200.155.66.2  user=root
+Apr 18 21:38:33 ubuntu-4gb-nbg1-17 sshd[1205568]: Failed password for root from 200.155.66.2 port 37304 ssh2
+Apr 18 21:38:34 ubuntu-4gb-nbg1-17 sshd[1205568]: Received disconnect from 200.155.66.2 port 37304:11: Bye Bye [preauth]
+Apr 18 21:38:34 ubuntu-4gb-nbg1-17 sshd[1205568]: Disconnected from authenticating user root 200.155.66.2 port 37304 [preauth]
+Apr 18 21:40:10 ubuntu-4gb-nbg1-17 sshd[1206519]: Invalid user newuser from 103.147.211.2 port 44588
+Apr 18 21:40:10 ubuntu-4gb-nbg1-17 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Apr 18 21:40:10 ubuntu-4gb-nbg1-17 sshd[1206519]: pam_unix(sshd:auth): check pass; user unknown
+Apr 18 21:40:10 ubuntu-4gb-nbg1-17 sshd[1206519]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=103.147.211.2
+Apr 18 21:40:10 ubuntu-4gb-nbg1-17 systemd[1]: sysstat-collect.service: Deactivated successfully.
+Apr 18 21:40:10 ubuntu-4gb-nbg1-17 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Apr 18 21:40:12 ubuntu-4gb-nbg1-17 sshd[1206519]: Failed password for invalid user newuser from 103.147.211.2 port 44588 ssh2
+Apr 18 21:40:52 ubuntu-4gb-nbg1-17 sshd[1206940]: Invalid user teamspeak from 200.155.66.2 port 39534
+Apr 18 21:40:52 ubuntu-4gb-nbg1-17 sshd[1206940]: pam_unix(sshd:auth): check pass; user unknown
+Apr 18 21:40:52 ubuntu-4gb-nbg1-17 sshd[1206940]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=200.155.66.2
+Apr 18 21:40:55 ubuntu-4gb-nbg1-17 sshd[1206940]: Failed password for invalid user teamspeak from 200.155.66.2 port 39534 ssh2
+Apr 18 21:40:58 ubuntu-4gb-nbg1-17 sshd[1206981]: Invalid user default from 220.178.246.43 port 57215
+Apr 18 21:40:58 ubuntu-4gb-nbg1-17 sshd[1206981]: pam_unix(sshd:auth): check pass; user unknown
+Apr 18 21:40:58 ubuntu-4gb-nbg1-17 sshd[1206981]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=220.178.246.43
+Apr 18 21:41:00 ubuntu-4gb-nbg1-17 sshd[1206981]: Failed password for invalid user default from 220.178.246.43 port 57215 ssh2
+Apr 18 21:41:01 ubuntu-4gb-nbg1-17 sshd[1206981]: Connection closed by invalid user default 220.178.246.43 port 57215 [preauth]
+Apr 18 21:45:01 ubuntu-4gb-nbg1-17 CRON[1209349]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 21:45:01 ubuntu-4gb-nbg1-17 CRON[1209350]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Apr 18 21:45:01 ubuntu-4gb-nbg1-17 CRON[1209349]: pam_unix(cron:session): session closed for user root
+Apr 18 21:50:33 ubuntu-4gb-nbg1-17 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Apr 18 21:50:33 ubuntu-4gb-nbg1-17 systemd[1]: sysstat-collect.service: Deactivated successfully.
+Apr 18 21:50:33 ubuntu-4gb-nbg1-17 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Apr 18 21:51:34 ubuntu-4gb-nbg1-17 sshd[1213113]: Connection closed by 47.106.252.152 port 33036
+Apr 18 21:53:59 ubuntu-4gb-nbg1-17 sshd[1214508]: Connection closed by 183.171.236.87 port 60864
+Apr 18 21:54:11 ubuntu-4gb-nbg1-17 sshd[1214607]: Connection closed by 119.148.49.82 port 48291
+Apr 18 21:55:01 ubuntu-4gb-nbg1-17 CRON[1215095]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 21:55:01 ubuntu-4gb-nbg1-17 CRON[1215096]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Apr 18 21:55:01 ubuntu-4gb-nbg1-17 CRON[1215095]: pam_unix(cron:session): session closed for user root
+Apr 18 21:56:33 ubuntu-4gb-nbg1-17 systemd[1]: Starting motd-news.service - Message of the Day...
+Apr 18 21:56:34 ubuntu-4gb-nbg1-17 50-motd-news[1216002]:  * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+Apr 18 21:56:34 ubuntu-4gb-nbg1-17 50-motd-news[1216002]:    just raised the bar for easy, resilient and secure K8s cluster deployment.
+Apr 18 21:56:34 ubuntu-4gb-nbg1-17 50-motd-news[1216002]:    https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+Apr 18 21:56:34 ubuntu-4gb-nbg1-17 systemd[1]: motd-news.service: Deactivated successfully.
+Apr 18 21:56:34 ubuntu-4gb-nbg1-17 systemd[1]: Finished motd-news.service - Message of the Day.
+Apr 18 22:00:06 ubuntu-4gb-nbg1-17 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Apr 18 22:00:06 ubuntu-4gb-nbg1-17 systemd[1]: sysstat-collect.service: Deactivated successfully.
+Apr 18 22:00:06 ubuntu-4gb-nbg1-17 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Apr 18 22:03:41 ubuntu-4gb-nbg1-17 sshd[1220072]: Invalid user ubnt from 14.54.22.11 port 17038
+Apr 18 22:03:41 ubuntu-4gb-nbg1-17 sshd[1220072]: pam_unix(sshd:auth): check pass; user unknown
+Apr 18 22:03:41 ubuntu-4gb-nbg1-17 sshd[1220072]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=14.54.22.11
+Apr 18 22:03:42 ubuntu-4gb-nbg1-17 sshd[1220072]: Failed password for invalid user ubnt from 14.54.22.11 port 17038 ssh2
+Apr 18 22:03:43 ubuntu-4gb-nbg1-17 sshd[1220072]: Connection closed by invalid user ubnt 14.54.22.11 port 17038 [preauth]
+Apr 18 22:04:39 ubuntu-4gb-nbg1-17 sshd[1220658]: error: kex_protocol_error: type 20 seq 2 [preauth]
+Apr 18 22:04:39 ubuntu-4gb-nbg1-17 sshd[1220658]: error: kex_protocol_error: type 30 seq 3 [preauth]
+Apr 18 22:04:40 ubuntu-4gb-nbg1-17 sshd[1220658]: error: kex_protocol_error: type 20 seq 4 [preauth]
+Apr 18 22:04:40 ubuntu-4gb-nbg1-17 sshd[1220658]: error: kex_protocol_error: type 30 seq 5 [preauth]
+Apr 18 22:04:42 ubuntu-4gb-nbg1-17 sshd[1220658]: error: kex_protocol_error: type 20 seq 6 [preauth]
+Apr 18 22:04:42 ubuntu-4gb-nbg1-17 sshd[1220658]: error: kex_protocol_error: type 30 seq 7 [preauth]
+Apr 18 22:05:01 ubuntu-4gb-nbg1-17 CRON[1220891]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 22:05:01 ubuntu-4gb-nbg1-17 CRON[1220892]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Apr 18 22:05:01 ubuntu-4gb-nbg1-17 CRON[1220891]: pam_unix(cron:session): session closed for user root
+Apr 18 22:05:10 ubuntu-4gb-nbg1-17 sshd[1220658]: Connection reset by 89.187.80.32 port 6102 [preauth]
+Apr 18 22:08:01 ubuntu-4gb-nbg1-17 sshd[1222621]: Connection closed by 103.183.13.42 port 25527
+Apr 18 22:10:33 ubuntu-4gb-nbg1-17 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Apr 18 22:10:33 ubuntu-4gb-nbg1-17 systemd[1]: sysstat-collect.service: Deactivated successfully.
+Apr 18 22:10:33 ubuntu-4gb-nbg1-17 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Apr 18 22:15:01 ubuntu-4gb-nbg1-17 CRON[1226642]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 22:15:01 ubuntu-4gb-nbg1-17 CRON[1226643]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Apr 18 22:15:01 ubuntu-4gb-nbg1-17 CRON[1226642]: pam_unix(cron:session): session closed for user root
+Apr 18 22:17:01 ubuntu-4gb-nbg1-17 CRON[1227824]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 22:17:01 ubuntu-4gb-nbg1-17 CRON[1227825]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+Apr 18 22:17:01 ubuntu-4gb-nbg1-17 CRON[1227824]: pam_unix(cron:session): session closed for user root
+Apr 18 22:20:33 ubuntu-4gb-nbg1-17 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Apr 18 22:20:33 ubuntu-4gb-nbg1-17 systemd[1]: sysstat-collect.service: Deactivated successfully.
+Apr 18 22:20:33 ubuntu-4gb-nbg1-17 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Apr 18 22:22:18 ubuntu-4gb-nbg1-17 sshd[1230811]: Invalid user support from 101.13.4.124 port 33122
+Apr 18 22:22:18 ubuntu-4gb-nbg1-17 sshd[1230811]: pam_unix(sshd:auth): check pass; user unknown
+Apr 18 22:22:18 ubuntu-4gb-nbg1-17 sshd[1230811]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=101.13.4.124
+Apr 18 22:22:20 ubuntu-4gb-nbg1-17 sshd[1230811]: Failed password for invalid user support from 101.13.4.124 port 33122 ssh2
+Apr 18 22:22:22 ubuntu-4gb-nbg1-17 sshd[1230811]: Connection closed by invalid user support 101.13.4.124 port 33122 [preauth]
+Apr 18 22:25:01 ubuntu-4gb-nbg1-17 CRON[1232393]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 22:25:01 ubuntu-4gb-nbg1-17 CRON[1232394]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Apr 18 22:25:01 ubuntu-4gb-nbg1-17 CRON[1232393]: pam_unix(cron:session): session closed for user root
+Apr 18 22:26:18 ubuntu-4gb-nbg1-17 sshd[1233091]: Connection closed by 61.153.104.6 port 58278
+Apr 18 22:30:26 ubuntu-4gb-nbg1-17 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Apr 18 22:30:26 ubuntu-4gb-nbg1-17 systemd[1]: sysstat-collect.service: Deactivated successfully.
+Apr 18 22:30:26 ubuntu-4gb-nbg1-17 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Apr 18 22:34:38 ubuntu-4gb-nbg1-17 sshd[1237896]: Invalid user test from 37.238.45.202 port 55678
+Apr 18 22:34:38 ubuntu-4gb-nbg1-17 sshd[1237896]: pam_unix(sshd:auth): check pass; user unknown
+Apr 18 22:34:38 ubuntu-4gb-nbg1-17 sshd[1237896]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=37.238.45.202
+Apr 18 22:34:40 ubuntu-4gb-nbg1-17 sshd[1237896]: Failed password for invalid user test from 37.238.45.202 port 55678 ssh2
+Apr 18 22:34:41 ubuntu-4gb-nbg1-17 sshd[1237896]: Connection closed by invalid user test 37.238.45.202 port 55678 [preauth]
+Apr 18 22:35:01 ubuntu-4gb-nbg1-17 CRON[1238135]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 22:35:01 ubuntu-4gb-nbg1-17 CRON[1238136]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Apr 18 22:35:01 ubuntu-4gb-nbg1-17 CRON[1238135]: pam_unix(cron:session): session closed for user root
+Apr 18 22:39:53 ubuntu-4gb-nbg1-17 sshd[1240920]: Invalid user test3 from 49.206.201.253 port 58120
+Apr 18 22:39:53 ubuntu-4gb-nbg1-17 sshd[1240920]: pam_unix(sshd:auth): check pass; user unknown
+Apr 18 22:39:53 ubuntu-4gb-nbg1-17 sshd[1240920]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=49.206.201.253
+Apr 18 22:39:54 ubuntu-4gb-nbg1-17 sshd[1240920]: Failed password for invalid user test3 from 49.206.201.253 port 58120 ssh2
+Apr 18 22:39:55 ubuntu-4gb-nbg1-17 sshd[1240920]: Connection closed by invalid user test3 49.206.201.253 port 58120 [preauth]
+Apr 18 22:40:33 ubuntu-4gb-nbg1-17 systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Apr 18 22:40:33 ubuntu-4gb-nbg1-17 systemd[1]: sysstat-collect.service: Deactivated successfully.
+Apr 18 22:40:33 ubuntu-4gb-nbg1-17 systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Apr 18 22:44:02 ubuntu-4gb-nbg1-17 sshd[1243281]: Connection reset by 205.210.31.57 port 64566 [preauth]
+Apr 18 22:45:01 ubuntu-4gb-nbg1-17 CRON[1243885]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 22:45:01 ubuntu-4gb-nbg1-17 CRON[1243886]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Apr 18 22:45:01 ubuntu-4gb-nbg1-17 CRON[1243885]: pam_unix(cron:session): session closed for user root
+Apr 18 22:48:38 ubuntu-4gb-nbg1-17 sshd[1245963]: Connection closed by 52.154.21.50 port 37905 [preauth]
+Apr 18 22:48:38 ubuntu-4gb-nbg1-17 sshd[1245964]: Connection closed by 52.154.21.50 port 37904 [preauth]
+Apr 18 22:48:38 ubuntu-4gb-nbg1-17 sshd[1245965]: Connection closed by 52.154.21.50 port 37907 [preauth]
+Apr 18 22:48:39 ubuntu-4gb-nbg1-17 sshd[1245968]: Unable to negotiate with 52.154.21.50 port 37908: no matching host key type found. Their offer: sk-ecdsa-sha2-nistp256@openssh.com [preauth]
+Apr 18 22:48:39 ubuntu-4gb-nbg1-17 sshd[1245967]: Unable to negotiate with 52.154.21.50 port 37906: no matching host key type found. Their offer: sk-ssh-ed25519@openssh.com [preauth]
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 sshd[1245993]: Accepted publickey for root from 52.154.21.50 port 37910 ssh2: ED25519 SHA256:IN1KIAB3hvi6OF6Xt+vZ6Yhl2uvux9S1bOD5+E2L9FU
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 sshd[1245993]: pam_unix(sshd:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1]: Created slice user-0.slice - User Slice of UID 0.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1]: Starting user-runtime-dir@0.service - User Runtime Directory /run/user/0...
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd-logind[828]: New session 9072 of user root.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1]: Finished user-runtime-dir@0.service - User Runtime Directory /run/user/0.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1]: Starting user@0.service - User Manager for UID 0...
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 (systemd)[1245997]: pam_unix(systemd-user:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Queued start job for default target default.target.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Created slice app.slice - User Application Slice.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Started launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Reached target paths.target - Paths.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Reached target timers.target - Timers.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Starting dbus.socket - D-Bus User Message Bus Socket...
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Starting gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Reached target sockets.target - Sockets.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Reached target basic.target - Basic System.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Reached target default.target - Main User Target.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1245997]: Startup finished in 158ms.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1]: Started user@0.service - User Manager for UID 0.
+Apr 18 22:48:40 ubuntu-4gb-nbg1-17 systemd[1]: Started session-9072.scope - Session 9072 of User root.
+Apr 18 22:48:41 ubuntu-4gb-nbg1-17 sshd[1245993]: Received disconnect from 52.154.21.50 port 37910:11: disconnected by user
+Apr 18 22:48:41 ubuntu-4gb-nbg1-17 sshd[1245993]: Disconnected from user root 52.154.21.50 port 37910
+Apr 18 22:48:41 ubuntu-4gb-nbg1-17 sshd[1245993]: pam_unix(sshd:session): session closed for user root
+Apr 18 22:48:41 ubuntu-4gb-nbg1-17 systemd[1]: session-9072.scope: Deactivated successfully.
+Apr 18 22:48:41 ubuntu-4gb-nbg1-17 systemd-logind[828]: Session 9072 logged out. Waiting for processes to exit.
+Apr 18 22:48:41 ubuntu-4gb-nbg1-17 systemd-logind[828]: Removed session 9072.
+Apr 18 22:48:42 ubuntu-4gb-nbg1-17 sshd[1246100]: Accepted publickey for root from 52.154.21.50 port 37909 ssh2: ED25519 SHA256:IN1KIAB3hvi6OF6Xt+vZ6Yhl2uvux9S1bOD5+E2L9FU
+Apr 18 22:48:42 ubuntu-4gb-nbg1-17 sshd[1246100]: pam_unix(sshd:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 22:48:42 ubuntu-4gb-nbg1-17 systemd-logind[828]: New session 9074 of user root.
+Apr 18 22:48:42 ubuntu-4gb-nbg1-17 systemd[1]: Started session-9074.scope - Session 9074 of User root.
+Apr 18 22:48:43 ubuntu-4gb-nbg1-17 sshd[1246100]: Received disconnect from 52.154.21.50 port 37909:11: disconnected by user
+Apr 18 22:48:43 ubuntu-4gb-nbg1-17 sshd[1246100]: Disconnected from user root 52.154.21.50 port 37909
+Apr 18 22:48:43 ubuntu-4gb-nbg1-17 sshd[1246100]: pam_unix(sshd:session): session closed for user root
+Apr 18 22:48:43 ubuntu-4gb-nbg1-17 systemd[1]: session-9074.scope: Deactivated successfully.
+Apr 18 22:48:43 ubuntu-4gb-nbg1-17 systemd-logind[828]: Session 9074 logged out. Waiting for processes to exit.
+Apr 18 22:48:43 ubuntu-4gb-nbg1-17 systemd-logind[828]: Removed session 9074.
+Apr 18 22:48:44 ubuntu-4gb-nbg1-17 sshd[1246198]: Accepted publickey for root from 52.154.21.50 port 37911 ssh2: ED25519 SHA256:IN1KIAB3hvi6OF6Xt+vZ6Yhl2uvux9S1bOD5+E2L9FU
+Apr 18 22:48:44 ubuntu-4gb-nbg1-17 sshd[1246198]: pam_unix(sshd:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 22:48:44 ubuntu-4gb-nbg1-17 systemd-logind[828]: New session 9075 of user root.
+Apr 18 22:48:44 ubuntu-4gb-nbg1-17 systemd[1]: Started session-9075.scope - Session 9075 of User root.
+Apr 18 22:48:45 ubuntu-4gb-nbg1-17 sshd[1246198]: Received disconnect from 52.154.21.50 port 37911:11: disconnected by user
+Apr 18 22:48:45 ubuntu-4gb-nbg1-17 sshd[1246198]: Disconnected from user root 52.154.21.50 port 37911
+Apr 18 22:48:45 ubuntu-4gb-nbg1-17 sshd[1246198]: pam_unix(sshd:session): session closed for user root
+Apr 18 22:48:45 ubuntu-4gb-nbg1-17 systemd[1]: session-9075.scope: Deactivated successfully.
+Apr 18 22:48:45 ubuntu-4gb-nbg1-17 systemd-logind[828]: Session 9075 logged out. Waiting for processes to exit.
+Apr 18 22:48:45 ubuntu-4gb-nbg1-17 systemd-logind[828]: Removed session 9075.
+Apr 18 22:48:46 ubuntu-4gb-nbg1-17 sshd[1246257]: Accepted publickey for root from 52.154.21.50 port 37904 ssh2: ED25519 SHA256:IN1KIAB3hvi6OF6Xt+vZ6Yhl2uvux9S1bOD5+E2L9FU
+Apr 18 22:48:46 ubuntu-4gb-nbg1-17 sshd[1246257]: pam_unix(sshd:session): session opened for user root(uid=0) by root(uid=0)
+Apr 18 22:48:46 ubuntu-4gb-nbg1-17 systemd-logind[828]: New session 9076 of user root.
+Apr 18 22:48:46 ubuntu-4gb-nbg1-17 systemd[1]: Started session-9076.scope - Session 9076 of User root.

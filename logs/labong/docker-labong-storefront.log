@@ -1,0 +1,45 @@
+Error: MISSING_MESSAGE: vision.color.dunkelgrau (de)
+    at <unknown> (.next/server/chunks/ssr/src_12bcb1a0._.js:1:15854)
+    at Array.map (<anonymous>)
+    at s (.next/server/chunks/ssr/src_12bcb1a0._.js:1:15693) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'vision.color.dunkelgrau (de)'
+}
+Error: MISSING_MESSAGE: vision.color.hellgrau (de)
+    at <unknown> (.next/server/chunks/ssr/src_12bcb1a0._.js:1:15854)
+    at Array.map (<anonymous>)
+    at s (.next/server/chunks/ssr/src_12bcb1a0._.js:1:15693) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'vision.color.hellgrau (de)'
+}
+Error: MISSING_MESSAGE: technical.patternMatch.53_cm_(gerade) (de)
+    at F.i.tLabel (.next/server/chunks/ssr/src_12bcb1a0._.js:1:20047)
+    at F (.next/server/chunks/ssr/src_12bcb1a0._.js:1:22027) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'technical.patternMatch.53_cm_(gerade) (de)'
+}
+Error: MISSING_MESSAGE: technical.patternMatch.53_cm_(gerade) (de)
+    at F.i.tLabel (.next/server/chunks/ssr/src_12bcb1a0._.js:1:20047)
+    at F (.next/server/chunks/ssr/src_12bcb1a0._.js:1:22027) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'technical.patternMatch.53_cm_(gerade) (de)'
+}
+Error: MISSING_MESSAGE: vision.color.salbeigrün (de)
+    at <unknown> (.next/server/chunks/ssr/src_12bcb1a0._.js:1:15854)
+    at Array.map (<anonymous>)
+    at s (.next/server/chunks/ssr/src_12bcb1a0._.js:1:15693) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'vision.color.salbeigrün (de)'
+}
+Error: MISSING_MESSAGE: technical.patternMatch.53_cm_(gerade) (de)
+    at F.i.tLabel (.next/server/chunks/ssr/src_12bcb1a0._.js:1:20047)
+    at F (.next/server/chunks/ssr/src_12bcb1a0._.js:1:22027) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'technical.patternMatch.53_cm_(gerade) (de)'
+}
+Error: MISSING_MESSAGE: technical.patternMatch.53_cm_(gerade) (de)
+    at F.i.tLabel (.next/server/chunks/ssr/src_12bcb1a0._.js:1:20047)
+    at F (.next/server/chunks/ssr/src_12bcb1a0._.js:1:22027) {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'technical.patternMatch.53_cm_(gerade) (de)'
+}
