@@ -1,0 +1,885 @@
+2026-04-25 20:32:59 [info     ] analysis_quota_incremented     count=85 month=2026-04 tenant_id=d0a50c0a-ccef-482a-a706-2524063eff92
+2026-04-25 20:32:59 [info     ] ingest.email_processed         documents=1 rejected=0 sender=noreply@maileu.cloud.scansnap.com tenant_id=d0a50c0a-ccef-482a-a706-2524063eff92
+2026-04-25 20:32:59 [info     ] ingest.webhook_processed       result_status=ok
+2026-04-25 20:32:59 [info     ] request_timing                 duration_ms=95.0 method=POST path=/v1/ingest/email status=200
+INFO:     172.19.0.4:58100 - "POST /v1/ingest/email HTTP/1.1" 200 OK
+2026-04-25 20:33:06 [info     ] analysis_quota_incremented     count=86 month=2026-04 tenant_id=d0a50c0a-ccef-482a-a706-2524063eff92
+2026-04-25 20:33:06 [info     ] ingest.email_processed         documents=1 rejected=0 sender=noreply@maileu.cloud.scansnap.com tenant_id=d0a50c0a-ccef-482a-a706-2524063eff92
+2026-04-25 20:33:06 [info     ] ingest.webhook_processed       result_status=ok
+2026-04-25 20:33:06 [info     ] request_timing                 duration_ms=70.9 method=POST path=/v1/ingest/email status=200
+INFO:     172.19.0.4:49980 - "POST /v1/ingest/email HTTP/1.1" 200 OK
+2026-04-25 20:33:46 [info     ] memory_extraction_complete     document_id=487ffb24-c248-4970-b833-f9fcec7cf3ec entities=2 tenant_id=d0a50c0a-ccef-482a-a706-2524063eff92
+2026-04-25 20:33:46 [debug    ] auto_buchung_no_pattern        document_id=487ffb24-c248-4970-b833-f9fcec7cf3ec sender='Amtsgericht Lemgo'
+2026-04-25 20:33:46 [info     ] duplicate_detection_completed  candidates=0 confirmed=0 document_id=487ffb24-c248-4970-b833-f9fcec7cf3ec
+2026-04-25 20:33:46 [info     ] document.analysis_completed    confidence=0.97 cost_usd=0.15508 document_id=487ffb24-c248-4970-b833-f9fcec7cf3ec duration_ms=39720 effort=max input_tokens=16721 model=claude-opus-4-7 output_tokens=2859
+2026-04-25 20:33:46 [info     ] memory_extraction_complete     document_id=41bac4a3-fd17-44e6-be35-f661b02aa3db entities=2 tenant_id=d0a50c0a-ccef-482a-a706-2524063eff92
+2026-04-25 20:33:46 [debug    ] auto_buchung_no_pattern        document_id=41bac4a3-fd17-44e6-be35-f661b02aa3db sender='Amtsgericht Lemgo'
+2026-04-25 20:33:46 [info     ] duplicate_detection_completed  candidates=0 confirmed=0 document_id=41bac4a3-fd17-44e6-be35-f661b02aa3db
+2026-04-25 20:33:46 [info     ] document.analysis_completed    confidence=0.97 cost_usd=0.16632 document_id=41bac4a3-fd17-44e6-be35-f661b02aa3db duration_ms=46799 effort=max input_tokens=14829 model=claude-opus-4-7 output_tokens=3687
+2026-04-25 20:33:51 [info     ] wiki_llm_compile_entity        entity_name='LaBong GmbH' entity_type=organization input_tokens=1540 output_tokens=587
+2026-04-25 20:33:53 [info     ] wiki_llm_compile_entity        entity_name='FabStack GmbH' entity_type=organization input_tokens=2122 output_tokens=743
+2026-04-25 20:36:37 [info     ] request_timing                 duration_ms=1.4 method=GET path=/v1/analysis/quota status=401
+INFO:     172.19.0.4:55356 - "GET /v1/analysis/quota HTTP/1.1" 401 Unauthorized
+2026-04-25 20:36:37 [info     ] request_timing                 duration_ms=13.7 method=POST path=/v1/auth/refresh status=401
+INFO:     172.19.0.4:55356 - "POST /v1/auth/refresh HTTP/1.1" 401 Unauthorized
+2026-04-25 20:36:40 [info     ] request_timing                 duration_ms=3.8 method=POST path=/v1/auth/login status=400
+INFO:     172.19.0.4:55356 - "POST /v1/auth/login HTTP/1.1" 400 Bad Request
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=648.7 method=POST path=/v1/auth/login status=200
+INFO:     172.19.0.4:55356 - "POST /v1/auth/login HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=4.6 method=GET path=/v1/analysis/quota status=200
+INFO:     172.19.0.4:55356 - "GET /v1/analysis/quota HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=17.8 method=GET path=/v1/settings/persons-mode status=200
+INFO:     172.19.0.4:55356 - "GET /v1/settings/persons-mode HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=20.1 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:55358 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=19.4 method=GET path=/v1/settings/properties-mode status=200
+INFO:     172.19.0.4:55364 - "GET /v1/settings/properties-mode HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=35.4 method=GET path=/v1/settings/business-mode status=200
+INFO:     172.19.0.4:55392 - "GET /v1/settings/business-mode HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=35.6 method=GET path=/v1/actions status=200
+INFO:     172.19.0.4:55396 - "GET /v1/actions HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=31.5 method=GET path=/v1/segments status=200
+INFO:     172.19.0.4:55410 - "GET /v1/segments HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=29.1 method=GET path=/v1/onboarding/status status=200
+INFO:     172.19.0.4:55426 - "GET /v1/onboarding/status HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=38.3 method=GET path=/v1/insights status=200
+INFO:     172.19.0.4:55404 - "GET /v1/insights HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=47.7 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:55380 - "GET /v1/documents?limit=10&pinned=true&sort=date_desc HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=56.0 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:55374 - "GET /v1/documents?limit=5&sort=created_desc HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=51.8 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:55400 - "GET /v1/documents?sort=recent&limit=6 HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=8.4 method=GET path=/v1/persons/deadlines status=200
+INFO:     172.19.0.4:55404 - "GET /v1/persons/deadlines?days=30 HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=22.4 method=GET path=/v1/documents/25ae400d-e18c-4ed2-b8af-e0ccdda176a3/thumbnail status=200
+INFO:     172.19.0.4:55380 - "GET /v1/documents/25ae400d-e18c-4ed2-b8af-e0ccdda176a3/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=23.4 method=GET path=/v1/documents/4e4c2458-0121-4e64-a98a-ded6b3fb3e3c/thumbnail status=200
+INFO:     172.19.0.4:55410 - "GET /v1/documents/4e4c2458-0121-4e64-a98a-ded6b3fb3e3c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=25.6 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/thumbnail status=200
+INFO:     172.19.0.4:55374 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=28.9 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/thumbnail status=200
+INFO:     172.19.0.4:55404 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:44 [info     ] request_timing                 duration_ms=32.5 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/thumbnail status=200
+INFO:     172.19.0.4:55400 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:46 [info     ] request_timing                 duration_ms=4.1 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:55400 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:36:47 [info     ] request_timing                 duration_ms=31.9 method=GET path=/v1/categories status=200
+INFO:     172.19.0.4:55400 - "GET /v1/categories HTTP/1.1" 200 OK
+2026-04-25 20:36:47 [info     ] request_timing                 duration_ms=37.7 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:55374 - "GET /v1/documents?status=uploaded&limit=200&sort=created_asc HTTP/1.1" 200 OK
+2026-04-25 20:36:47 [info     ] request_timing                 duration_ms=46.4 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:55380 - "GET /v1/documents?status=analyzed&limit=200&sort=created_asc HTTP/1.1" 200 OK
+2026-04-25 20:36:47 [info     ] request_timing                 duration_ms=46.8 method=GET path=/v1/properties status=200
+INFO:     172.19.0.4:55410 - "GET /v1/properties HTTP/1.1" 200 OK
+2026-04-25 20:36:47 [info     ] request_timing                 duration_ms=59.9 method=GET path=/v1/businesses status=200
+INFO:     172.19.0.4:55404 - "GET /v1/businesses HTTP/1.1" 200 OK
+2026-04-25 20:36:47 [info     ] request_timing                 duration_ms=4.5 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/businesses status=200
+INFO:     172.19.0.4:55404 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/businesses HTTP/1.1" 200 OK
+2026-04-25 20:36:47 [info     ] request_timing                 duration_ms=4.5 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/businesses status=200
+INFO:     172.19.0.4:55410 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/businesses HTTP/1.1" 200 OK
+2026-04-25 20:36:50 [info     ] request_timing                 duration_ms=5.1 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:55410 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=42.6 method=GET path=/v1/persons status=200
+INFO:     172.19.0.4:55410 - "GET /v1/persons HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=43.1 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:55404 - "GET /v1/documents?limit=24&sort=created_desc HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=14.3 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/thumbnail status=200
+INFO:     172.19.0.4:55404 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=14.7 method=GET path=/v1/documents/4e4c2458-0121-4e64-a98a-ded6b3fb3e3c/thumbnail status=200
+INFO:     172.19.0.4:55380 - "GET /v1/documents/4e4c2458-0121-4e64-a98a-ded6b3fb3e3c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=15.1 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/thumbnail status=200
+INFO:     172.19.0.4:55374 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=15.6 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/thumbnail status=200
+INFO:     172.19.0.4:55410 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=18.2 method=GET path=/v1/documents/25ae400d-e18c-4ed2-b8af-e0ccdda176a3/thumbnail status=200
+INFO:     172.19.0.4:55400 - "GET /v1/documents/25ae400d-e18c-4ed2-b8af-e0ccdda176a3/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=33.7 method=GET path=/v1/documents/df6441ec-5ada-4aa5-94be-a3cedf760489/thumbnail status=200
+INFO:     172.19.0.4:38900 - "GET /v1/documents/df6441ec-5ada-4aa5-94be-a3cedf760489/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=34.3 method=GET path=/v1/documents/b0a6428b-64cb-4c4e-a79e-5ceffd33c459/thumbnail status=200
+INFO:     172.19.0.4:38890 - "GET /v1/documents/b0a6428b-64cb-4c4e-a79e-5ceffd33c459/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=33.1 method=GET path=/v1/documents/8995a4a1-4dc2-49fe-a1b7-a560aa4090ef/thumbnail status=200
+INFO:     172.19.0.4:38904 - "GET /v1/documents/8995a4a1-4dc2-49fe-a1b7-a560aa4090ef/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=31.2 method=GET path=/v1/documents/f8562182-e071-4e7c-97af-8fc378af0178/thumbnail status=200
+INFO:     172.19.0.4:38908 - "GET /v1/documents/f8562182-e071-4e7c-97af-8fc378af0178/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=10.3 method=GET path=/v1/documents/83a2799f-72f6-48a8-bcc5-eebe516bc92c/thumbnail status=200
+INFO:     172.19.0.4:39002 - "GET /v1/documents/83a2799f-72f6-48a8-bcc5-eebe516bc92c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=9.1 method=GET path=/v1/documents/fe132674-33f8-4308-a0a0-16bb978c32af/thumbnail status=200
+INFO:     172.19.0.4:39012 - "GET /v1/documents/fe132674-33f8-4308-a0a0-16bb978c32af/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=29.6 method=GET path=/v1/documents/b1ae87f7-02d6-40db-a81d-385fab3f9b5c/thumbnail status=200
+INFO:     172.19.0.4:38932 - "GET /v1/documents/b1ae87f7-02d6-40db-a81d-385fab3f9b5c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=26.0 method=GET path=/v1/documents/dfb32cec-82c2-427d-8a60-f65b5699a2a7/thumbnail status=200
+INFO:     172.19.0.4:38948 - "GET /v1/documents/dfb32cec-82c2-427d-8a60-f65b5699a2a7/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=33.7 method=GET path=/v1/documents/f30231ee-ee8c-408f-b86a-ca2bc017c94b/thumbnail status=200
+INFO:     172.19.0.4:38922 - "GET /v1/documents/f30231ee-ee8c-408f-b86a-ca2bc017c94b/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=20.9 method=GET path=/v1/documents/1b18e72e-7a5b-4b74-85b3-ba9af691fa7f/thumbnail status=200
+INFO:     172.19.0.4:38964 - "GET /v1/documents/1b18e72e-7a5b-4b74-85b3-ba9af691fa7f/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=28.2 method=GET path=/v1/documents/1b639068-0a59-4a0a-b139-0ae65e09085e/thumbnail status=200
+INFO:     172.19.0.4:38952 - "GET /v1/documents/1b639068-0a59-4a0a-b139-0ae65e09085e/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=19.5 method=GET path=/v1/documents/194af9c2-3796-45bd-b5f8-fae6345eab3b/thumbnail status=200
+INFO:     172.19.0.4:38996 - "GET /v1/documents/194af9c2-3796-45bd-b5f8-fae6345eab3b/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=25.7 method=GET path=/v1/documents/a7da6887-1550-4378-9e56-e2e8caa2ffea/thumbnail status=200
+INFO:     172.19.0.4:38972 - "GET /v1/documents/a7da6887-1550-4378-9e56-e2e8caa2ffea/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=21.7 method=GET path=/v1/documents/34c55e9b-7140-490e-9b2a-b6e7b9381309/thumbnail status=200
+INFO:     172.19.0.4:38988 - "GET /v1/documents/34c55e9b-7140-490e-9b2a-b6e7b9381309/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:51 [info     ] request_timing                 duration_ms=17.2 method=GET path=/v1/documents/98180a85-5cc4-4133-a90c-7c2e96bd5c3e/thumbnail status=200
+INFO:     172.19.0.4:39024 - "GET /v1/documents/98180a85-5cc4-4133-a90c-7c2e96bd5c3e/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=33.8 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/properties status=200
+INFO:     172.19.0.4:38972 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/properties HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=36.4 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungen status=200
+INFO:     172.19.0.4:38948 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungen HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=38.5 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/conversations status=200
+INFO:     172.19.0.4:38952 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/conversations HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=40.4 method=GET path=/v1/analysis/quota status=200
+INFO:     172.19.0.4:38932 - "GET /v1/analysis/quota HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=40.8 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/persons status=200
+INFO:     172.19.0.4:38964 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/persons HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=53.6 method=GET path=/v1/wiki/articles status=200
+INFO:     172.19.0.4:38988 - "GET /v1/wiki/articles?document_id=41bac4a3-fd17-44e6-be35-f661b02aa3db HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=53.6 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/businesses status=200
+INFO:     172.19.0.4:38996 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/businesses HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=53.5 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungssaetze status=200
+INFO:     172.19.0.4:38922 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungssaetze HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=57.3 method=GET path=/v1/tags status=200
+INFO:     172.19.0.4:39024 - "GET /v1/tags HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=80.8 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db status=200
+INFO:     172.19.0.4:39012 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=11.1 method=GET path=/v1/kontenrahmen/skr03 status=200
+INFO:     172.19.0.4:39024 - "GET /v1/kontenrahmen/skr03 HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=112.7 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:39002 - "GET /v1/documents?limit=500&sort=created_desc HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=9.4 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/share-links status=200
+INFO:     172.19.0.4:39012 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/share-links HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=11.4 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/related status=200
+INFO:     172.19.0.4:39002 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/related?limit=5 HTTP/1.1" 200 OK
+2026-04-25 20:36:54 [info     ] request_timing                 duration_ms=17.5 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/files/21a2828d-ac40-446d-8366-6e3b8f3ae2d8/download status=200
+INFO:     172.19.0.4:39024 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/files/21a2828d-ac40-446d-8366-6e3b8f3ae2d8/download HTTP/1.1" 200 OK
+2026-04-25 20:37:12 [info     ] request_timing                 duration_ms=15.5 method=PATCH path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db status=200
+INFO:     172.19.0.4:43394 - "PATCH /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db HTTP/1.1" 200 OK
+2026-04-25 20:37:12 [info     ] request_timing                 duration_ms=12.2 method=GET path=/v1/analysis/quota status=200
+INFO:     172.19.0.4:43396 - "GET /v1/analysis/quota HTTP/1.1" 200 OK
+2026-04-25 20:37:12 [info     ] request_timing                 duration_ms=11.8 method=GET path=/v1/categories status=200
+INFO:     172.19.0.4:43410 - "GET /v1/categories HTTP/1.1" 200 OK
+2026-04-25 20:37:12 [info     ] request_timing                 duration_ms=42.5 method=GET path=/v1/tags status=200
+INFO:     172.19.0.4:43394 - "GET /v1/tags HTTP/1.1" 200 OK
+2026-04-25 20:37:12 [info     ] request_timing                 duration_ms=54.6 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db status=200
+INFO:     172.19.0.4:43416 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db HTTP/1.1" 200 OK
+2026-04-25 20:37:12 [info     ] request_timing                 duration_ms=7.1 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/related status=200
+INFO:     172.19.0.4:43394 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/related?limit=5 HTTP/1.1" 200 OK
+2026-04-25 20:37:12 [info     ] request_timing                 duration_ms=8.2 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/share-links status=200
+INFO:     172.19.0.4:43416 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/share-links HTTP/1.1" 200 OK
+2026-04-25 20:37:14 [info     ] request_timing                 duration_ms=4.6 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:43416 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=12.5 method=GET path=/v1/segments status=200
+INFO:     172.19.0.4:57942 - "GET /v1/segments HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=15.8 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/persons status=200
+INFO:     172.19.0.4:57928 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/persons HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=18.6 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/conversations status=200
+INFO:     172.19.0.4:57926 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/conversations HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=16.2 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungen status=200
+INFO:     172.19.0.4:57978 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungen HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=16.3 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/businesses status=200
+INFO:     172.19.0.4:57994 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/businesses HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=19.1 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/properties status=200
+INFO:     172.19.0.4:57964 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/properties HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=20.4 method=GET path=/v1/wiki/articles status=200
+INFO:     172.19.0.4:57948 - "GET /v1/wiki/articles?document_id=487ffb24-c248-4970-b833-f9fcec7cf3ec HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=16.3 method=GET path=/v1/analysis/quota status=200
+INFO:     172.19.0.4:58000 - "GET /v1/analysis/quota HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=20.6 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungssaetze status=200
+INFO:     172.19.0.4:57998 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungssaetze HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=54.7 method=GET path=/v1/properties status=200
+INFO:     172.19.0.4:57884 - "GET /v1/properties HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=7.6 method=GET path=/v1/kontenrahmen/skr03 status=200
+INFO:     172.19.0.4:57998 - "GET /v1/kontenrahmen/skr03 HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=45.5 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec status=200
+INFO:     172.19.0.4:58020 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=52.5 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:58036 - "GET /v1/documents?limit=500&sort=created_desc HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=74.8 method=GET path=/v1/persons status=200
+INFO:     172.19.0.4:57886 - "GET /v1/persons HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=84.4 method=GET path=/v1/businesses status=200
+INFO:     172.19.0.4:57910 - "GET /v1/businesses HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=4.7 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/related status=200
+INFO:     172.19.0.4:57910 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/related?limit=5 HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=4.9 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/share-links status=200
+INFO:     172.19.0.4:57886 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/share-links HTTP/1.1" 200 OK
+2026-04-25 20:37:25 [info     ] request_timing                 duration_ms=10.6 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/files/dd964e52-4dd9-44f8-8577-f090c36f1261/download status=200
+INFO:     172.19.0.4:58036 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/files/dd964e52-4dd9-44f8-8577-f090c36f1261/download HTTP/1.1" 200 OK
+2026-04-25 20:37:31 [info     ] request_timing                 duration_ms=17.2 method=PATCH path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec status=200
+INFO:     172.19.0.4:40358 - "PATCH /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec HTTP/1.1" 200 OK
+2026-04-25 20:37:31 [info     ] request_timing                 duration_ms=15.1 method=GET path=/v1/categories status=200
+INFO:     172.19.0.4:40358 - "GET /v1/categories HTTP/1.1" 200 OK
+2026-04-25 20:37:31 [info     ] request_timing                 duration_ms=18.1 method=GET path=/v1/analysis/quota status=200
+INFO:     172.19.0.4:40386 - "GET /v1/analysis/quota HTTP/1.1" 200 OK
+2026-04-25 20:37:31 [info     ] request_timing                 duration_ms=44.0 method=GET path=/v1/tags status=200
+INFO:     172.19.0.4:40374 - "GET /v1/tags HTTP/1.1" 200 OK
+2026-04-25 20:37:31 [info     ] request_timing                 duration_ms=50.3 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec status=200
+INFO:     172.19.0.4:40394 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec HTTP/1.1" 200 OK
+2026-04-25 20:37:31 [info     ] request_timing                 duration_ms=7.5 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/related status=200
+INFO:     172.19.0.4:40374 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/related?limit=5 HTTP/1.1" 200 OK
+2026-04-25 20:37:31 [info     ] request_timing                 duration_ms=8.6 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/share-links status=200
+INFO:     172.19.0.4:40394 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/share-links HTTP/1.1" 200 OK
+2026-04-25 20:37:43 [info     ] auto_buchung_from_regel        document_id=df1c6949-af3f-422a-97f4-58721ae33907 konto=4969
+2026-04-25 20:37:43 [info     ] auto_buchung_from_regel        document_id=cb18a155-8c03-4966-a560-53fdd0c1c1f8 konto=4969
+2026-04-25 20:37:43 [info     ] auto_buchung_from_regel        document_id=758776c6-a74d-4676-8225-55e9adcc8325 konto=4969
+2026-04-25 20:37:43 [info     ] auto_buchung_from_regel        document_id=d21ac751-8f7a-4800-ae28-1bf8b4e70593 konto=4969
+2026-04-25 20:37:43 [info     ] auto_buchung_from_regel        document_id=76379d39-f0b6-4e40-b31f-2b90855925a8 konto=4969
+2026-04-25 20:37:43 [debug    ] auto_buchung_no_pattern        document_id=0693ae82-301f-429b-93a6-608b2de865f3 sender='Peak Marketing'
+2026-04-25 20:37:43 [info     ] auto_buchung_from_regel        document_id=ad8b088a-e2c5-4a67-a001-222626c0d90d konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=816c53ec-b53e-4393-83f5-2c63a81f6cc3 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=22a5a0c7-4063-432a-9b62-ba4f645b261f konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=b7953cc8-e903-46c2-b0de-817d840e8073 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=848f7b2c-2d70-4d4f-9eb5-653a5f459fb9 konto=4969
+2026-04-25 20:37:44 [warning  ] generate_suggestion_failed     document_id=f08ecd89-afda-49d3-8c34-5909e0610fb4 error='Multiple rows were found when one or none was required'
+2026-04-25 20:37:44 [debug    ] auto_buchung_no_pattern        document_id=0de250e2-2a27-4911-b4da-2567aaebe41e sender='Amtsgericht Lemgo'
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=020c318b-eb17-47f5-9dee-781ef747d966 konto=4969
+2026-04-25 20:37:44 [warning  ] generate_suggestion_failed     document_id=850811d5-cf51-4ccf-80b7-fb00ddabc27a error='Multiple rows were found when one or none was required'
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=fc711f35-7350-40ad-9b53-eb5d11b390f2 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=9c781483-dcad-4dc1-bb80-e98ad83979a8 konto=4969
+2026-04-25 20:37:44 [warning  ] generate_suggestion_failed     document_id=c3ba4f63-bcef-4d8c-813f-0e6c92b93895 error='Multiple rows were found when one or none was required'
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=0d9118ba-540b-44a0-8219-a6301e096e46 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=530dd1d5-65af-4c72-84ea-82332935314e konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=95407c47-945e-4e2b-9276-50375930f8a2 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=e410976e-3b4f-48dd-acfc-e4137097c9a8 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=41f4faf8-0c37-4e09-9b46-08f112f373b5 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=3fda3051-ee8e-41e0-8d72-d2fee60b4400 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=8c25ce98-5b33-431f-aed4-ace182a53b5e konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=94ef200a-4c43-4ad2-8bf6-b4cf7371ebd2 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=8193fba1-789a-4a53-a208-f2aa10e39101 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=6b7fd897-7b99-4a1c-a678-2252f150f44f konto=4969
+2026-04-25 20:37:44 [warning  ] generate_suggestion_failed     document_id=1153623f-0bb9-41a5-bdaf-e870f7f7c3da error='Multiple rows were found when one or none was required'
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=7fc86d86-39eb-40e2-8fcf-c64da2fa8864 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=4c8f413a-b11d-4996-9fb4-fea6ac459f0f konto=4920
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=af25d45d-d85b-4d7d-a9b9-7732d8f5cd38 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=889e5d29-91a9-486f-a65a-e6659d2e4336 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=0371197c-d758-443f-96d9-f9d04e375661 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=1a0df184-1969-44d3-9d2c-14abafd75745 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=8ec5414b-3e28-4949-a65b-7edebcc725fb konto=4969
+2026-04-25 20:37:44 [warning  ] generate_suggestion_failed     document_id=1cf2b4a5-62c6-472a-81f0-98b53bfc8c97 error='Multiple rows were found when one or none was required'
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=e96e638e-bf7b-47f5-ad5e-5eba173c8509 konto=4969
+2026-04-25 20:37:44 [info     ] request_timing                 duration_ms=5.3 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:53932 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=4333139b-0caf-464b-be59-f8bc8c343839 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=939221cd-bb06-4a9b-aab1-47bb211264e5 konto=4969
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=1e42e8e7-e501-4a27-9077-48b73e5741ed konto=4920
+2026-04-25 20:37:44 [warning  ] generate_suggestion_failed     document_id=954d45f9-9f2c-48e2-be0a-ceb561088a01 error='Multiple rows were found when one or none was required'
+2026-04-25 20:37:44 [debug    ] auto_buchung_no_pattern        document_id=0e2806ac-894c-410c-863a-87a9be9c4fd9 sender='fal - Features & Labels, Inc.'
+2026-04-25 20:37:44 [warning  ] generate_suggestion_failed     document_id=06345bc5-b837-4efd-bd47-0a665c22562b error='Multiple rows were found when one or none was required'
+2026-04-25 20:37:44 [debug    ] auto_buchung_no_pattern        document_id=cfc28a39-fbf3-42b6-80c4-5b1d87b1353b sender='Anthropic Ireland, Limited'
+2026-04-25 20:37:44 [info     ] auto_buchung_from_regel        document_id=0b76f975-0e45-4837-84b9-a63d09a3170a konto=4969
+2026-04-25 20:37:44 [debug    ] auto_buchung_no_pattern        document_id=3cd0c390-2a31-41d7-b226-1515df573ff5 sender='Black Forest Labs'
+2026-04-25 20:37:44 [debug    ] auto_buchung_no_pattern        document_id=a5ba0d05-070d-4cb0-9c45-5741ba759801 sender='Replicate, LLC'
+2026-04-25 20:37:44 [debug    ] auto_buchung_no_pattern        document_id=41bac4a3-fd17-44e6-be35-f661b02aa3db sender='Amtsgericht Lemgo'
+2026-04-25 20:37:44 [debug    ] auto_buchung_no_pattern        document_id=487ffb24-c248-4970-b833-f9fcec7cf3ec sender='Amtsgericht Lemgo'
+2026-04-25 20:37:44 [info     ] request_timing                 duration_ms=283.7 method=POST path=/v1/businesses/3d8e2c6d-949c-44e9-9248-07f2c6be9439/buchungssaetze/generate status=200
+INFO:     172.19.0.4:53930 - "POST /v1/businesses/3d8e2c6d-949c-44e9-9248-07f2c6be9439/buchungssaetze/generate HTTP/1.1" 200 OK
+2026-04-25 20:37:44 [info     ] request_timing                 duration_ms=3.0 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungssaetze status=200
+INFO:     172.19.0.4:53930 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungssaetze HTTP/1.1" 200 OK
+2026-04-25 20:37:54 [info     ] doppik_analysis_completed      buchungssaetze=1 document_id=487ffb24-c248-4970-b833-f9fcec7cf3ec warnungen=3
+2026-04-25 20:37:54 [info     ] request_timing                 duration_ms=10345.0 method=POST path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/business-analysis status=200
+INFO:     172.19.0.4:53930 - "POST /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/business-analysis HTTP/1.1" 200 OK
+2026-04-25 20:37:54 [info     ] request_timing                 duration_ms=6.6 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungssaetze status=200
+INFO:     172.19.0.4:53930 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungssaetze HTTP/1.1" 200 OK
+2026-04-25 20:37:54 [info     ] request_timing                 duration_ms=3.4 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungen status=200
+INFO:     172.19.0.4:53930 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungen HTTP/1.1" 200 OK
+2026-04-25 20:38:14 [info     ] request_timing                 duration_ms=4.3 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:48574 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:38:30 [info     ] request_timing                 duration_ms=15.5 method=POST path=/v1/buchungssaetze/13d2f39f-fa08-484c-80ee-36fa59730780/confirm status=200
+INFO:     172.19.0.4:48998 - "POST /v1/buchungssaetze/13d2f39f-fa08-484c-80ee-36fa59730780/confirm HTTP/1.1" 200 OK
+2026-04-25 20:38:30 [info     ] request_timing                 duration_ms=4.5 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungssaetze status=200
+INFO:     172.19.0.4:48998 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungssaetze HTTP/1.1" 200 OK
+2026-04-25 20:38:32 [info     ] document.status_changed        document_id=487ffb24-c248-4970-b833-f9fcec7cf3ec from_status=analyzed to_status=reviewed
+2026-04-25 20:38:32 [info     ] request_timing                 duration_ms=11.2 method=PATCH path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/status status=200
+INFO:     172.19.0.4:48998 - "PATCH /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/status HTTP/1.1" 200 OK
+2026-04-25 20:38:32 [info     ] request_timing                 duration_ms=33.0 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec status=200
+INFO:     172.19.0.4:48998 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec HTTP/1.1" 200 OK
+2026-04-25 20:38:32 [info     ] request_timing                 duration_ms=3.5 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/share-links status=200
+INFO:     172.19.0.4:49012 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/share-links HTTP/1.1" 200 OK
+2026-04-25 20:38:32 [info     ] request_timing                 duration_ms=6.0 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/related status=200
+INFO:     172.19.0.4:48998 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/related?limit=5 HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=24.5 method=GET path=/v1/segments status=200
+INFO:     172.19.0.4:48998 - "GET /v1/segments HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=28.4 method=GET path=/v1/settings/persons-mode status=200
+INFO:     172.19.0.4:42116 - "GET /v1/settings/persons-mode HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=34.2 method=GET path=/v1/categories status=200
+INFO:     172.19.0.4:49012 - "GET /v1/categories HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=34.1 method=GET path=/v1/settings/properties-mode status=200
+INFO:     172.19.0.4:42136 - "GET /v1/settings/properties-mode HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=44.6 method=GET path=/v1/settings/business-mode status=200
+INFO:     172.19.0.4:42156 - "GET /v1/settings/business-mode HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=52.2 method=GET path=/v1/tags status=200
+INFO:     172.19.0.4:42138 - "GET /v1/tags HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=41.6 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/persons status=200
+INFO:     172.19.0.4:42158 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/persons HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=36.3 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/properties status=200
+INFO:     172.19.0.4:42204 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/properties HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=18.2 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungen status=200
+INFO:     172.19.0.4:42216 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungen HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=43.7 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/conversations status=200
+INFO:     172.19.0.4:42174 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/conversations HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=35.9 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungssaetze status=200
+INFO:     172.19.0.4:42208 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungssaetze HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=49.3 method=GET path=/v1/wiki/articles status=200
+INFO:     172.19.0.4:42188 - "GET /v1/wiki/articles?document_id=41bac4a3-fd17-44e6-be35-f661b02aa3db HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=69.2 method=GET path=/v1/persons status=200
+INFO:     172.19.0.4:42122 - "GET /v1/persons HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=20.3 method=GET path=/v1/analysis/quota status=200
+INFO:     172.19.0.4:42232 - "GET /v1/analysis/quota HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=19.0 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/businesses status=200
+INFO:     172.19.0.4:42236 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/businesses HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=84.1 method=GET path=/v1/businesses status=200
+INFO:     172.19.0.4:42142 - "GET /v1/businesses HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=39.0 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db status=200
+INFO:     172.19.0.4:42252 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=52.5 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:42256 - "GET /v1/documents?limit=500&sort=created_desc HTTP/1.1" 200 OK
+2026-04-25 20:38:35 [info     ] request_timing                 duration_ms=3.6 method=GET path=/v1/kontenrahmen/skr03 status=200
+INFO:     172.19.0.4:42252 - "GET /v1/kontenrahmen/skr03 HTTP/1.1" 200 OK
+2026-04-25 20:38:36 [info     ] request_timing                 duration_ms=110.1 method=GET path=/v1/properties status=200
+INFO:     172.19.0.4:42140 - "GET /v1/properties HTTP/1.1" 200 OK
+2026-04-25 20:38:36 [info     ] request_timing                 duration_ms=4.2 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/share-links status=200
+INFO:     172.19.0.4:42140 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/share-links HTTP/1.1" 200 OK
+2026-04-25 20:38:36 [info     ] request_timing                 duration_ms=5.3 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/related status=200
+INFO:     172.19.0.4:42252 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/related?limit=5 HTTP/1.1" 200 OK
+2026-04-25 20:38:36 [info     ] request_timing                 duration_ms=11.2 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/files/21a2828d-ac40-446d-8366-6e3b8f3ae2d8/download status=200
+INFO:     172.19.0.4:42256 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/files/21a2828d-ac40-446d-8366-6e3b8f3ae2d8/download HTTP/1.1" 200 OK
+2026-04-25 20:38:44 [info     ] request_timing                 duration_ms=7.9 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:42260 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=df1c6949-af3f-422a-97f4-58721ae33907 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=cb18a155-8c03-4966-a560-53fdd0c1c1f8 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=758776c6-a74d-4676-8225-55e9adcc8325 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=d21ac751-8f7a-4800-ae28-1bf8b4e70593 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=76379d39-f0b6-4e40-b31f-2b90855925a8 konto=4969
+2026-04-25 20:38:52 [debug    ] auto_buchung_no_pattern        document_id=0693ae82-301f-429b-93a6-608b2de865f3 sender='Peak Marketing'
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=ad8b088a-e2c5-4a67-a001-222626c0d90d konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=816c53ec-b53e-4393-83f5-2c63a81f6cc3 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=22a5a0c7-4063-432a-9b62-ba4f645b261f konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=b7953cc8-e903-46c2-b0de-817d840e8073 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=848f7b2c-2d70-4d4f-9eb5-653a5f459fb9 konto=4969
+2026-04-25 20:38:52 [warning  ] generate_suggestion_failed     document_id=f08ecd89-afda-49d3-8c34-5909e0610fb4 error='Multiple rows were found when one or none was required'
+2026-04-25 20:38:52 [debug    ] auto_buchung_no_pattern        document_id=0de250e2-2a27-4911-b4da-2567aaebe41e sender='Amtsgericht Lemgo'
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=020c318b-eb17-47f5-9dee-781ef747d966 konto=4969
+2026-04-25 20:38:52 [warning  ] generate_suggestion_failed     document_id=850811d5-cf51-4ccf-80b7-fb00ddabc27a error='Multiple rows were found when one or none was required'
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=fc711f35-7350-40ad-9b53-eb5d11b390f2 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=9c781483-dcad-4dc1-bb80-e98ad83979a8 konto=4969
+2026-04-25 20:38:52 [warning  ] generate_suggestion_failed     document_id=c3ba4f63-bcef-4d8c-813f-0e6c92b93895 error='Multiple rows were found when one or none was required'
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=0d9118ba-540b-44a0-8219-a6301e096e46 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=530dd1d5-65af-4c72-84ea-82332935314e konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=95407c47-945e-4e2b-9276-50375930f8a2 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=e410976e-3b4f-48dd-acfc-e4137097c9a8 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=41f4faf8-0c37-4e09-9b46-08f112f373b5 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=3fda3051-ee8e-41e0-8d72-d2fee60b4400 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=8c25ce98-5b33-431f-aed4-ace182a53b5e konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=94ef200a-4c43-4ad2-8bf6-b4cf7371ebd2 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=8193fba1-789a-4a53-a208-f2aa10e39101 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=6b7fd897-7b99-4a1c-a678-2252f150f44f konto=4969
+2026-04-25 20:38:52 [warning  ] generate_suggestion_failed     document_id=1153623f-0bb9-41a5-bdaf-e870f7f7c3da error='Multiple rows were found when one or none was required'
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=7fc86d86-39eb-40e2-8fcf-c64da2fa8864 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=4c8f413a-b11d-4996-9fb4-fea6ac459f0f konto=4920
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=af25d45d-d85b-4d7d-a9b9-7732d8f5cd38 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=889e5d29-91a9-486f-a65a-e6659d2e4336 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=0371197c-d758-443f-96d9-f9d04e375661 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=1a0df184-1969-44d3-9d2c-14abafd75745 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=8ec5414b-3e28-4949-a65b-7edebcc725fb konto=4969
+2026-04-25 20:38:52 [warning  ] generate_suggestion_failed     document_id=1cf2b4a5-62c6-472a-81f0-98b53bfc8c97 error='Multiple rows were found when one or none was required'
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=e96e638e-bf7b-47f5-ad5e-5eba173c8509 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=4333139b-0caf-464b-be59-f8bc8c343839 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=939221cd-bb06-4a9b-aab1-47bb211264e5 konto=4969
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=1e42e8e7-e501-4a27-9077-48b73e5741ed konto=4920
+2026-04-25 20:38:52 [warning  ] generate_suggestion_failed     document_id=954d45f9-9f2c-48e2-be0a-ceb561088a01 error='Multiple rows were found when one or none was required'
+2026-04-25 20:38:52 [debug    ] auto_buchung_no_pattern        document_id=0e2806ac-894c-410c-863a-87a9be9c4fd9 sender='fal - Features & Labels, Inc.'
+2026-04-25 20:38:52 [warning  ] generate_suggestion_failed     document_id=06345bc5-b837-4efd-bd47-0a665c22562b error='Multiple rows were found when one or none was required'
+2026-04-25 20:38:52 [debug    ] auto_buchung_no_pattern        document_id=cfc28a39-fbf3-42b6-80c4-5b1d87b1353b sender='Anthropic Ireland, Limited'
+2026-04-25 20:38:52 [info     ] auto_buchung_from_regel        document_id=0b76f975-0e45-4837-84b9-a63d09a3170a konto=4969
+2026-04-25 20:38:52 [debug    ] auto_buchung_no_pattern        document_id=3cd0c390-2a31-41d7-b226-1515df573ff5 sender='Black Forest Labs'
+2026-04-25 20:38:52 [debug    ] auto_buchung_no_pattern        document_id=a5ba0d05-070d-4cb0-9c45-5741ba759801 sender='Replicate, LLC'
+2026-04-25 20:38:52 [debug    ] auto_buchung_no_pattern        document_id=41bac4a3-fd17-44e6-be35-f661b02aa3db sender='Amtsgericht Lemgo'
+2026-04-25 20:38:52 [info     ] request_timing                 duration_ms=144.9 method=POST path=/v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/buchungssaetze/generate status=200
+INFO:     172.19.0.4:58188 - "POST /v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/buchungssaetze/generate HTTP/1.1" 200 OK
+2026-04-25 20:38:53 [info     ] request_timing                 duration_ms=5.1 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungssaetze status=200
+INFO:     172.19.0.4:58188 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungssaetze HTTP/1.1" 200 OK
+2026-04-25 20:39:04 [info     ] doppik_analysis_completed      buchungssaetze=1 document_id=41bac4a3-fd17-44e6-be35-f661b02aa3db warnungen=3
+2026-04-25 20:39:04 [info     ] request_timing                 duration_ms=11297.0 method=POST path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/business-analysis status=200
+INFO:     172.19.0.4:58188 - "POST /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/business-analysis HTTP/1.1" 200 OK
+2026-04-25 20:39:04 [info     ] request_timing                 duration_ms=6.8 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungssaetze status=200
+INFO:     172.19.0.4:58188 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungssaetze HTTP/1.1" 200 OK
+2026-04-25 20:39:04 [info     ] request_timing                 duration_ms=3.3 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungen status=200
+INFO:     172.19.0.4:58188 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungen HTTP/1.1" 200 OK
+2026-04-25 20:39:06 [info     ] request_timing                 duration_ms=15.2 method=POST path=/v1/buchungssaetze/ff88621e-257f-4b43-9fbb-79a6c7a7b9ca/confirm status=200
+INFO:     172.19.0.4:58188 - "POST /v1/buchungssaetze/ff88621e-257f-4b43-9fbb-79a6c7a7b9ca/confirm HTTP/1.1" 200 OK
+2026-04-25 20:39:06 [info     ] request_timing                 duration_ms=6.6 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungssaetze status=200
+INFO:     172.19.0.4:58188 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungssaetze HTTP/1.1" 200 OK
+2026-04-25 20:39:08 [info     ] document.status_changed        document_id=41bac4a3-fd17-44e6-be35-f661b02aa3db from_status=analyzed to_status=reviewed
+2026-04-25 20:39:08 [info     ] request_timing                 duration_ms=9.8 method=PATCH path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/status status=200
+INFO:     172.19.0.4:58188 - "PATCH /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/status HTTP/1.1" 200 OK
+2026-04-25 20:39:08 [info     ] request_timing                 duration_ms=24.9 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db status=200
+INFO:     172.19.0.4:58188 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db HTTP/1.1" 200 OK
+2026-04-25 20:39:08 [info     ] request_timing                 duration_ms=6.6 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/related status=200
+INFO:     172.19.0.4:58188 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/related?limit=5 HTTP/1.1" 200 OK
+2026-04-25 20:39:08 [info     ] request_timing                 duration_ms=6.5 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/share-links status=200
+INFO:     172.19.0.4:59344 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/share-links HTTP/1.1" 200 OK
+2026-04-25 20:39:14 [info     ] request_timing                 duration_ms=4.6 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:59346 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:39:19 [info     ] request_timing                 duration_ms=4.3 method=GET path=/v1/segments status=200
+INFO:     172.19.0.4:59346 - "GET /v1/segments HTTP/1.1" 200 OK
+2026-04-25 20:39:19 [info     ] request_timing                 duration_ms=5.3 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:47328 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=37.5 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:47344 - "GET /v1/documents?limit=24&sort=created_desc HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=51.5 method=GET path=/v1/properties status=200
+INFO:     172.19.0.4:47328 - "GET /v1/properties HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=70.7 method=GET path=/v1/businesses status=200
+INFO:     172.19.0.4:59346 - "GET /v1/businesses HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=81.1 method=GET path=/v1/persons status=200
+INFO:     172.19.0.4:47336 - "GET /v1/persons HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=12.1 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/thumbnail status=200
+INFO:     172.19.0.4:47336 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=12.4 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/thumbnail status=200
+INFO:     172.19.0.4:59346 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=14.5 method=GET path=/v1/documents/25ae400d-e18c-4ed2-b8af-e0ccdda176a3/thumbnail status=200
+INFO:     172.19.0.4:47344 - "GET /v1/documents/25ae400d-e18c-4ed2-b8af-e0ccdda176a3/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=14.7 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/thumbnail status=200
+INFO:     172.19.0.4:47328 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=15.3 method=GET path=/v1/documents/b0a6428b-64cb-4c4e-a79e-5ceffd33c459/thumbnail status=200
+INFO:     172.19.0.4:47358 - "GET /v1/documents/b0a6428b-64cb-4c4e-a79e-5ceffd33c459/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=15.4 method=GET path=/v1/documents/4e4c2458-0121-4e64-a98a-ded6b3fb3e3c/thumbnail status=200
+INFO:     172.19.0.4:47368 - "GET /v1/documents/4e4c2458-0121-4e64-a98a-ded6b3fb3e3c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=16.2 method=GET path=/v1/documents/8995a4a1-4dc2-49fe-a1b7-a560aa4090ef/thumbnail status=200
+INFO:     172.19.0.4:47382 - "GET /v1/documents/8995a4a1-4dc2-49fe-a1b7-a560aa4090ef/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=17.3 method=GET path=/v1/documents/df6441ec-5ada-4aa5-94be-a3cedf760489/thumbnail status=200
+INFO:     172.19.0.4:47392 - "GET /v1/documents/df6441ec-5ada-4aa5-94be-a3cedf760489/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=18.5 method=GET path=/v1/documents/f8562182-e071-4e7c-97af-8fc378af0178/thumbnail status=200
+INFO:     172.19.0.4:47416 - "GET /v1/documents/f8562182-e071-4e7c-97af-8fc378af0178/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=19.7 method=GET path=/v1/documents/f30231ee-ee8c-408f-b86a-ca2bc017c94b/thumbnail status=200
+INFO:     172.19.0.4:47408 - "GET /v1/documents/f30231ee-ee8c-408f-b86a-ca2bc017c94b/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=19.5 method=GET path=/v1/documents/b1ae87f7-02d6-40db-a81d-385fab3f9b5c/thumbnail status=200
+INFO:     172.19.0.4:47418 - "GET /v1/documents/b1ae87f7-02d6-40db-a81d-385fab3f9b5c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=17.4 method=GET path=/v1/documents/dfb32cec-82c2-427d-8a60-f65b5699a2a7/thumbnail status=200
+INFO:     172.19.0.4:47420 - "GET /v1/documents/dfb32cec-82c2-427d-8a60-f65b5699a2a7/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=17.0 method=GET path=/v1/documents/1b18e72e-7a5b-4b74-85b3-ba9af691fa7f/thumbnail status=200
+INFO:     172.19.0.4:47436 - "GET /v1/documents/1b18e72e-7a5b-4b74-85b3-ba9af691fa7f/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=18.4 method=GET path=/v1/documents/194af9c2-3796-45bd-b5f8-fae6345eab3b/thumbnail status=200
+INFO:     172.19.0.4:47446 - "GET /v1/documents/194af9c2-3796-45bd-b5f8-fae6345eab3b/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=17.6 method=GET path=/v1/documents/1b639068-0a59-4a0a-b139-0ae65e09085e/thumbnail status=200
+INFO:     172.19.0.4:47438 - "GET /v1/documents/1b639068-0a59-4a0a-b139-0ae65e09085e/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=16.0 method=GET path=/v1/documents/98180a85-5cc4-4133-a90c-7c2e96bd5c3e/thumbnail status=200
+INFO:     172.19.0.4:47452 - "GET /v1/documents/98180a85-5cc4-4133-a90c-7c2e96bd5c3e/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=13.8 method=GET path=/v1/documents/34c55e9b-7140-490e-9b2a-b6e7b9381309/thumbnail status=200
+INFO:     172.19.0.4:47470 - "GET /v1/documents/34c55e9b-7140-490e-9b2a-b6e7b9381309/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=11.8 method=GET path=/v1/documents/a7da6887-1550-4378-9e56-e2e8caa2ffea/thumbnail status=200
+INFO:     172.19.0.4:47464 - "GET /v1/documents/a7da6887-1550-4378-9e56-e2e8caa2ffea/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=10.4 method=GET path=/v1/documents/83a2799f-72f6-48a8-bcc5-eebe516bc92c/thumbnail status=200
+INFO:     172.19.0.4:47480 - "GET /v1/documents/83a2799f-72f6-48a8-bcc5-eebe516bc92c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:20 [info     ] request_timing                 duration_ms=8.8 method=GET path=/v1/documents/fe132674-33f8-4308-a0a0-16bb978c32af/thumbnail status=200
+INFO:     172.19.0.4:47488 - "GET /v1/documents/fe132674-33f8-4308-a0a0-16bb978c32af/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:22 [info     ] request_timing                 duration_ms=4.9 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:47470 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:39:24 [info     ] request_timing                 duration_ms=35.8 method=GET path=/v1/businesses/3d8e2c6d-949c-44e9-9248-07f2c6be9439/umsatz status=200
+INFO:     172.19.0.4:47464 - "GET /v1/businesses/3d8e2c6d-949c-44e9-9248-07f2c6be9439/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:39:24 [info     ] request_timing                 duration_ms=40.8 method=GET path=/v1/businesses/0100ec6b-a868-494d-88bf-9d78fa0dfb70/umsatz status=200
+INFO:     172.19.0.4:47470 - "GET /v1/businesses/0100ec6b-a868-494d-88bf-9d78fa0dfb70/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:39:24 [info     ] request_timing                 duration_ms=42.5 method=GET path=/v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/umsatz status=200
+INFO:     172.19.0.4:47488 - "GET /v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:39:24 [info     ] request_timing                 duration_ms=43.3 method=GET path=/v1/businesses/f5194b82-3e89-4fb8-967e-ea618b741148/umsatz status=200
+INFO:     172.19.0.4:47480 - "GET /v1/businesses/f5194b82-3e89-4fb8-967e-ea618b741148/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:39:29 [info     ] request_timing                 duration_ms=26.1 method=GET path=/v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/bilanz status=200
+INFO:     172.19.0.4:47480 - "GET /v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/bilanz?stichtag=2026-04-25 HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=27.0 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:44684 - "GET /v1/documents?limit=24&sort=created_desc HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=17.0 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/thumbnail status=200
+INFO:     172.19.0.4:44684 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=19.6 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/thumbnail status=200
+INFO:     172.19.0.4:44698 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=17.9 method=GET path=/v1/documents/4e4c2458-0121-4e64-a98a-ded6b3fb3e3c/thumbnail status=200
+INFO:     172.19.0.4:44712 - "GET /v1/documents/4e4c2458-0121-4e64-a98a-ded6b3fb3e3c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=20.7 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/thumbnail status=200
+INFO:     172.19.0.4:44724 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=19.4 method=GET path=/v1/documents/b0a6428b-64cb-4c4e-a79e-5ceffd33c459/thumbnail status=200
+INFO:     172.19.0.4:44734 - "GET /v1/documents/b0a6428b-64cb-4c4e-a79e-5ceffd33c459/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=19.5 method=GET path=/v1/documents/25ae400d-e18c-4ed2-b8af-e0ccdda176a3/thumbnail status=200
+INFO:     172.19.0.4:44730 - "GET /v1/documents/25ae400d-e18c-4ed2-b8af-e0ccdda176a3/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=19.3 method=GET path=/v1/documents/df6441ec-5ada-4aa5-94be-a3cedf760489/thumbnail status=200
+INFO:     172.19.0.4:44748 - "GET /v1/documents/df6441ec-5ada-4aa5-94be-a3cedf760489/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=19.5 method=GET path=/v1/documents/8995a4a1-4dc2-49fe-a1b7-a560aa4090ef/thumbnail status=200
+INFO:     172.19.0.4:44764 - "GET /v1/documents/8995a4a1-4dc2-49fe-a1b7-a560aa4090ef/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=20.0 method=GET path=/v1/documents/b1ae87f7-02d6-40db-a81d-385fab3f9b5c/thumbnail status=200
+INFO:     172.19.0.4:44778 - "GET /v1/documents/b1ae87f7-02d6-40db-a81d-385fab3f9b5c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=19.0 method=GET path=/v1/documents/f8562182-e071-4e7c-97af-8fc378af0178/thumbnail status=200
+INFO:     172.19.0.4:44780 - "GET /v1/documents/f8562182-e071-4e7c-97af-8fc378af0178/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=16.7 method=GET path=/v1/documents/dfb32cec-82c2-427d-8a60-f65b5699a2a7/thumbnail status=200
+INFO:     172.19.0.4:44786 - "GET /v1/documents/dfb32cec-82c2-427d-8a60-f65b5699a2a7/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=19.5 method=GET path=/v1/documents/f30231ee-ee8c-408f-b86a-ca2bc017c94b/thumbnail status=200
+INFO:     172.19.0.4:44798 - "GET /v1/documents/f30231ee-ee8c-408f-b86a-ca2bc017c94b/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=16.2 method=GET path=/v1/documents/a7da6887-1550-4378-9e56-e2e8caa2ffea/thumbnail status=200
+INFO:     172.19.0.4:44808 - "GET /v1/documents/a7da6887-1550-4378-9e56-e2e8caa2ffea/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=16.0 method=GET path=/v1/documents/1b639068-0a59-4a0a-b139-0ae65e09085e/thumbnail status=200
+INFO:     172.19.0.4:44820 - "GET /v1/documents/1b639068-0a59-4a0a-b139-0ae65e09085e/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=14.6 method=GET path=/v1/documents/194af9c2-3796-45bd-b5f8-fae6345eab3b/thumbnail status=200
+INFO:     172.19.0.4:44826 - "GET /v1/documents/194af9c2-3796-45bd-b5f8-fae6345eab3b/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=11.6 method=GET path=/v1/documents/98180a85-5cc4-4133-a90c-7c2e96bd5c3e/thumbnail status=200
+INFO:     172.19.0.4:44842 - "GET /v1/documents/98180a85-5cc4-4133-a90c-7c2e96bd5c3e/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=10.3 method=GET path=/v1/documents/1b18e72e-7a5b-4b74-85b3-ba9af691fa7f/thumbnail status=200
+INFO:     172.19.0.4:44854 - "GET /v1/documents/1b18e72e-7a5b-4b74-85b3-ba9af691fa7f/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=7.9 method=GET path=/v1/documents/34c55e9b-7140-490e-9b2a-b6e7b9381309/thumbnail status=200
+INFO:     172.19.0.4:44868 - "GET /v1/documents/34c55e9b-7140-490e-9b2a-b6e7b9381309/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=6.3 method=GET path=/v1/documents/fe132674-33f8-4308-a0a0-16bb978c32af/thumbnail status=200
+INFO:     172.19.0.4:44878 - "GET /v1/documents/fe132674-33f8-4308-a0a0-16bb978c32af/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:35 [info     ] request_timing                 duration_ms=4.8 method=GET path=/v1/documents/83a2799f-72f6-48a8-bcc5-eebe516bc92c/thumbnail status=200
+INFO:     172.19.0.4:44894 - "GET /v1/documents/83a2799f-72f6-48a8-bcc5-eebe516bc92c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:39:36 [info     ] request_timing                 duration_ms=54.8 method=GET path=/v1/settings/persons-mode status=200
+INFO:     172.19.0.4:44878 - "GET /v1/settings/persons-mode HTTP/1.1" 200 OK
+2026-04-25 20:39:36 [info     ] request_timing                 duration_ms=54.5 method=GET path=/v1/settings/business-mode status=200
+INFO:     172.19.0.4:44894 - "GET /v1/settings/business-mode HTTP/1.1" 200 OK
+2026-04-25 20:39:36 [info     ] request_timing                 duration_ms=55.6 method=GET path=/v1/categories status=200
+INFO:     172.19.0.4:44854 - "GET /v1/categories HTTP/1.1" 200 OK
+2026-04-25 20:39:36 [info     ] request_timing                 duration_ms=58.4 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/conversations status=200
+INFO:     172.19.0.4:44826 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/conversations HTTP/1.1" 200 OK
+2026-04-25 20:39:36 [info     ] request_timing                 duration_ms=46.1 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/businesses status=200
+INFO:     172.19.0.4:44820 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/businesses HTTP/1.1" 200 OK
+2026-04-25 20:39:36 [info     ] request_timing                 duration_ms=46.1 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungen status=200
+INFO:     172.19.0.4:44798 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungen HTTP/1.1" 200 OK
+2026-04-25 20:39:36 [info     ] request_timing                 duration_ms=59.9 method=GET path=/v1/settings/properties-mode status=200
+INFO:     172.19.0.4:44842 - "GET /v1/settings/properties-mode HTTP/1.1" 200 OK
+2026-04-25 20:39:37 [info     ] request_timing                 duration_ms=58.3 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/persons status=200
+INFO:     172.19.0.4:44780 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/persons HTTP/1.1" 200 OK
+2026-04-25 20:39:37 [info     ] request_timing                 duration_ms=59.4 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/properties status=200
+INFO:     172.19.0.4:44808 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/properties HTTP/1.1" 200 OK
+2026-04-25 20:39:37 [info     ] request_timing                 duration_ms=78.4 method=GET path=/v1/analysis/quota status=200
+INFO:     172.19.0.4:44764 - "GET /v1/analysis/quota HTTP/1.1" 200 OK
+2026-04-25 20:39:37 [info     ] request_timing                 duration_ms=85.7 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungssaetze status=200
+INFO:     172.19.0.4:44786 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/buchungssaetze HTTP/1.1" 200 OK
+2026-04-25 20:39:37 [info     ] request_timing                 duration_ms=100.6 method=GET path=/v1/tags status=200
+INFO:     172.19.0.4:44868 - "GET /v1/tags HTTP/1.1" 200 OK
+2026-04-25 20:39:37 [info     ] request_timing                 duration_ms=88.3 method=GET path=/v1/wiki/articles status=200
+INFO:     172.19.0.4:44778 - "GET /v1/wiki/articles?document_id=41bac4a3-fd17-44e6-be35-f661b02aa3db HTTP/1.1" 200 OK
+2026-04-25 20:39:37 [info     ] request_timing                 duration_ms=102.7 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:44748 - "GET /v1/documents?limit=500&sort=created_desc HTTP/1.1" 200 OK
+2026-04-25 20:39:37 [info     ] request_timing                 duration_ms=6.8 method=GET path=/v1/kontenrahmen/skr03 status=200
+INFO:     172.19.0.4:44748 - "GET /v1/kontenrahmen/skr03 HTTP/1.1" 200 OK
+2026-04-25 20:39:37 [info     ] request_timing                 duration_ms=119.8 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db status=200
+INFO:     172.19.0.4:44730 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db HTTP/1.1" 200 OK
+2026-04-25 20:39:37 [info     ] request_timing                 duration_ms=10.1 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/share-links status=200
+INFO:     172.19.0.4:44730 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/share-links HTTP/1.1" 200 OK
+2026-04-25 20:39:37 [info     ] request_timing                 duration_ms=14.2 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/related status=200
+INFO:     172.19.0.4:44748 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/related?limit=5 HTTP/1.1" 200 OK
+2026-04-25 20:39:37 [info     ] request_timing                 duration_ms=18.6 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/files/21a2828d-ac40-446d-8366-6e3b8f3ae2d8/download status=200
+INFO:     172.19.0.4:44778 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/files/21a2828d-ac40-446d-8366-6e3b8f3ae2d8/download HTTP/1.1" 200 OK
+2026-04-25 20:39:43 [info     ] request_timing                 duration_ms=3.1 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:56260 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:39:44 [info     ] request_timing                 duration_ms=4.5 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:56260 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:39:44 [info     ] request_timing                 duration_ms=39.6 method=GET path=/v1/businesses/f5194b82-3e89-4fb8-967e-ea618b741148/umsatz status=200
+INFO:     172.19.0.4:56260 - "GET /v1/businesses/f5194b82-3e89-4fb8-967e-ea618b741148/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:39:44 [info     ] request_timing                 duration_ms=36.2 method=GET path=/v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/umsatz status=200
+INFO:     172.19.0.4:56264 - "GET /v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:39:44 [info     ] request_timing                 duration_ms=34.3 method=GET path=/v1/businesses/3d8e2c6d-949c-44e9-9248-07f2c6be9439/umsatz status=200
+INFO:     172.19.0.4:56288 - "GET /v1/businesses/3d8e2c6d-949c-44e9-9248-07f2c6be9439/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:39:44 [info     ] request_timing                 duration_ms=40.8 method=GET path=/v1/businesses/0100ec6b-a868-494d-88bf-9d78fa0dfb70/umsatz status=200
+INFO:     172.19.0.4:56266 - "GET /v1/businesses/0100ec6b-a868-494d-88bf-9d78fa0dfb70/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:39:47 [info     ] request_timing                 duration_ms=11.7 method=GET path=/v1/businesses/3d8e2c6d-949c-44e9-9248-07f2c6be9439/bilanz status=200
+INFO:     172.19.0.4:56266 - "GET /v1/businesses/3d8e2c6d-949c-44e9-9248-07f2c6be9439/bilanz?stichtag=2026-04-25 HTTP/1.1" 200 OK
+2026-04-25 20:39:57 [info     ] request_timing                 duration_ms=6.3 method=GET path=/v1/segments status=200
+INFO:     172.19.0.4:34290 - "GET /v1/segments HTTP/1.1" 200 OK
+2026-04-25 20:39:57 [info     ] request_timing                 duration_ms=6.8 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:34300 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:39:59 [info     ] request_timing                 duration_ms=46.6 method=GET path=/v1/onboarding/status status=200
+INFO:     172.19.0.4:34290 - "GET /v1/onboarding/status HTTP/1.1" 200 OK
+2026-04-25 20:39:59 [info     ] request_timing                 duration_ms=47.4 method=GET path=/v1/persons/deadlines status=200
+INFO:     172.19.0.4:34300 - "GET /v1/persons/deadlines?days=30 HTTP/1.1" 200 OK
+2026-04-25 20:39:59 [info     ] request_timing                 duration_ms=43.6 method=GET path=/v1/actions status=200
+INFO:     172.19.0.4:34316 - "GET /v1/actions HTTP/1.1" 200 OK
+2026-04-25 20:40:00 [info     ] request_timing                 duration_ms=405.5 method=GET path=/v1/insights status=200
+INFO:     172.19.0.4:34344 - "GET /v1/insights HTTP/1.1" 200 OK
+2026-04-25 20:40:00 [info     ] request_timing                 duration_ms=406.0 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:34354 - "GET /v1/documents?limit=5&sort=created_desc HTTP/1.1" 200 OK
+2026-04-25 20:40:00 [info     ] request_timing                 duration_ms=405.0 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:34368 - "GET /v1/documents?limit=10&pinned=true&sort=date_desc HTTP/1.1" 200 OK
+2026-04-25 20:40:00 [info     ] request_timing                 duration_ms=416.3 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:34328 - "GET /v1/documents?sort=recent&limit=6 HTTP/1.1" 200 OK
+2026-04-25 20:40:07 [info     ] request_timing                 duration_ms=4.2 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:38716 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:40:10 [info     ] request_timing                 duration_ms=4.3 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:38716 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:40:14 [info     ] request_timing                 duration_ms=3.0 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:38716 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:40:31 [info     ] request_timing                 duration_ms=4.0 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:42158 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:40:33 [info     ] request_timing                 duration_ms=2.1 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:42172 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:40:33 [info     ] request_timing                 duration_ms=3.7 method=GET path=/v1/segments status=200
+INFO:     172.19.0.4:42158 - "GET /v1/segments HTTP/1.1" 200 OK
+2026-04-25 20:40:41 [info     ] request_timing                 duration_ms=22.1 method=GET path=/v1/categories status=200
+INFO:     172.19.0.4:55176 - "GET /v1/categories HTTP/1.1" 200 OK
+2026-04-25 20:40:41 [info     ] request_timing                 duration_ms=21.5 method=GET path=/v1/settings/properties-mode status=200
+INFO:     172.19.0.4:55200 - "GET /v1/settings/properties-mode HTTP/1.1" 200 OK
+2026-04-25 20:40:41 [info     ] request_timing                 duration_ms=20.0 method=GET path=/v1/settings/business-mode status=200
+INFO:     172.19.0.4:55198 - "GET /v1/settings/business-mode HTTP/1.1" 200 OK
+2026-04-25 20:40:41 [info     ] request_timing                 duration_ms=38.1 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:55178 - "GET /v1/documents?status=analyzed&limit=200&sort=created_asc HTTP/1.1" 200 OK
+2026-04-25 20:40:41 [info     ] request_timing                 duration_ms=27.5 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:55224 - "GET /v1/documents?status=uploaded&limit=200&sort=created_asc HTTP/1.1" 200 OK
+2026-04-25 20:40:41 [info     ] request_timing                 duration_ms=42.5 method=GET path=/v1/properties status=200
+INFO:     172.19.0.4:55210 - "GET /v1/properties HTTP/1.1" 200 OK
+2026-04-25 20:40:41 [info     ] request_timing                 duration_ms=52.1 method=GET path=/v1/businesses status=200
+INFO:     172.19.0.4:55214 - "GET /v1/businesses HTTP/1.1" 200 OK
+2026-04-25 20:40:44 [info     ] request_timing                 duration_ms=3.0 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:55214 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:40:44 [info     ] request_timing                 duration_ms=4.2 method=GET path=/v1/settings/persons-mode status=200
+INFO:     172.19.0.4:55214 - "GET /v1/settings/persons-mode HTTP/1.1" 200 OK
+2026-04-25 20:40:44 [info     ] request_timing                 duration_ms=3.3 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:55210 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=17.1 method=GET path=/v1/persons status=200
+INFO:     172.19.0.4:55214 - "GET /v1/persons HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=23.9 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:55210 - "GET /v1/documents?limit=24&sort=created_desc HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=5.7 method=GET path=/v1/documents/4e4c2458-0121-4e64-a98a-ded6b3fb3e3c/thumbnail status=200
+INFO:     172.19.0.4:55210 - "GET /v1/documents/4e4c2458-0121-4e64-a98a-ded6b3fb3e3c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=6.0 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/thumbnail status=200
+INFO:     172.19.0.4:55214 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=7.8 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/thumbnail status=200
+INFO:     172.19.0.4:53488 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=7.5 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/thumbnail status=200
+INFO:     172.19.0.4:53478 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=7.1 method=GET path=/v1/documents/b0a6428b-64cb-4c4e-a79e-5ceffd33c459/thumbnail status=200
+INFO:     172.19.0.4:53500 - "GET /v1/documents/b0a6428b-64cb-4c4e-a79e-5ceffd33c459/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=7.9 method=GET path=/v1/documents/25ae400d-e18c-4ed2-b8af-e0ccdda176a3/thumbnail status=200
+INFO:     172.19.0.4:53504 - "GET /v1/documents/25ae400d-e18c-4ed2-b8af-e0ccdda176a3/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=8.5 method=GET path=/v1/documents/8995a4a1-4dc2-49fe-a1b7-a560aa4090ef/thumbnail status=200
+INFO:     172.19.0.4:53520 - "GET /v1/documents/8995a4a1-4dc2-49fe-a1b7-a560aa4090ef/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=10.1 method=GET path=/v1/documents/f30231ee-ee8c-408f-b86a-ca2bc017c94b/thumbnail status=200
+INFO:     172.19.0.4:53528 - "GET /v1/documents/f30231ee-ee8c-408f-b86a-ca2bc017c94b/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=11.5 method=GET path=/v1/documents/df6441ec-5ada-4aa5-94be-a3cedf760489/thumbnail status=200
+INFO:     172.19.0.4:53540 - "GET /v1/documents/df6441ec-5ada-4aa5-94be-a3cedf760489/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=11.8 method=GET path=/v1/documents/b1ae87f7-02d6-40db-a81d-385fab3f9b5c/thumbnail status=200
+INFO:     172.19.0.4:53542 - "GET /v1/documents/b1ae87f7-02d6-40db-a81d-385fab3f9b5c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=12.7 method=GET path=/v1/documents/dfb32cec-82c2-427d-8a60-f65b5699a2a7/thumbnail status=200
+INFO:     172.19.0.4:53548 - "GET /v1/documents/dfb32cec-82c2-427d-8a60-f65b5699a2a7/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=11.9 method=GET path=/v1/documents/f8562182-e071-4e7c-97af-8fc378af0178/thumbnail status=200
+INFO:     172.19.0.4:53550 - "GET /v1/documents/f8562182-e071-4e7c-97af-8fc378af0178/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=13.4 method=GET path=/v1/documents/a7da6887-1550-4378-9e56-e2e8caa2ffea/thumbnail status=200
+INFO:     172.19.0.4:53562 - "GET /v1/documents/a7da6887-1550-4378-9e56-e2e8caa2ffea/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=12.2 method=GET path=/v1/documents/1b18e72e-7a5b-4b74-85b3-ba9af691fa7f/thumbnail status=200
+INFO:     172.19.0.4:53572 - "GET /v1/documents/1b18e72e-7a5b-4b74-85b3-ba9af691fa7f/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=11.2 method=GET path=/v1/documents/1b639068-0a59-4a0a-b139-0ae65e09085e/thumbnail status=200
+INFO:     172.19.0.4:53570 - "GET /v1/documents/1b639068-0a59-4a0a-b139-0ae65e09085e/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=10.8 method=GET path=/v1/documents/34c55e9b-7140-490e-9b2a-b6e7b9381309/thumbnail status=200
+INFO:     172.19.0.4:53592 - "GET /v1/documents/34c55e9b-7140-490e-9b2a-b6e7b9381309/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=9.6 method=GET path=/v1/documents/194af9c2-3796-45bd-b5f8-fae6345eab3b/thumbnail status=200
+INFO:     172.19.0.4:53604 - "GET /v1/documents/194af9c2-3796-45bd-b5f8-fae6345eab3b/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=8.2 method=GET path=/v1/documents/98180a85-5cc4-4133-a90c-7c2e96bd5c3e/thumbnail status=200
+INFO:     172.19.0.4:53620 - "GET /v1/documents/98180a85-5cc4-4133-a90c-7c2e96bd5c3e/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=6.7 method=GET path=/v1/documents/fe132674-33f8-4308-a0a0-16bb978c32af/thumbnail status=200
+INFO:     172.19.0.4:53636 - "GET /v1/documents/fe132674-33f8-4308-a0a0-16bb978c32af/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:46 [info     ] request_timing                 duration_ms=5.8 method=GET path=/v1/documents/83a2799f-72f6-48a8-bcc5-eebe516bc92c/thumbnail status=200
+INFO:     172.19.0.4:53644 - "GET /v1/documents/83a2799f-72f6-48a8-bcc5-eebe516bc92c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=33.4 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/businesses status=200
+INFO:     172.19.0.4:53604 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/businesses HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=40.1 method=GET path=/v1/tags status=200
+INFO:     172.19.0.4:53644 - "GET /v1/tags HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=35.4 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungen status=200
+INFO:     172.19.0.4:53570 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungen HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=39.8 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/properties status=200
+INFO:     172.19.0.4:53592 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/properties HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=40.4 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/persons status=200
+INFO:     172.19.0.4:53636 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/persons HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=42.6 method=GET path=/v1/analysis/quota status=200
+INFO:     172.19.0.4:53548 - "GET /v1/analysis/quota HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=44.0 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/conversations status=200
+INFO:     172.19.0.4:53620 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/conversations HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=53.2 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungssaetze status=200
+INFO:     172.19.0.4:53562 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/buchungssaetze HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=54.9 method=GET path=/v1/wiki/articles status=200
+INFO:     172.19.0.4:53572 - "GET /v1/wiki/articles?document_id=487ffb24-c248-4970-b833-f9fcec7cf3ec HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=4.2 method=GET path=/v1/kontenrahmen/skr03 status=200
+INFO:     172.19.0.4:53572 - "GET /v1/kontenrahmen/skr03 HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=71.3 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec status=200
+INFO:     172.19.0.4:53550 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=79.6 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:53542 - "GET /v1/documents?limit=500&sort=created_desc HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=10.0 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/related status=200
+INFO:     172.19.0.4:53542 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/related?limit=5 HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=11.0 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/share-links status=200
+INFO:     172.19.0.4:53572 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/share-links HTTP/1.1" 200 OK
+2026-04-25 20:40:47 [info     ] request_timing                 duration_ms=19.7 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/files/dd964e52-4dd9-44f8-8577-f090c36f1261/download status=200
+INFO:     172.19.0.4:53550 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/files/dd964e52-4dd9-44f8-8577-f090c36f1261/download HTTP/1.1" 200 OK
+2026-04-25 20:40:57 [info     ] request_timing                 duration_ms=3.0 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:44444 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:41:33 [info     ] request_timing                 duration_ms=3.6 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:51404 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:41:34 [info     ] request_timing                 duration_ms=4.2 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:51412 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:41:34 [info     ] request_timing                 duration_ms=7.2 method=GET path=/v1/segments status=200
+INFO:     172.19.0.4:51404 - "GET /v1/segments HTTP/1.1" 200 OK
+2026-04-25 20:41:36 [info     ] request_timing                 duration_ms=50.2 method=GET path=/v1/businesses/0100ec6b-a868-494d-88bf-9d78fa0dfb70/umsatz status=200
+INFO:     172.19.0.4:51412 - "GET /v1/businesses/0100ec6b-a868-494d-88bf-9d78fa0dfb70/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:41:36 [info     ] request_timing                 duration_ms=47.3 method=GET path=/v1/businesses status=200
+INFO:     172.19.0.4:44848 - "GET /v1/businesses HTTP/1.1" 200 OK
+2026-04-25 20:41:36 [info     ] request_timing                 duration_ms=53.9 method=GET path=/v1/businesses/f5194b82-3e89-4fb8-967e-ea618b741148/umsatz status=200
+INFO:     172.19.0.4:51404 - "GET /v1/businesses/f5194b82-3e89-4fb8-967e-ea618b741148/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:41:36 [info     ] request_timing                 duration_ms=51.2 method=GET path=/v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/umsatz status=200
+INFO:     172.19.0.4:44846 - "GET /v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:41:36 [info     ] request_timing                 duration_ms=47.9 method=GET path=/v1/businesses/3d8e2c6d-949c-44e9-9248-07f2c6be9439/umsatz status=200
+INFO:     172.19.0.4:44856 - "GET /v1/businesses/3d8e2c6d-949c-44e9-9248-07f2c6be9439/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:41:40 [info     ] request_timing                 duration_ms=6.6 method=GET path=/v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/wirtschaftsjahr status=200
+INFO:     172.19.0.4:44856 - "GET /v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/wirtschaftsjahr HTTP/1.1" 200 OK
+2026-04-25 20:41:41 [info     ] request_timing                 duration_ms=12.1 method=GET path=/v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/guv status=200
+INFO:     172.19.0.4:44856 - "GET /v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/guv?von=2026-01-01&bis=2026-04-25 HTTP/1.1" 200 OK
+2026-04-25 20:41:44 [info     ] request_timing                 duration_ms=3.9 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:44856 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:41:47 [info     ] request_timing                 duration_ms=12.1 method=GET path=/v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/bilanz status=200
+INFO:     172.19.0.4:44856 - "GET /v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/bilanz?stichtag=2026-04-25 HTTP/1.1" 200 OK
+2026-04-25 20:41:52 [info     ] request_timing                 duration_ms=13.8 method=GET path=/v1/settings/business-mode status=200
+INFO:     172.19.0.4:44856 - "GET /v1/settings/business-mode HTTP/1.1" 200 OK
+2026-04-25 20:41:52 [info     ] request_timing                 duration_ms=12.6 method=GET path=/v1/settings/persons-mode status=200
+INFO:     172.19.0.4:37970 - "GET /v1/settings/persons-mode HTTP/1.1" 200 OK
+2026-04-25 20:41:52 [info     ] request_timing                 duration_ms=13.8 method=GET path=/v1/settings/properties-mode status=200
+INFO:     172.19.0.4:37982 - "GET /v1/settings/properties-mode HTTP/1.1" 200 OK
+2026-04-25 20:41:52 [info     ] request_timing                 duration_ms=14.9 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:37996 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:41:53 [info     ] request_timing                 duration_ms=21.8 method=GET path=/v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/umsatz status=200
+INFO:     172.19.0.4:37982 - "GET /v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:41:53 [info     ] request_timing                 duration_ms=22.1 method=GET path=/v1/businesses/3d8e2c6d-949c-44e9-9248-07f2c6be9439/umsatz status=200
+INFO:     172.19.0.4:37970 - "GET /v1/businesses/3d8e2c6d-949c-44e9-9248-07f2c6be9439/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:41:53 [info     ] request_timing                 duration_ms=26.5 method=GET path=/v1/businesses/f5194b82-3e89-4fb8-967e-ea618b741148/umsatz status=200
+INFO:     172.19.0.4:37996 - "GET /v1/businesses/f5194b82-3e89-4fb8-967e-ea618b741148/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:41:53 [info     ] request_timing                 duration_ms=26.5 method=GET path=/v1/businesses/0100ec6b-a868-494d-88bf-9d78fa0dfb70/umsatz status=200
+INFO:     172.19.0.4:44856 - "GET /v1/businesses/0100ec6b-a868-494d-88bf-9d78fa0dfb70/umsatz HTTP/1.1" 200 OK
+2026-04-25 20:41:57 [info     ] request_timing                 duration_ms=11.9 method=GET path=/v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/ustva status=200
+INFO:     172.19.0.4:44856 - "GET /v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/ustva?von=2026-03-01&bis=2026-03-31 HTTP/1.1" 200 OK
+2026-04-25 20:42:01 [info     ] request_timing                 duration_ms=12.0 method=GET path=/v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/ustva status=200
+INFO:     172.19.0.4:44856 - "GET /v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/ustva?von=2026-04-01&bis=2026-04-30 HTTP/1.1" 200 OK
+2026-04-25 20:42:10 [info     ] request_timing                 duration_ms=9.8 method=GET path=/v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/ustva status=200
+INFO:     172.19.0.4:60790 - "GET /v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/ustva?von=2026-05-01&bis=2026-05-31 HTTP/1.1" 200 OK
+2026-04-25 20:42:14 [info     ] request_timing                 duration_ms=3.2 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:60790 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:42:14 [info     ] request_timing                 duration_ms=6.1 method=GET path=/v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/ustva status=200
+INFO:     172.19.0.4:60790 - "GET /v1/businesses/01b2cac7-b024-484b-9260-24ac0956b4b2/ustva?von=2026-04-01&bis=2026-04-30 HTTP/1.1" 200 OK
+2026-04-25 20:42:21 [info     ] request_timing                 duration_ms=6.6 method=GET path=/v1/segments status=200
+INFO:     172.19.0.4:54822 - "GET /v1/segments HTTP/1.1" 200 OK
+2026-04-25 20:42:21 [info     ] request_timing                 duration_ms=5.2 method=GET path=/v1/documents/review-count status=200
+INFO:     172.19.0.4:54824 - "GET /v1/documents/review-count HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=23.9 method=GET path=/v1/persons status=200
+INFO:     172.19.0.4:54824 - "GET /v1/persons HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=31.4 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:54822 - "GET /v1/documents?limit=24&sort=created_desc HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=41.5 method=GET path=/v1/businesses status=200
+INFO:     172.19.0.4:54836 - "GET /v1/businesses HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=54.7 method=GET path=/v1/properties status=200
+INFO:     172.19.0.4:54840 - "GET /v1/properties HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=10.2 method=GET path=/v1/documents/b0a6428b-64cb-4c4e-a79e-5ceffd33c459/thumbnail status=200
+INFO:     172.19.0.4:54824 - "GET /v1/documents/b0a6428b-64cb-4c4e-a79e-5ceffd33c459/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=12.9 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/thumbnail status=200
+INFO:     172.19.0.4:54840 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=14.9 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/thumbnail status=200
+INFO:     172.19.0.4:54822 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=15.5 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/thumbnail status=200
+INFO:     172.19.0.4:54836 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=13.4 method=GET path=/v1/documents/25ae400d-e18c-4ed2-b8af-e0ccdda176a3/thumbnail status=200
+INFO:     172.19.0.4:54844 - "GET /v1/documents/25ae400d-e18c-4ed2-b8af-e0ccdda176a3/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=16.3 method=GET path=/v1/documents/4e4c2458-0121-4e64-a98a-ded6b3fb3e3c/thumbnail status=200
+INFO:     172.19.0.4:54852 - "GET /v1/documents/4e4c2458-0121-4e64-a98a-ded6b3fb3e3c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=17.2 method=GET path=/v1/documents/8995a4a1-4dc2-49fe-a1b7-a560aa4090ef/thumbnail status=200
+INFO:     172.19.0.4:54864 - "GET /v1/documents/8995a4a1-4dc2-49fe-a1b7-a560aa4090ef/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=16.2 method=GET path=/v1/documents/f8562182-e071-4e7c-97af-8fc378af0178/thumbnail status=200
+INFO:     172.19.0.4:54888 - "GET /v1/documents/f8562182-e071-4e7c-97af-8fc378af0178/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=18.6 method=GET path=/v1/documents/df6441ec-5ada-4aa5-94be-a3cedf760489/thumbnail status=200
+INFO:     172.19.0.4:54900 - "GET /v1/documents/df6441ec-5ada-4aa5-94be-a3cedf760489/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=18.8 method=GET path=/v1/documents/f30231ee-ee8c-408f-b86a-ca2bc017c94b/thumbnail status=200
+INFO:     172.19.0.4:54872 - "GET /v1/documents/f30231ee-ee8c-408f-b86a-ca2bc017c94b/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=18.6 method=GET path=/v1/documents/b1ae87f7-02d6-40db-a81d-385fab3f9b5c/thumbnail status=200
+INFO:     172.19.0.4:54908 - "GET /v1/documents/b1ae87f7-02d6-40db-a81d-385fab3f9b5c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=16.4 method=GET path=/v1/documents/dfb32cec-82c2-427d-8a60-f65b5699a2a7/thumbnail status=200
+INFO:     172.19.0.4:54918 - "GET /v1/documents/dfb32cec-82c2-427d-8a60-f65b5699a2a7/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=15.1 method=GET path=/v1/documents/34c55e9b-7140-490e-9b2a-b6e7b9381309/thumbnail status=200
+INFO:     172.19.0.4:54936 - "GET /v1/documents/34c55e9b-7140-490e-9b2a-b6e7b9381309/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=18.0 method=GET path=/v1/documents/a7da6887-1550-4378-9e56-e2e8caa2ffea/thumbnail status=200
+INFO:     172.19.0.4:54926 - "GET /v1/documents/a7da6887-1550-4378-9e56-e2e8caa2ffea/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=13.2 method=GET path=/v1/documents/1b18e72e-7a5b-4b74-85b3-ba9af691fa7f/thumbnail status=200
+INFO:     172.19.0.4:54952 - "GET /v1/documents/1b18e72e-7a5b-4b74-85b3-ba9af691fa7f/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=11.9 method=GET path=/v1/documents/1b639068-0a59-4a0a-b139-0ae65e09085e/thumbnail status=200
+INFO:     172.19.0.4:54950 - "GET /v1/documents/1b639068-0a59-4a0a-b139-0ae65e09085e/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=10.1 method=GET path=/v1/documents/194af9c2-3796-45bd-b5f8-fae6345eab3b/thumbnail status=200
+INFO:     172.19.0.4:54956 - "GET /v1/documents/194af9c2-3796-45bd-b5f8-fae6345eab3b/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=8.4 method=GET path=/v1/documents/98180a85-5cc4-4133-a90c-7c2e96bd5c3e/thumbnail status=200
+INFO:     172.19.0.4:54970 - "GET /v1/documents/98180a85-5cc4-4133-a90c-7c2e96bd5c3e/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=6.8 method=GET path=/v1/documents/83a2799f-72f6-48a8-bcc5-eebe516bc92c/thumbnail status=200
+INFO:     172.19.0.4:54978 - "GET /v1/documents/83a2799f-72f6-48a8-bcc5-eebe516bc92c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:24 [info     ] request_timing                 duration_ms=5.3 method=GET path=/v1/documents/fe132674-33f8-4308-a0a0-16bb978c32af/thumbnail status=200
+INFO:     172.19.0.4:54990 - "GET /v1/documents/fe132674-33f8-4308-a0a0-16bb978c32af/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=47.7 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/persons status=200
+INFO:     172.19.0.4:54978 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/persons HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=52.2 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/conversations status=200
+INFO:     172.19.0.4:54970 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/conversations HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=54.7 method=GET path=/v1/wiki/articles status=200
+INFO:     172.19.0.4:54956 - "GET /v1/wiki/articles?document_id=2028661d-bb1a-4859-a974-3fc7475cc6b1 HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=42.1 method=GET path=/v1/analysis/quota status=200
+INFO:     172.19.0.4:54908 - "GET /v1/analysis/quota HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=42.5 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/businesses status=200
+INFO:     172.19.0.4:54872 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/businesses HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=55.2 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/properties status=200
+INFO:     172.19.0.4:54950 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/properties HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=43.4 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/buchungen status=200
+INFO:     172.19.0.4:54926 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/buchungen HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=56.0 method=GET path=/v1/categories status=200
+INFO:     172.19.0.4:54952 - "GET /v1/categories HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=60.3 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/buchungssaetze status=200
+INFO:     172.19.0.4:54936 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/buchungssaetze HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=76.6 method=GET path=/v1/tags status=200
+INFO:     172.19.0.4:54990 - "GET /v1/tags HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=17.5 method=GET path=/v1/kontenrahmen/skr03 status=200
+INFO:     172.19.0.4:54990 - "GET /v1/kontenrahmen/skr03 HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=106.6 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1 status=200
+INFO:     172.19.0.4:54918 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1 HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=116.0 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:54900 - "GET /v1/documents?limit=500&sort=created_desc HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=10.9 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/related status=200
+INFO:     172.19.0.4:54918 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/related?limit=5 HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=11.5 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/share-links status=200
+INFO:     172.19.0.4:54990 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/share-links HTTP/1.1" 200 OK
+2026-04-25 20:42:26 [info     ] request_timing                 duration_ms=21.8 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/files/763e0d01-b173-476c-bf73-ca0587ce083d/download status=200
+INFO:     172.19.0.4:54900 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/files/763e0d01-b173-476c-bf73-ca0587ce083d/download HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=26.8 method=GET path=/v1/documents status=200
+INFO:     172.19.0.4:54900 - "GET /v1/documents?limit=24&sort=created_desc HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=21.3 method=GET path=/v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/thumbnail status=200
+INFO:     172.19.0.4:54990 - "GET /v1/documents/2028661d-bb1a-4859-a974-3fc7475cc6b1/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=22.2 method=GET path=/v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/thumbnail status=200
+INFO:     172.19.0.4:54900 - "GET /v1/documents/487ffb24-c248-4970-b833-f9fcec7cf3ec/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=22.5 method=GET path=/v1/documents/4e4c2458-0121-4e64-a98a-ded6b3fb3e3c/thumbnail status=200
+INFO:     172.19.0.4:54936 - "GET /v1/documents/4e4c2458-0121-4e64-a98a-ded6b3fb3e3c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=25.2 method=GET path=/v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/thumbnail status=200
+INFO:     172.19.0.4:54918 - "GET /v1/documents/41bac4a3-fd17-44e6-be35-f661b02aa3db/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=24.7 method=GET path=/v1/documents/25ae400d-e18c-4ed2-b8af-e0ccdda176a3/thumbnail status=200
+INFO:     172.19.0.4:54872 - "GET /v1/documents/25ae400d-e18c-4ed2-b8af-e0ccdda176a3/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=25.1 method=GET path=/v1/documents/b0a6428b-64cb-4c4e-a79e-5ceffd33c459/thumbnail status=200
+INFO:     172.19.0.4:54926 - "GET /v1/documents/b0a6428b-64cb-4c4e-a79e-5ceffd33c459/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=24.4 method=GET path=/v1/documents/f8562182-e071-4e7c-97af-8fc378af0178/thumbnail status=200
+INFO:     172.19.0.4:54970 - "GET /v1/documents/f8562182-e071-4e7c-97af-8fc378af0178/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=25.2 method=GET path=/v1/documents/f30231ee-ee8c-408f-b86a-ca2bc017c94b/thumbnail status=200
+INFO:     172.19.0.4:54950 - "GET /v1/documents/f30231ee-ee8c-408f-b86a-ca2bc017c94b/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=25.7 method=GET path=/v1/documents/df6441ec-5ada-4aa5-94be-a3cedf760489/thumbnail status=200
+INFO:     172.19.0.4:54952 - "GET /v1/documents/df6441ec-5ada-4aa5-94be-a3cedf760489/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=25.9 method=GET path=/v1/documents/dfb32cec-82c2-427d-8a60-f65b5699a2a7/thumbnail status=200
+INFO:     172.19.0.4:54908 - "GET /v1/documents/dfb32cec-82c2-427d-8a60-f65b5699a2a7/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=26.5 method=GET path=/v1/documents/b1ae87f7-02d6-40db-a81d-385fab3f9b5c/thumbnail status=200
+INFO:     172.19.0.4:54956 - "GET /v1/documents/b1ae87f7-02d6-40db-a81d-385fab3f9b5c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=29.4 method=GET path=/v1/documents/8995a4a1-4dc2-49fe-a1b7-a560aa4090ef/thumbnail status=200
+INFO:     172.19.0.4:54978 - "GET /v1/documents/8995a4a1-4dc2-49fe-a1b7-a560aa4090ef/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=28.1 method=GET path=/v1/documents/a7da6887-1550-4378-9e56-e2e8caa2ffea/thumbnail status=200
+INFO:     172.19.0.4:43876 - "GET /v1/documents/a7da6887-1550-4378-9e56-e2e8caa2ffea/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=28.3 method=GET path=/v1/documents/34c55e9b-7140-490e-9b2a-b6e7b9381309/thumbnail status=200
+INFO:     172.19.0.4:43892 - "GET /v1/documents/34c55e9b-7140-490e-9b2a-b6e7b9381309/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=26.8 method=GET path=/v1/documents/1b18e72e-7a5b-4b74-85b3-ba9af691fa7f/thumbnail status=200
+INFO:     172.19.0.4:43902 - "GET /v1/documents/1b18e72e-7a5b-4b74-85b3-ba9af691fa7f/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=25.5 method=GET path=/v1/documents/194af9c2-3796-45bd-b5f8-fae6345eab3b/thumbnail status=200
+INFO:     172.19.0.4:43906 - "GET /v1/documents/194af9c2-3796-45bd-b5f8-fae6345eab3b/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=22.9 method=GET path=/v1/documents/98180a85-5cc4-4133-a90c-7c2e96bd5c3e/thumbnail status=200
+INFO:     172.19.0.4:43908 - "GET /v1/documents/98180a85-5cc4-4133-a90c-7c2e96bd5c3e/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=19.6 method=GET path=/v1/documents/1b639068-0a59-4a0a-b139-0ae65e09085e/thumbnail status=200
+INFO:     172.19.0.4:43916 - "GET /v1/documents/1b639068-0a59-4a0a-b139-0ae65e09085e/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=17.0 method=GET path=/v1/documents/83a2799f-72f6-48a8-bcc5-eebe516bc92c/thumbnail status=200
+INFO:     172.19.0.4:43932 - "GET /v1/documents/83a2799f-72f6-48a8-bcc5-eebe516bc92c/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:29 [info     ] request_timing                 duration_ms=11.8 method=GET path=/v1/documents/fe132674-33f8-4308-a0a0-16bb978c32af/thumbnail status=200
+INFO:     172.19.0.4:43940 - "GET /v1/documents/fe132674-33f8-4308-a0a0-16bb978c32af/thumbnail HTTP/1.1" 200 OK
+2026-04-25 20:42:30 [info     ] request_timing                 duration_ms=2.8 method=GET path=/v1/documents/a0c96ca6-aa83-4673-b435-814e52241818/thumbnail status=200
+INFO:     172.19.0.4:43916 - "GET /v1/documents/a0c96ca6-aa83-4673-b435-814e52241818/thumbnail HTTP/1.1" 200 OK
